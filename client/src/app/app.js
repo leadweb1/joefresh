@@ -33,7 +33,9 @@
   }
 
   angular.module('app', [
+      'ui',
       'ui.router',
+      'ngAnimate',
       'home',
       'getting-started',
       'common.header',
