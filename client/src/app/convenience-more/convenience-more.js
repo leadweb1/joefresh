@@ -7,12 +7,12 @@
    */
   function config($stateProvider) {
     $stateProvider
-      .state('root.home', {
-        url: '/',
+      .state('root.convenience-more.notifications', {
+        url: '/convenience-more/notifications',
         views: {
           '@': {
-            templateUrl: 'src/app/home/home.tpl.html',
-            controller: 'HomeCtrl as home',
+            templateUrl: 'src/app/convenience-more/notifications/notifications.tpl.html',
+            controller: 'ConvenienceCtrl as convenience',
             resolve: {
               data: function(DataService) {
                 return DataService.get();
@@ -24,19 +24,14 @@
   }
 
   /**
-   * @name  HomeCtrl
+   * @name  ConvenienceCtrl
    * @description Controller
    */
-  function HomeCtrl(data, $scope) {
+  function ConvenienceCtrl(data, $scope) {
     $scope.data = data;
-    $scope.activeSection = -1;
-    
-    $scope.selectSection = function(index) {
-        $scope.activeSection = index;
-    }
   }
 
-  angular.module('home', [])
+  angular.module('convenience-more', [])
     .config(config)
-    .controller('HomeCtrl', HomeCtrl);
+    .controller('ConvenienceCtrl', ConvenienceCtrl);
 })();

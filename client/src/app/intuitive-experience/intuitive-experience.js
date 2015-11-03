@@ -7,12 +7,12 @@
    */
   function config($stateProvider) {
     $stateProvider
-      .state('root.home', {
-        url: '/',
+      .state('root.intuitive-experience.rotating-bezel', {
+        url: '/intuitive-experience/rotating-bezel',
         views: {
           '@': {
-            templateUrl: 'src/app/home/home.tpl.html',
-            controller: 'HomeCtrl as home',
+            templateUrl: 'src/app/intuitive-experience/rotating-bezel/rotating-bezel.tpl.html',
+            controller: 'IntuitiveCtrl as intuitive',
             resolve: {
               data: function(DataService) {
                 return DataService.get();
@@ -24,19 +24,14 @@
   }
 
   /**
-   * @name  HomeCtrl
+   * @name  IntuitiveCtrl
    * @description Controller
    */
-  function HomeCtrl(data, $scope) {
+  function IntuitiveCtrl(data, $scope) {
     $scope.data = data;
-    $scope.activeSection = -1;
-    
-    $scope.selectSection = function(index) {
-        $scope.activeSection = index;
-    }
   }
 
-  angular.module('home', [])
+  angular.module('intuitive-experience', [])
     .config(config)
-    .controller('HomeCtrl', HomeCtrl);
+    .controller('IntuitiveCtrl', IntuitiveCtrl);
 })();

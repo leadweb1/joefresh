@@ -7,12 +7,12 @@
    */
   function config($stateProvider) {
     $stateProvider
-      .state('root.home', {
-        url: '/',
+      .state('root.try-on', {
+        url: '/try-on',
         views: {
           '@': {
-            templateUrl: 'src/app/home/home.tpl.html',
-            controller: 'HomeCtrl as home',
+            templateUrl: 'src/app/try-on/try-on.tpl.html',
+            controller: 'TryOnCtrl as try-on',
             resolve: {
               data: function(DataService) {
                 return DataService.get();
@@ -24,19 +24,14 @@
   }
 
   /**
-   * @name  HomeCtrl
+   * @name  TryOnCtrl
    * @description Controller
    */
-  function HomeCtrl(data, $scope) {
+  function TryOnCtrl(data, $scope) {
     $scope.data = data;
-    $scope.activeSection = -1;
-    
-    $scope.selectSection = function(index) {
-        $scope.activeSection = index;
-    }
   }
 
-  angular.module('home', [])
+  angular.module('try-on', [])
     .config(config)
-    .controller('HomeCtrl', HomeCtrl);
+    .controller('TryOnCtrl', TryOnCtrl);
 })();

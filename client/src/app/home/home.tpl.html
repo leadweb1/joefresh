@@ -1,25 +1,15 @@
 <div class="pure-g island">
-    <div class="pure-u-1 pure-u-lg-1-4 island">
+    <div ng-repeat="section in data.content.sections" class="pure-u-1 pure-u-lg-1-4 island">
         <div class="text-center">
-            <a ui-sref="root.home"><img class="pure-img" src="assets/images/angular-logo.png"></a>
+            <a href="#" ng-click="selectSection($index)">
+                <img alt="logo" class="pure-img" src="assets/images/angular-logo.png">
+                <div>{{ section.title}}</div>
+            </a>
         </div>
-    </div>
-
-    <div class="pure-u-1 pure-u-lg-1-4 island">
-        <div class="text-center">
-            <a ui-sref="root.home"><img class="pure-img" src="assets/images/angular-logo.png"></a>
-        </div>
-    </div>
-
-    <div class="pure-u-1 pure-u-lg-1-4 island">
-        <div class="text-center">
-            <a ui-sref="root.getting-started"><img class="pure-img" src="assets/images/bower-logo.png"></a>
-        </div>
-    </div>
-
-    <div class="pure-u-1 pure-u-lg-1-4 island">
-        <div class="text-center">
-            <a ui-sref="root.getting-started"><img class="pure-img" src="assets/images/bower-logo.png"></a>
+        <div ng-show="$index == activeSection" class="animate-show ng-hide">
+            <ul>
+                <li ng-repeat="section in section.sections"><a ui-sref="{{section.route}}">{{section.title}}</a></li>
+            </ul>
         </div>
     </div>
 </div>

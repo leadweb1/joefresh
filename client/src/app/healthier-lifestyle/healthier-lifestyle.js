@@ -7,12 +7,12 @@
    */
   function config($stateProvider) {
     $stateProvider
-      .state('root.home', {
-        url: '/',
+      .state('root.healthier-lifestyle.track-your-health', {
+        url: '/healthier-lifestyle/track-your-health',
         views: {
           '@': {
-            templateUrl: 'src/app/home/home.tpl.html',
-            controller: 'HomeCtrl as home',
+            templateUrl: 'src/app/healthier-lifestyle/track-your-health/track-your-health.tpl.html',
+            controller: 'HealthierCtrl as healthier',
             resolve: {
               data: function(DataService) {
                 return DataService.get();
@@ -24,19 +24,14 @@
   }
 
   /**
-   * @name  HomeCtrl
+   * @name  HealthierCtrl
    * @description Controller
    */
-  function HomeCtrl(data, $scope) {
+  function HealthierCtrl(data, $scope) {
     $scope.data = data;
-    $scope.activeSection = -1;
-    
-    $scope.selectSection = function(index) {
-        $scope.activeSection = index;
-    }
   }
 
-  angular.module('home', [])
+  angular.module('healthier-lifestyle', [])
     .config(config)
-    .controller('HomeCtrl', HomeCtrl);
+    .controller('HealthierCtrl', HealthierCtrl);
 })();
