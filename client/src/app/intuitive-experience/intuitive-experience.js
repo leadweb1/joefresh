@@ -13,11 +13,6 @@
           '@': {
             templateUrl: 'src/app/intuitive-experience/intuitive-experience.tpl.html',
             controller: 'IntuitiveController as intuitive',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
           }
         }
       })
@@ -27,11 +22,6 @@
           '@': {
             templateUrl: 'src/app/intuitive-experience/rotating-bezel/rotating-bezel.tpl.html',
             controller: 'IntuitiveController as intuitive',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
           }
         }
       });
@@ -45,7 +35,7 @@
     $scope.data = data;
   }
 
-  angular.module('intuitiveExperience', [])
+  angular.module('app.intuitiveExperience', [])
     .config(config)
     .controller('IntuitiveController', IntuitiveController);
 })();

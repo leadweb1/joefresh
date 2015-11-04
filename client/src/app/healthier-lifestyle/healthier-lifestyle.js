@@ -13,11 +13,6 @@
           '@': {
             templateUrl: 'src/app/healthier-lifestyle/healthier-lifestyle.tpl.html',
             controller: 'HealthierController as healthier',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
           }
         }
       })
@@ -27,11 +22,6 @@
           '@': {
             templateUrl: 'src/app/healthier-lifestyle/track-your-health/track-your-health.tpl.html',
             controller: 'HealthierController as healthier',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
           }
         }
       })
@@ -41,11 +31,6 @@
           '@': {
             templateUrl: 'src/app/healthier-lifestyle/24h-activity-log/24h-activity-log.tpl.html',
             controller: 'HealthierController as healthier',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
           }
         }
       })
@@ -55,11 +40,6 @@
           '@': {
             templateUrl: 'src/app/healthier-lifestyle/health-clock/health-clock.tpl.html',
             controller: 'HealthierController as healthier',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
           }
         }
       });
@@ -73,7 +53,7 @@
     $scope.data = data;
   }
 
-  angular.module('healthierLifestyle', [])
+  angular.module('app.healthierLifestyle', [])
     .config(config)
     .controller('HealthierController', HealthierController);
 })();

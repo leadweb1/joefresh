@@ -1,14 +1,18 @@
 <div class="pure-g island">
-    <div ng-repeat="section in filteredSections = (data.content.sections | filterDisabledSections)" class="pure-u-1 pure-u-lg-1-{{ filteredSections.length }} island">
+    <div ng-repeat="section in filteredSections = (data.content.sections| filterDisabledSections)" class="pure-u-1 pure-u-lg-1-{{ filteredSections.length}} island">
         <div class="text-center">
-            <a href="#" ng-click="selectSection($index)">
+            <a href="#" ng-if="section.sections" ng-click="selectSection($index)">
+                <img alt="logo" class="pure-img" src="assets/images/angular-logo.png">
+                <div>{{ section.title}}</div>
+            </a>
+            <a href="#" ng-if="!section.sections" ui-sref="{{section.route}}">
                 <img alt="logo" class="pure-img" src="assets/images/angular-logo.png">
                 <div>{{ section.title}}</div>
             </a>
         </div>
-        <div ng-show="$index == activeSection" class="animate-show ng-hide">
+        <div ng-if="section.sections.length > 0" ng-show="$index == activeSection" class="animate-show ng-hide">
             <ul>
-                <li ng-repeat="section in section.sections | filterDisabledSections"><a ui-sref="{{section.route}}">{{section.title}}</a></li>
+                <li ng-repeat="section in section.sections| filterDisabledSections"><a ui-sref="{{section.route}}">{{section.title}}</a></li>
             </ul>
         </div>
     </div>

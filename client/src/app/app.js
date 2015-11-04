@@ -15,15 +15,15 @@
           'header': {
             templateUrl: 'src/common/header.tpl.html',
             controller: 'HeaderController',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
           },
           'footer': {
             templateUrl: 'src/common/footer.tpl.html',
             controller: 'FooterController'
+          }
+        },
+        resolve: {
+          data: function(DataService) {
+            return DataService.get();
           }
         }
       });
@@ -43,12 +43,12 @@
       'ui.router',
       'ngAnimate',
       'angular-gestures',
-      'home',
-      'aestheticElegantDesign',
-      'intuitiveExperience',
-      'healthierLifestyle',
-      'convenienceAndMore',
-      'tryOn',
+      'app.home',
+      'app.aestheticElegantDesign',
+      'app.intuitiveExperience',
+      'app.healthierLifestyle',
+      'app.convenienceAndMore',
+      'app.customizeYourGear',
       'common.header',
       'common.footer',
       'common.services.data',

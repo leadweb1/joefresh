@@ -13,11 +13,6 @@
           '@': {
             templateUrl: 'src/app/home/home.tpl.html',
             controller: 'HomeController as home',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
           }
         }
       });
@@ -36,7 +31,7 @@
     }
   }
 
-  angular.module('home', [])
+  angular.module('app.home', [])
     .config(config)
     .controller('HomeController', HomeController);
 })();

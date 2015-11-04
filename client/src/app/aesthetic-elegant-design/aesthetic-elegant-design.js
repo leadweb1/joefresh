@@ -13,11 +13,6 @@
           '@': {
             templateUrl: 'src/app/aesthetic-elegant-design/aesthetic-elegant-design.tpl.html',
             controller: 'AestheticController as aesthetic',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
           }
         }
       })
@@ -27,11 +22,6 @@
           '@': {
             templateUrl: 'src/app/aesthetic-elegant-design/stylish-smart-gear/stylish-smart-gear.tpl.html',
             controller: 'AestheticController as aesthetic',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
           }
         }
       });
@@ -45,7 +35,7 @@
     $scope.data = data;
   }
 
-  angular.module('aestheticElegantDesign', [])
+  angular.module('app.aestheticElegantDesign', [])
     .config(config)
     .controller('AestheticController', AestheticController);
 })();

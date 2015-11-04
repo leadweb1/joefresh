@@ -13,11 +13,6 @@
           '@': {
             templateUrl: 'src/app/convenience-more/convenience-more.tpl.html',
             controller: 'ConvenienceController as convenience',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
           }
         }
       })
@@ -27,11 +22,6 @@
           '@': {
             templateUrl: 'src/app/convenience-more/notifications/notifications.tpl.html',
             controller: 'ConvenienceController as convenience',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
           }
         }
       })
@@ -41,11 +31,6 @@
           '@': {
             templateUrl: 'src/app/convenience-more/samsung-pay/samsung-pay.tpl.html',
             controller: 'ConvenienceController as convenience',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
           }
         }
       })
@@ -55,11 +40,6 @@
           '@': {
             templateUrl: 'src/app/convenience-more/additional-features/additional-features.tpl.html',
             controller: 'ConvenienceController as convenience',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
           }
         }
       })
@@ -69,11 +49,6 @@
           '@': {
             templateUrl: 'src/app/convenience-more/accessories/accessories.tpl.html',
             controller: 'ConvenienceController as convenience',
-            resolve: {
-              data: function(DataService) {
-                return DataService.get();
-              }
-            }
           }
         }
       });
@@ -83,11 +58,10 @@
    * @name  ConvenienceController
    * @description Controller
    */
-  function ConvenienceController(data, $scope) {
-    $scope.data = data;
+  function ConvenienceController() {
   }
 
-  angular.module('convenienceAndMore', [])
+  angular.module('app.convenienceAndMore', [])
     .config(config)
     .controller('ConvenienceController', ConvenienceController);
 })();
