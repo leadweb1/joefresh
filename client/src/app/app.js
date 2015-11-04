@@ -14,14 +14,20 @@
         views: {
           'header': {
             templateUrl: 'src/common/header.tpl.html',
-            controller: 'HeaderCtrl'
+            controller: 'HeaderController',
+            resolve: {
+              data: function(DataService) {
+                return DataService.get();
+              }
+            }
           },
           'footer': {
             templateUrl: 'src/common/footer.tpl.html',
-            controller: 'FooterCtrl'
+            controller: 'FooterController'
           }
         }
       });
+    //hammerDefaultOptsProvider.set({recognizers: [[Hammer.Tap, {time: 250}]] });
   }
 
   function MainCtrl($log) {
@@ -36,12 +42,13 @@
       'ui',
       'ui.router',
       'ngAnimate',
+      'angular-gestures',
       'home',
-      'aesthetic-elegant-design',
-      'intuitive-experience',
-      'healthier-lifestyle',
-      'convenience-more',
-      'try-on',
+      'aestheticElegantDesign',
+      'intuitiveExperience',
+      'healthierLifestyle',
+      'convenienceAndMore',
+      'tryOn',
       'common.header',
       'common.footer',
       'common.services.data',
@@ -53,5 +60,16 @@
     .config(config)
     .run(run)
     .controller('MainCtrl', MainCtrl)
-    .value('version', '1.1.0');
+    .value('version', '1.1.0')
+    .filter('filterDisabledSections', function() {
+      return function(input) {
+        var inputArray = [];
+    
+        for(var item in input) {
+          inputArray.push(input[item]);
+        }
+    
+        return inputArray.filter(function(v) { return v.disabled !== true; });
+      };
+    });
 })();

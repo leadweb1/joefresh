@@ -12,7 +12,7 @@
         views: {
           '@': {
             templateUrl: 'src/app/home/home.tpl.html',
-            controller: 'HomeCtrl as home',
+            controller: 'HomeController as home',
             resolve: {
               data: function(DataService) {
                 return DataService.get();
@@ -24,10 +24,10 @@
   }
 
   /**
-   * @name  HomeCtrl
+   * @name  HomeController
    * @description Controller
    */
-  function HomeCtrl(data, $scope) {
+  function HomeController(data, $scope) {
     $scope.data = data;
     $scope.activeSection = -1;
     
@@ -38,5 +38,5 @@
 
   angular.module('home', [])
     .config(config)
-    .controller('HomeCtrl', HomeCtrl);
+    .controller('HomeController', HomeController);
 })();

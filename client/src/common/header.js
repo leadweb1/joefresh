@@ -1,10 +1,11 @@
 (function() {
   'use strict';
 
-  function headerCtrl($log) {
+  function headerController(data, $scope, $log) {
     $log.debug('Header loaded');
+    $scope.data = data;
   }
 
   angular.module('common.header', [])
-    .controller('HeaderCtrl', headerCtrl);
+    .controller('HeaderController', headerController);
 })();

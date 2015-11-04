@@ -7,12 +7,26 @@
    */
   function config($stateProvider) {
     $stateProvider
-      .state('root.aesthetic-elegant-design.stylish-smart-gear', {
+      .state('root.aesthetic-elegant-design', {
+        url: '/aesthetic-elegant-design',
+        views: {
+          '@': {
+            templateUrl: 'src/app/aesthetic-elegant-design/aesthetic-elegant-design.tpl.html',
+            controller: 'AestheticController as aesthetic',
+            resolve: {
+              data: function(DataService) {
+                return DataService.get();
+              }
+            }
+          }
+        }
+      })
+      .state('root.aesthetic-elegant-design_stylish-smart-gear', {
         url: '/aesthetic-elegant-design/stylish-smart-gear',
         views: {
           '@': {
             templateUrl: 'src/app/aesthetic-elegant-design/stylish-smart-gear/stylish-smart-gear.tpl.html',
-            controller: 'AestheticCtrl as aesthetic',
+            controller: 'AestheticController as aesthetic',
             resolve: {
               data: function(DataService) {
                 return DataService.get();
@@ -24,14 +38,14 @@
   }
 
   /**
-   * @name  AestheticCtrl
+   * @name  AestheticController
    * @description Controller
    */
-  function AestheticCtrl(data, $scope) {
+  function AestheticController(data, $scope) {
     $scope.data = data;
   }
 
-  angular.module('aesthetic-elegant-design', [])
+  angular.module('aestheticElegantDesign', [])
     .config(config)
-    .controller('AestheticCtrl', AestheticCtrl);
+    .controller('AestheticController', AestheticController);
 })();

@@ -1,10 +1,10 @@
 (function() {
   'use strict';
 
-  function footerCtrl($log) {
+  function footerController($log) {
     $log.debug('Footer loaded');
   }
 
   angular.module('common.footer', [])
-    .controller('FooterCtrl', footerCtrl);
+    .controller('FooterController', footerController);
 })();

@@ -7,12 +7,26 @@
    */
   function config($stateProvider) {
     $stateProvider
-      .state('root.intuitive-experience.rotating-bezel', {
+      .state('root.intuitive-experience', {
+        url: '/intuitive-experience',
+        views: {
+          '@': {
+            templateUrl: 'src/app/intuitive-experience/intuitive-experience.tpl.html',
+            controller: 'IntuitiveController as intuitive',
+            resolve: {
+              data: function(DataService) {
+                return DataService.get();
+              }
+            }
+          }
+        }
+      })
+      .state('root.intuitive-experience_rotating-bezel', {
         url: '/intuitive-experience/rotating-bezel',
         views: {
           '@': {
             templateUrl: 'src/app/intuitive-experience/rotating-bezel/rotating-bezel.tpl.html',
-            controller: 'IntuitiveCtrl as intuitive',
+            controller: 'IntuitiveController as intuitive',
             resolve: {
               data: function(DataService) {
                 return DataService.get();
@@ -24,14 +38,14 @@
   }
 
   /**
-   * @name  IntuitiveCtrl
+   * @name  IntuitiveController
    * @description Controller
    */
-  function IntuitiveCtrl(data, $scope) {
+  function IntuitiveController(data, $scope) {
     $scope.data = data;
   }
 
-  angular.module('intuitive-experience', [])
+  angular.module('intuitiveExperience', [])
     .config(config)
-    .controller('IntuitiveCtrl', IntuitiveCtrl);
+    .controller('IntuitiveController', IntuitiveController);
 })();

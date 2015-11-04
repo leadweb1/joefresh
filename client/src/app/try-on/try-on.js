@@ -12,7 +12,7 @@
         views: {
           '@': {
             templateUrl: 'src/app/try-on/try-on.tpl.html',
-            controller: 'TryOnCtrl as try-on',
+            controller: 'TryOnController as try-on',
             resolve: {
               data: function(DataService) {
                 return DataService.get();
@@ -24,14 +24,14 @@
   }
 
   /**
-   * @name  TryOnCtrl
+   * @name  TryOnController
    * @description Controller
    */
-  function TryOnCtrl(data, $scope) {
+  function TryOnController(data, $scope) {
     $scope.data = data;
   }
 
-  angular.module('try-on', [])
+  angular.module('tryOn', [])
     .config(config)
-    .controller('TryOnCtrl', TryOnCtrl);
+    .controller('TryOnController', TryOnController);
 })();
