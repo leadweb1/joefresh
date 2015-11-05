@@ -5,7 +5,7 @@
     angular.bootstrap(document, ['app']);
   });
 
-  function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider) {
+  function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider, hammerDefaultOptsProvider) {
     $urlRouterProvider.otherwise('/');
     $logProvider.debugEnabled(true);
     $httpProvider.interceptors.push('httpInterceptor');
@@ -27,7 +27,14 @@
           }
         }
       });
-    //hammerDefaultOptsProvider.set({recognizers: [[Hammer.Tap, {time: 250}]] });
+    
+    hammerDefaultOptsProvider.set({
+        recognizers: [
+            [Hammer.Tap],
+            [Hammer.Press, {time: 250}],
+            [Hammer.Swipe],
+        ],
+    });
   }
 
   function MainCtrl($log) {
