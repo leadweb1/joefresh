@@ -30,9 +30,9 @@
     
     hammerDefaultOptsProvider.set({
         recognizers: [
-            [Hammer.Tap],
-            [Hammer.Press, {time: 250}],
-            [Hammer.Swipe],
+            [Hammer.Tap, {}],
+            [Hammer.Press, {}],
+            [Hammer.Swipe, {}],
         ],
     });
   }

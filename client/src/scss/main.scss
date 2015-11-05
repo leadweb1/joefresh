@@ -31,3 +31,18 @@ https://github.com/davidrapson/scss-toolkit
         }
     }
 }
+
+.healthier-lifestyle {
+    &.health-clock {
+        div {
+            border: 1px solid black;
+            width: 100%;
+        }
+        .slider {
+            z-index: 1;
+        }
+        .overlay {
+            z-index: 2;
+        }
+    }
+}
