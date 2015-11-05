@@ -1,9 +1,20 @@
 <div class="pure-g island">
     <div class="pure-u-1 pure-u-lg-1-4 island">
-        {{data.template}}
+        <div class="left-nav pure-menu custom-restricted-width">
+            <span class="pure-menu-heading">
+                <div class="btn-home"><a href ui-sref="root.home">Home</a></div>
+                <div class="section-title">{{data.top.title}}</div>
+                <div class="section-description" ng-if="data.top.description" ng-bind-html="data.top.description | nl2br"></div>
+            </span>
+            <ul class="pure-menu-list">
+                <li ng-repeat="section in data.top.sections| filterDisabledSections" ui-sref-active="pure-menu-selected" class="pure-menu-item">
+                    <a href ui-sref="{{section.route}}">{{ section.title}}</a>
+                    <div class="section-description" ng-if="section.description" ng-bind-html="section.description | nl2br"></div>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="pure-u-1 pure-u-lg-3-4 island">
-        {{data.section}}
+        <ng-include src="data.template" />
     </div>
 </div>
-{{data2}}

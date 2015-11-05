@@ -13,17 +13,6 @@
           '@': {
             templateUrl: 'src/common/templates/section.tpl.html',
             controller: 'CustomizeController as customize',
-            resolve: {
-                data2: function(DataService) {
-                  var data = DataService.get();
-                  
-                  return {
-                      content: data.content,
-                      template: 'src/app/customize-your-gear/customize-your-gear.tpl.html',
-                      section: DataService.getSectionByName('customize-your-gear'),
-                  };
-                },
-            }
           }
         }
       });
@@ -33,8 +22,12 @@
    * @name  CustomizeController
    * @description Controller
    */
-  function CustomizeController(data, $scope) {
-    $scope.data = data;
+  function CustomizeController(data, DataService, $scope) {
+    $scope.data = {
+        content: data.content,
+        template: 'src/app/customize-your-gear/customize-your-gear.tpl.html',
+        top: DataService.getSectionByName('customize-your-gear'),
+    };
   }
 
   angular.module('app.customizeYourGear', [])

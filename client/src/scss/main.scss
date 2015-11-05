@@ -5,3 +5,29 @@ https://github.com/kachunchau/smacss-boilerplate
 https://github.com/davidrapson/scss-toolkit
 */
 @import 'settings', 'mixins', 'base', 'helpers', 'modules/island','modules/horizontal-list', 'modules/buttons', 'layouts/page', 'states';
+
+.left-nav {
+    &.pure-menu {
+        &.custom-restricted-width {
+            display: inline-block;
+        }
+
+        & > ul {
+            visibility: visible;
+            top: 0;
+            left: 0;
+
+            li {
+                .section-description {
+                    display: none;
+                }
+                
+                &.pure-menu-selected {
+                    .section-description {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

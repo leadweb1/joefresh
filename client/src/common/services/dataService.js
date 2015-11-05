@@ -76,6 +76,7 @@
                             {
                                 name: 'accessories',
                                 title: 'Accessories',
+                                description: 'Gear S2 provides a range of watch faces and watchbands that completes your personal style.\n\nThere are unique and colorful bands, including exclusive collection from Italian designer Alessandro Mendini, that brings his taste, humor, and sense of color to the Gear S2.',
                                 route: 'root.convenience-more_accessories',
                             },
                         ],
@@ -83,6 +84,7 @@
                     {
                         name: 'customize-your-gear',
                         title: 'Customize your Gear S2',
+                        description: 'You can transform the look of your Gear S2 by choosing from a wide variety of watch face and band options.\n\nTry on different designs, just like you mix and match your outfits everyday.',
                         route: 'root.customize-your-gear',
                     },
                 ],

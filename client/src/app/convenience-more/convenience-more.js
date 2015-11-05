@@ -11,7 +11,7 @@
         url: '/convenience-more',
         views: {
           '@': {
-            templateUrl: 'src/app/convenience-more/convenience-more.tpl.html',
+            templateUrl: 'src/common/templates/section.tpl.html',
             controller: 'ConvenienceController as convenience',
           }
         }
@@ -20,8 +20,8 @@
         url: '/convenience-more/notifications',
         views: {
           '@': {
-            templateUrl: 'src/app/convenience-more/notifications/notifications.tpl.html',
-            controller: 'ConvenienceController as convenience',
+            templateUrl: 'src/common/templates/section.tpl.html',
+            controller: 'NotificationsController as convenience',
           }
         }
       })
@@ -29,8 +29,8 @@
         url: '/convenience-more/samsung-pay',
         views: {
           '@': {
-            templateUrl: 'src/app/convenience-more/samsung-pay/samsung-pay.tpl.html',
-            controller: 'ConvenienceController as convenience',
+            templateUrl: 'src/common/templates/section.tpl.html',
+            controller: 'SamsungPayController as convenience',
           }
         }
       })
@@ -38,8 +38,8 @@
         url: '/convenience-more/additional-features',
         views: {
           '@': {
-            templateUrl: 'src/app/convenience-more/additional-features/additional-features.tpl.html',
-            controller: 'ConvenienceController as convenience',
+            templateUrl: 'src/common/templates/section.tpl.html',
+            controller: 'AdditionalFeaturesController as convenience',
           }
         }
       })
@@ -47,8 +47,8 @@
         url: '/convenience-more/accessories',
         views: {
           '@': {
-            templateUrl: 'src/app/convenience-more/accessories/accessories.tpl.html',
-            controller: 'ConvenienceController as convenience',
+            templateUrl: 'src/common/templates/section.tpl.html',
+            controller: 'AccessoriesController as convenience',
           }
         }
       });
@@ -58,10 +58,72 @@
    * @name  ConvenienceController
    * @description Controller
    */
-  function ConvenienceController() {
+  function ConvenienceController(data, DataService, $scope) {
+    $scope.data = {
+        content: data.content,
+        template: 'src/app/convenience-more/convenience-more.tpl.html',
+        top: DataService.getSectionByName('convenience-more'),
+    };
+  }
+
+  /**
+   * @name  NotificationsController
+   * @description Controller
+   */
+  function NotificationsController(data, DataService, $scope) {
+    $scope.data = {
+        content: data.content,
+        template: 'src/app/convenience-more/notifications/notifications.tpl.html',
+        section: DataService.getSectionByName('notifications'),
+        top: DataService.getSectionByName('convenience-more'),
+    };
+  }
+
+  /**
+   * @name  SamsungPayController
+   * @description Controller
+   */
+  function SamsungPayController(data, DataService, $scope) {
+    $scope.data = {
+        content: data.content,
+        template: 'src/app/convenience-more/samsung-pay/samsung-pay.tpl.html',
+        section: DataService.getSectionByName('samsung-pay'),
+        top: DataService.getSectionByName('convenience-more'),
+    };
+  }
+
+  /**
+   * @name  AdditionalFeaturesController
+   * @description Controller
+   */
+  function AdditionalFeaturesController(data, DataService, $scope) {
+    $scope.data = {
+        content: data.content,
+        template: 'src/app/convenience-more/additional-features/additional-features.tpl.html',
+        section: DataService.getSectionByName('additional-features'),
+        top: DataService.getSectionByName('convenience-more'),
+    };
+  }
+
+  /**
+   * @name  AccessoriesController
+   * @description Controller
+   */
+  function AccessoriesController(data, DataService, $scope) {
+    $scope.data = {
+        content: data.content,
+        template: 'src/app/convenience-more/accessories/accessories.tpl.html',
+        section: DataService.getSectionByName('accessories'),
+        top: DataService.getSectionByName('convenience-more'),
+    };
   }
 
   angular.module('app.convenienceAndMore', [])
     .config(config)
-    .controller('ConvenienceController', ConvenienceController);
+    .controller('ConvenienceController', ConvenienceController)
+    .controller('NotificationsController', NotificationsController)
+    .controller('SamsungPayController', SamsungPayController)
+    .controller('AdditionalFeaturesController', AdditionalFeaturesController)
+    .controller('AccessoriesController', AccessoriesController)
+    ;
 })();

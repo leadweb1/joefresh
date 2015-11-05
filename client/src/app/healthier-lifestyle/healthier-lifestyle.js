@@ -11,7 +11,7 @@
         url: '/healthier-lifestyle',
         views: {
           '@': {
-            templateUrl: 'src/app/healthier-lifestyle/healthier-lifestyle.tpl.html',
+            templateUrl: 'src/common/templates/section.tpl.html',
             controller: 'HealthierController as healthier',
           }
         }
@@ -20,8 +20,8 @@
         url: '/healthier-lifestyle/track-your-health',
         views: {
           '@': {
-            templateUrl: 'src/app/healthier-lifestyle/track-your-health/track-your-health.tpl.html',
-            controller: 'HealthierController as healthier',
+            templateUrl: 'src/common/templates/section.tpl.html',
+            controller: 'HealthierTrackController as healthier',
           }
         }
       })
@@ -29,8 +29,8 @@
         url: '/healthier-lifestyle/24h-activity-log',
         views: {
           '@': {
-            templateUrl: 'src/app/healthier-lifestyle/24h-activity-log/24h-activity-log.tpl.html',
-            controller: 'HealthierController as healthier',
+            templateUrl: 'src/common/templates/section.tpl.html',
+            controller: 'HealthierActivityController as healthier',
           }
         }
       })
@@ -38,8 +38,8 @@
         url: '/healthier-lifestyle/health-clock',
         views: {
           '@': {
-            templateUrl: 'src/app/healthier-lifestyle/health-clock/health-clock.tpl.html',
-            controller: 'HealthierController as healthier',
+            templateUrl: 'src/common/templates/section.tpl.html',
+            controller: 'HealthierHealthClockController as healthier',
           }
         }
       });
@@ -49,11 +49,54 @@
    * @name  HealthierController
    * @description Controller
    */
-  function HealthierController(data, $scope) {
-    $scope.data = data;
+  function HealthierController(data, DataService, $scope) {
+    $scope.data = {
+        content: data.content,
+        template: 'src/app/healthier-lifestyle/healthier-lifestyle.tpl.html',
+        top: DataService.getSectionByName('healthier-lifestyle'),
+    };
+  }
+
+  /**
+   * @name  HealthierTrackController
+   * @description Controller
+   */
+  function HealthierTrackController(data, DataService, $scope) {
+    $scope.data = {
+        content: data.content,
+        template: 'src/app/healthier-lifestyle/track-your-health/track-your-health.tpl.html',
+        top: DataService.getSectionByName('healthier-lifestyle'),
+    };
+  }
+
+  /**
+   * @name  HealthierActivityController
+   * @description Controller
+   */
+  function HealthierActivityController(data, DataService, $scope) {
+    $scope.data = {
+        content: data.content,
+        template: 'src/app/healthier-lifestyle/24h-activity-log/24h-activity-log.tpl.html',
+        top: DataService.getSectionByName('healthier-lifestyle'),
+    };
+  }
+
+  /**
+   * @name  HealthierHealthClockController
+   * @description Controller
+   */
+  function HealthierHealthClockController(data, DataService, $scope) {
+    $scope.data = {
+        content: data.content,
+        template: 'src/app/healthier-lifestyle/health-clock/health-clock.tpl.html',
+        top: DataService.getSectionByName('healthier-lifestyle'),
+    };
   }
 
   angular.module('app.healthierLifestyle', [])
     .config(config)
-    .controller('HealthierController', HealthierController);
+    .controller('HealthierController', HealthierController)
+    .controller('HealthierTrackController', HealthierTrackController)
+    .controller('HealthierActivityController', HealthierActivityController)
+    .controller('HealthierHealthClockController', HealthierHealthClockController);
 })();
