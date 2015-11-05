@@ -54,30 +54,13 @@
       'common.services.data',
       'common.directives.version',
       'common.filters.uppercase',
+      'common.filters.filterDisabledSections',
+      'common.filters.nl2br',
       'common.interceptors.http',
       'templates'
     ])
     .config(config)
     .run(run)
     .controller('MainCtrl', MainCtrl)
-    .value('version', '1.1.0')
-    .filter('filterDisabledSections', function() {
-      return function(input) {
-        var inputArray = [];
-    
-        for(var item in input) {
-          inputArray.push(input[item]);
-        }
-    
-        return inputArray.filter(function(v) { return v.disabled !== true; });
-      };
-    })
-    .filter('nl2br', function($sce) {
-      return function(msg, is_xhtml) { 
-        var is_xhtml = is_xhtml || true;
-        var breakTag = (is_xhtml) ? '<br />' : '<br>';
-        var msg = (msg + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1'+ breakTag +'$2');
-        return $sce.trustAsHtml(msg);
-      }
-    });
+    .value('version', '1.1.0');
 })();
