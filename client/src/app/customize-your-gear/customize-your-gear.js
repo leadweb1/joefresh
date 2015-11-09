@@ -22,11 +22,29 @@
    * @name  CustomizeController
    * @description Controller
    */
-  function CustomizeController(data, DataService, $scope) {
+  function CustomizeController(data, DataService, $scope, $timeout) {
     $scope.data = {
         content: data.content,
         template: 'src/app/customize-your-gear/customize-your-gear.tpl.html',
         top: DataService.getSectionByName('customize-your-gear'),
+    };
+    
+    $scope.activeSlider = 'watch';
+    $scope.changeSlider = function(slider) {
+        $scope.activeSlider = slider;
+        
+        $timeout(function(){
+          var $slider = jQuery('.slider-container:not(.ng-hide)');
+          var $slides = $slider.find('.slick-slide');
+          
+          $slides.each(function(index){
+            var $slide = jQuery(this);
+            
+            if($slide.hasClass('slick-current')) {
+                $slider.slick('slickGoTo', index);
+            }
+          })
+        },100);
     };
   }
 

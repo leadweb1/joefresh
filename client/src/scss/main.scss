@@ -37,7 +37,6 @@ https://github.com/davidrapson/scss-toolkit
         position: relative;
         width: 100%;
         z-index: 1;
-        position: absolute;
 
         .slick-arrow {
             position: absolute;
@@ -58,7 +57,7 @@ https://github.com/davidrapson/scss-toolkit
                 .slick-slide {
                     min-height: inherit;
                     vertical-align: middle;
-                    transition: all 300ms ease;
+                    transition: all 300ms ease; // Matches slider speed
 
                     &:not(.slick-current) {
                         transform: scale(0.8)
@@ -82,11 +81,5 @@ https://github.com/davidrapson/scss-toolkit
                 }
             }
         }
-    }
-}
-
-.healthier-lifestyle {
-    &.health-clock {
-        position: relative;
     }
 }

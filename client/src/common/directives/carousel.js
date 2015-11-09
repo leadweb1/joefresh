@@ -4,7 +4,10 @@
   var carouselDefaults = {
     dots: true,
     swipeToSlide: true,
+    autoplaySpeed: 1,
   };
+  
+  var activeSlider = null;
 
   function watchCarouselDirective() {
     return {
@@ -26,7 +29,7 @@
       }
     };
   }
-
+  
   function contentCarouselDirective() {
     return {
       restrict: 'A',
@@ -54,22 +57,28 @@
 
   function createOverlay($elem) {
     $elem.on('init', function(event, slick) {
-      var $overlay = jQuery(slick.options.overlay);
-      var $carousel = jQuery('.slick-list');
-      
-      $overlay.appendTo($carousel);
-      resizeOverlay();
-    });    
+      if(slick.options.overlay) {
+        var $overlay = jQuery(slick.options.overlay);
+        var $carousel = $elem.find('.slick-list');
+
+        $overlay.appendTo($carousel);
+        resizeOverlay($carousel);
+      }
+    });
+    
   }
   
-  function resizeOverlay() {
-    var $carousel = jQuery('.slick-list');
-    var $overlay = $carousel.find('.slider-overlay');
-    var width = $carousel.find('.slick-slide.slick-current').width();
-    
-    $overlay.css('width', width)
-        .css('margin-left', (width / 2) * -1)
-    ;
+  function resizeOverlay($carousel) {
+    $carousel = $carousel || jQuery('.slick-list');
+    $carousel.each(function(elem){
+        $carousel = jQuery(this);
+        var $overlay = $carousel.find('.slider-overlay');
+        var width = $carousel.find('.slick-slide.slick-current').width();
+
+        $overlay.css('width', width)
+            .css('margin-left', (width / 2) * -1)
+        ;
+    });
   }
 
   angular.module('common.directives.carousel', [])
