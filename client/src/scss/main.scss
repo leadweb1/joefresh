@@ -69,6 +69,11 @@ https://github.com/davidrapson/scss-toolkit
                         vertical-align: middle;
                         //background: url(../assets/images/angular-logo-inner.png) no-repeat top center;
                         //background-size: 100px;
+                        transition: all 300ms ease;
+                        
+                        &:not(.slick-current) {
+                            transform: scale(0.8)
+                        }
 
                         img {
                             width: inherit;
