@@ -3,8 +3,10 @@
   
   var carouselDefaults = {
     dots: true,
-    swipeToSlide: true,
+    infinite: false, // Disabled because of a bug in Slick that gives wrong dots count when on infinite center mode
+    //swipeToSlide: true,
     autoplaySpeed: 1,
+    swipe: false,
   };
   
   var activeSlider = null;
@@ -20,9 +22,10 @@
         createOverlay($elem);
 
         $elem.slick(jQuery.extend({}, carouselDefaults, {
-            infinite: false, // Disabled because of a bug in Slick that gives wrong dots count when on infinite center mode
             centerMode: true,
             slidesToShow: 5,
+            overlay: '<div class="slider-overlay"><img src="/assets/images/angular-logo-outer.png" /></div>',
+            dots: false,
         }, slickData));
         
         setStartSlide($elem);
