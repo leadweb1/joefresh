@@ -36,65 +36,57 @@ https://github.com/davidrapson/scss-toolkit
     .slider-container {
         position: relative;
         width: 100%;
+        z-index: 1;
+        position: absolute;
+
+        .slick-arrow {
+            position: absolute;
+            top: 0;
+            z-index: 2;
+
+            &.slick-prev {
+                left: 0;
+            }
+            &.slick-next {
+                right: 0;
+            }
+        }
+        .slick-list {
+            .slick-track {
+                min-height: inherit;
+
+                .slick-slide {
+                    min-height: inherit;
+                    vertical-align: middle;
+                    transition: all 300ms ease;
+
+                    &:not(.slick-current) {
+                        transform: scale(0.8)
+                    }
+
+                    img {
+                        width: inherit;
+                    }
+                }
+            }
+            .slider-overlay {
+                height: inherit;
+                z-index: 9;
+                margin: 0 auto;
+                position: absolute;
+                top: 0;
+                left: 50%;
+
+                img {
+                    width: inherit;
+                }
+            }
+        }
     }
 }
 
 .healthier-lifestyle {
     &.health-clock {
         position: relative;
-
-        .slider-container {
-            z-index: 1;
-            position: absolute;
-
-            .slick-arrow {
-                position: absolute;
-                top: 0;
-                z-index: 2;
-
-                &.slick-prev {
-                    left: 0;
-                }
-                &.slick-next {
-                    right: 0;
-                }
-            }
-            .slick-list {
-
-                .slick-track {
-                    min-height: inherit;
-
-                    .slick-slide {
-                        min-height: inherit;
-                        vertical-align: middle;
-                        //background: url(../assets/images/angular-logo-inner.png) no-repeat top center;
-                        //background-size: 100px;
-                        transition: all 300ms ease;
-                        
-                        &:not(.slick-current) {
-                            transform: scale(0.8)
-                        }
-
-                        img {
-                            width: inherit;
-                        }
-                    }
-                }
-                .slider-overlay {
-                    height: inherit;
-                    //background: url(../assets/images/angular-logo-outer.png) no-repeat top center;
-                    //background-size: 195px;
-                    z-index: 9;
-                    margin: 0 auto;
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    
-                    img {
-                        width: inherit;
-                    }
-                }
-            }
-        }
     }
 }
