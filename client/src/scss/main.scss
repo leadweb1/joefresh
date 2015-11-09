@@ -33,10 +33,29 @@ https://github.com/davidrapson/scss-toolkit
 }
 
 .slider-wrapper {
+    position: relative;
+    
     .slider-container {
-        position: relative;
+        position: absolute;
         width: 100%;
         z-index: 1;
+
+        &.ng-hide {
+            opacity: 0;
+        }
+
+        &.ng-hide-remove,
+        &.ng-hide-add {
+            display: block !important;
+        }
+
+        &.ng-hide-remove {
+            transition: all linear 1000ms;
+        }
+
+        &.ng-hide-add {
+            transition: all linear 500ms;
+        }
 
         .slick-arrow {
             position: absolute;

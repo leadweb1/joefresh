@@ -1,28 +1,26 @@
-<div class="pure-g customize-your-gear">
+<div class="pure-g slider-wrapper customize-your-gear">
     <div class="pure-u-1">
-        <div class="slider-wrapper">
-            <div id="watch" class="slider-container" ng-show="activeSlider == 'watch' || activeSlider == null" app-watch-carousel data-slick='{"startSlide": 2, "swipe": false, "overlay": "<div class=\"slider-overlay\"><img src=\"/assets/images/angular-logo-outer.png\" /></div>"}'>
-                <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
-                <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
-                <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
-                <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
-                <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
-                <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
-            </div>
-        </div>
-        <div class="slider-wrapper">
-            <div id="watchFace" class="slider-container" ng-show="activeSlider == 'watchFace'" app-watch-carousel data-slick='{"startSlide": 2, "swipe": false, "overlay": "<div class=\"slider-overlay\"><img src=\"/assets/images/angular-logo-outer.png\" /></div>"}'>
-                <div class="slide"><img ng-src="../assets/images/angular-logo-inner-dark.png" /></div>
-                <div class="slide"><img ng-src="../assets/images/angular-logo-inner-dark.png" /></div>
-                <div class="slide"><img ng-src="../assets/images/angular-logo-inner-dark.png" /></div>
-                <div class="slide"><img ng-src="../assets/images/angular-logo-inner-dark.png" /></div>
-                <div class="slide"><img ng-src="../assets/images/angular-logo-inner-dark.png" /></div>
-                <div class="slide"><img ng-src="../assets/images/angular-logo-inner-dark.png" /></div>
-            </div>
-        </div>
         <div class="slider-selector">
             <button type="button" ng-click="changeSlider('watch'); $event.stopPropagation();">Change Product</button>
             <button type="button" ng-click="changeSlider('watchFace'); $event.stopPropagation();">Change Watch Face</button>
+        </div>
+    </div>
+    <div class="pure-u-1">
+        <div id="watch" class="slider-container" ng-show="activeSlider == 'watch' || activeSlider == null" app-watch-carousel data-slick='{"startSlide": 2, "swipe": false, "overlay": "<div class=\"slider-overlay\"><img src=\"/assets/images/angular-logo-outer.png\" /></div>"}'>
+            <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
+            <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
+            <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
+            <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
+            <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
+            <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
+        </div>
+        <div id="watchFace" class="slider-container" ng-show="activeSlider == 'watchFace'" app-watch-carousel data-slick='{"startSlide": 2, "swipe": false, "overlay": "<div class=\"slider-overlay\"><img src=\"/assets/images/angular-logo-outer.png\" /></div>"}'>
+            <div class="slide"><img ng-src="../assets/images/angular-logo-inner-dark.png" /></div>
+            <div class="slide"><img ng-src="../assets/images/angular-logo-inner-dark.png" /></div>
+            <div class="slide"><img ng-src="../assets/images/angular-logo-inner-dark.png" /></div>
+            <div class="slide"><img ng-src="../assets/images/angular-logo-inner-dark.png" /></div>
+            <div class="slide"><img ng-src="../assets/images/angular-logo-inner-dark.png" /></div>
+            <div class="slide"><img ng-src="../assets/images/angular-logo-inner-dark.png" /></div>
         </div>
     </div>
 </div>
