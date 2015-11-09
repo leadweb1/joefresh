@@ -1,11 +1,14 @@
 <div class="pure-g healthier-lifestyle health-clock">
-    <div class="pure-u-1-1">
-        <ul>
-            <li>Slide 1</li>
-            <li>Slide 2</li>
-            <li>Slide 3</li>
-            <li>Slide 4</li>
-        </ul>
-        <div class="overlay" hm-swipe-left="swipeLeft($event)" hm-swipe-right="swipeRight($event)">overlay</div>
+    <div class="pure-u-1">
+        <div class="slider-wrapper">
+            <div class="slider-container" app-watch-carousel data-slick='{"startSlide": 2, "swipe": false, "overlay": "<div class=\"slider-overlay\"><img src=\"/assets/images/angular-logo-outer.png\" /></div>"}'>
+                <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
+                <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
+                <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
+                <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
+                <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
+                <div class="slide"><img ng-src="../assets/images/angular-logo-inner.png" /></div>
+            </div>
+        </div>
     </div>
 </div>

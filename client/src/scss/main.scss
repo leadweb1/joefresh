@@ -21,7 +21,7 @@ https://github.com/davidrapson/scss-toolkit
                 .section-description {
                     display: none;
                 }
-                
+
                 &.pure-menu-selected {
                     .section-description {
                         display: block;
@@ -32,17 +32,64 @@ https://github.com/davidrapson/scss-toolkit
     }
 }
 
+.slider-wrapper {
+    .slider-container {
+        position: relative;
+        width: 100%;
+    }
+}
+
 .healthier-lifestyle {
     &.health-clock {
-        div {
-            border: 1px solid black;
-            width: 100%;
-        }
-        .slider {
+        position: relative;
+
+        .slider-container {
             z-index: 1;
-        }
-        .overlay {
-            z-index: 2;
+            position: absolute;
+
+            .slick-arrow {
+                position: absolute;
+                top: 0;
+                z-index: 2;
+
+                &.slick-prev {
+                    left: 0;
+                }
+                &.slick-next {
+                    right: 0;
+                }
+            }
+            .slick-list {
+
+                .slick-track {
+                    min-height: inherit;
+
+                    .slick-slide {
+                        min-height: inherit;
+                        vertical-align: middle;
+                        //background: url(../assets/images/angular-logo-inner.png) no-repeat top center;
+                        //background-size: 100px;
+
+                        img {
+                            width: inherit;
+                        }
+                    }
+                }
+                .slider-overlay {
+                    height: inherit;
+                    //background: url(../assets/images/angular-logo-outer.png) no-repeat top center;
+                    //background-size: 195px;
+                    z-index: 9;
+                    margin: 0 auto;
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    
+                    img {
+                        width: inherit;
+                    }
+                }
+            }
         }
     }
 }

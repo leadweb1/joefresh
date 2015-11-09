@@ -91,14 +91,6 @@
         template: 'src/app/healthier-lifestyle/health-clock/health-clock.tpl.html',
         top: DataService.getSectionByName('healthier-lifestyle'),
     };
-    $scope.swipeLeft = function(event) {
-        console.log('Next');
-        console.log(event);
-    }
-    $scope.swipeRight = function(event) {
-        console.log('Previous');
-        console.log(event);
-    }
   }
 
   angular.module('app.healthierLifestyle', [])

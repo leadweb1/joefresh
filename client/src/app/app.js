@@ -60,6 +60,7 @@
       'common.footer',
       'common.services.data',
       'common.directives.version',
+      'common.directives.carousel',
       'common.filters.uppercase',
       'common.filters.filterDisabledSections',
       'common.filters.nl2br',
