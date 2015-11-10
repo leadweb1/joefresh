@@ -23,11 +23,10 @@
    * @description Controller
    */
   function CustomizeController(data, DataService, $scope, $timeout) {
-    $scope.data = {
-        content: data.content,
+    $scope.data = angular.extend({}, data, {
         template: 'src/app/customize-your-gear/customize-your-gear.tpl.html',
         top: DataService.getSectionByName('customize-your-gear'),
-    };
+    });
     
     $scope.activeSlider = 'watch';
     $scope.changeSlider = function(slider) {

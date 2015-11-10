@@ -3,6 +3,10 @@
 
     function dataService() {
         return {
+            config: {
+                rotatingBezelLeft: 'src/common/templates/rotating-bezel-left.tpl.html',
+                rotatingBezelRight: 'src/common/templates/rotating-bezel-right.tpl.html',
+            },
             content: {
                 sections: [
                     {
@@ -91,6 +95,7 @@
             },
             get: function () {
                 return {
+                    config: this.config,
                     content: this.content,
                 };
             },

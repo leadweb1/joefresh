@@ -32,11 +32,10 @@
    * @description Controller
    */
   function AestheticController(data, DataService, $scope) {
-    $scope.data = {
-        content: data.content,
+    $scope.data = angular.extend({}, data, {
         template: 'src/app/aesthetic-elegant-design/aesthetic-elegant-design.tpl.html',
         top: DataService.getSectionByName('aesthetic-elegant-design'),
-    };
+    });
   }
 
   /**
@@ -44,12 +43,11 @@
    * @description Controller
    */
   function AestheticStylishController(data, DataService, $scope) {
-    $scope.data = {
-        content: data.content,
+    $scope.data = angular.extend({}, data, {
         template: 'src/app/aesthetic-elegant-design/stylish-smart-gear/stylish-smart-gear.tpl.html',
         section: DataService.getSectionByName('stylish-smart-gear'),
         top: DataService.getSectionByName('aesthetic-elegant-design'),
-    };
+    });
   }
 
   angular.module('app.aestheticElegantDesign', [])

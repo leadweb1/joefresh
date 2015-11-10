@@ -1,16 +1,111 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+<div class="pure-g slider-wrapper intuitive-experience rotating-bezel">
+    <div class="pure-u-1">
+        {{tab}}/{{step}}
+        <div class="slider-container" app-content-carousel>
+            <div class="slide">
+                <div class="title">Horizontal Navigation</div>
+                <div class="description">Bla bla</div>
+                <div class="experience">
+                    <div class="step2-drag" style="border: 1px solid black; width: 200px; height: 200px; position: relative;">
+                        <div ng-show="step == 2"><ng-include src="data.config.rotatingBezelLeft" /></div>
+                        <div ng-show="step == 4 || step == 6"><ng-include src="data.config.rotatingBezelRight" /></div>
+                    </div>
+                    <div ng-show="step == 2 || step == 4 || step == 6">Turn the bezel to navigate</div>
+                    <div ng-show="step == null || step == 1">
+                        Start
+                    </div>
+                    <div ng-show="step == 2">
+                        Rotate left
+                    </div>
+                    <div ng-show="step == 3">
+                        Message
+                    </div>
+                    <div ng-show="step == 4">
+                        Rotate right
+                    </div>
+                    <div ng-show="step == 5">
+                        Main screen
+                    </div>
+                    <div ng-show="step == 6">
+                        Rotate right
+                    </div>
+                    <div ng-show="step == 7">
+                        Icons
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="title">Vertical Navigation</div>
+                <div class="description">Bla bla</div>
+                <div class="experience">
+                    <div class="step2-drag" style="border: 1px solid black; width: 200px; height: 200px; position: relative;">
+                        <div ng-show="step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
+                    </div>
+                    <div ng-show="step == 2">Turn the bezel to navigate</div>
+                    <div ng-show="step == null || step == 1">
+                        Start
+                    </div>
+                    <div ng-show="step == 2">
+                        Rotate right
+                    </div>
+                    <div ng-show="step == 3">
+                        Message
+                    </div>
+                    <div ng-show="step == 4">
+                        Scroll
+                    </div>
+                    <div ng-show="step == 5">
+                        Scroll more
+                    </div>
+                    <div ng-show="step == 6">
+                        Reply
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="title">Circular Navigation</div>
+                <div class="description">Bla bla</div>
+                <div class="experience">
+                    <div class="step2-drag" style="border: 1px solid black; width: 200px; height: 200px; position: relative;">
+                        <div ng-show="step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
+                    </div>
+                    <div ng-show="step == 2">Turn the bezel to navigate</div>
+                    <div ng-show="step == null || step == 1">
+                        Selected icon (Messages)
+                    </div>
+                    <div ng-show="step == 2">
+                        Rotate right
+                    </div>
+                    <div ng-show="step == 3">
+                        Change selected icon (phone)
+                    </div>
+                    <div ng-show="step == 4">
+                        Change selected icon (S Health)
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="title">Value Control</div>
+                <div class="description">Bla bla</div>
+                <div class="experience">
+                    <div class="step2-drag" style="border: 1px solid black; width: 200px; height: 200px; position: relative;">
+                        <div ng-show="step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
+                    </div>
+                    <div ng-show="step == 2">Turn the bezel to navigate</div>
+                    <div ng-show="step == null || step == 1">
+                        Volume (5)
+                    </div>
+                    <div ng-show="step == 2">
+                        Rotate right
+                    </div>
+                    <div ng-show="step == 3">
+                        Volume up (6)
+                    </div>
+                    <div ng-show="step == 4">
+                        Volume up (7)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

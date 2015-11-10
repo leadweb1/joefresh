@@ -50,11 +50,10 @@
    * @description Controller
    */
   function HealthierController(data, DataService, $scope) {
-    $scope.data = {
-        content: data.content,
+    $scope.data = angular.extend({}, data, {
         template: 'src/app/healthier-lifestyle/healthier-lifestyle.tpl.html',
         top: DataService.getSectionByName('healthier-lifestyle'),
-    };
+    });
   }
 
   /**
@@ -62,11 +61,10 @@
    * @description Controller
    */
   function HealthierTrackController(data, DataService, $scope) {
-    $scope.data = {
-        content: data.content,
+    $scope.data = angular.extend({}, data, {
         template: 'src/app/healthier-lifestyle/track-your-health/track-your-health.tpl.html',
         top: DataService.getSectionByName('healthier-lifestyle'),
-    };
+    });
   }
 
   /**
@@ -74,11 +72,10 @@
    * @description Controller
    */
   function HealthierActivityController(data, DataService, $scope) {
-    $scope.data = {
-        content: data.content,
+    $scope.data = angular.extend({}, data, {
         template: 'src/app/healthier-lifestyle/24h-activity-log/24h-activity-log.tpl.html',
         top: DataService.getSectionByName('healthier-lifestyle'),
-    };
+    });
   }
 
   /**
@@ -86,11 +83,10 @@
    * @description Controller
    */
   function HealthierHealthClockController(data, DataService, $scope) {
-    $scope.data = {
-        content: data.content,
+    $scope.data = angular.extend({}, data, {
         template: 'src/app/healthier-lifestyle/health-clock/health-clock.tpl.html',
         top: DataService.getSectionByName('healthier-lifestyle'),
-    };
+    });
   }
 
   angular.module('app.healthierLifestyle', [])

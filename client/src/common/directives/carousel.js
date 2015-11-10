@@ -53,7 +53,7 @@
   function setStartSlide($elem) {
     var slickData = $elem.data('slick');
     
-    if(slickData.startSlide) {
+    if(slickData && slickData.startSlide !== undefined) {
         $elem.slick('slickGoTo', slickData.startSlide - 1);
     }
   }

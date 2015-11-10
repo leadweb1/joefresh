@@ -59,11 +59,10 @@
    * @description Controller
    */
   function ConvenienceController(data, DataService, $scope) {
-    $scope.data = {
-        content: data.content,
+    $scope.data = angular.extend({}, data, {
         template: 'src/app/convenience-more/convenience-more.tpl.html',
         top: DataService.getSectionByName('convenience-more'),
-    };
+    });
   }
 
   /**
@@ -71,12 +70,11 @@
    * @description Controller
    */
   function NotificationsController(data, DataService, $scope) {
-    $scope.data = {
-        content: data.content,
+    $scope.data = angular.extend({}, data, {
         template: 'src/app/convenience-more/notifications/notifications.tpl.html',
         section: DataService.getSectionByName('notifications'),
         top: DataService.getSectionByName('convenience-more'),
-    };
+    });
   }
 
   /**
@@ -84,12 +82,11 @@
    * @description Controller
    */
   function SamsungPayController(data, DataService, $scope) {
-    $scope.data = {
-        content: data.content,
+    $scope.data = angular.extend({}, data, {
         template: 'src/app/convenience-more/samsung-pay/samsung-pay.tpl.html',
         section: DataService.getSectionByName('samsung-pay'),
         top: DataService.getSectionByName('convenience-more'),
-    };
+    });
   }
 
   /**
@@ -97,12 +94,11 @@
    * @description Controller
    */
   function AdditionalFeaturesController(data, DataService, $scope) {
-    $scope.data = {
-        content: data.content,
+    $scope.data = angular.extend({}, data, {
         template: 'src/app/convenience-more/additional-features/additional-features.tpl.html',
         section: DataService.getSectionByName('additional-features'),
         top: DataService.getSectionByName('convenience-more'),
-    };
+    });
   }
 
   /**
@@ -110,12 +106,11 @@
    * @description Controller
    */
   function AccessoriesController(data, DataService, $scope) {
-    $scope.data = {
-        content: data.content,
+    $scope.data = angular.extend({}, data, {
         template: 'src/app/convenience-more/accessories/accessories.tpl.html',
         section: DataService.getSectionByName('accessories'),
         top: DataService.getSectionByName('convenience-more'),
-    };
+    });
   }
 
   angular.module('app.convenienceAndMore', [])
