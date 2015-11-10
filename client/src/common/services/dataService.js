@@ -19,6 +19,21 @@
                                 name: 'stylish-smart-gear',
                                 title: 'Stylish Smart Gear',
                                 route: 'root.aesthetic-elegant-design_stylish-smart-gear',
+                                experience: {
+                                    tabs: [
+                                        {
+                                            title: 'Stylish Smart Gear',
+                                            description: 'Bla bla',
+                                            last: true,
+                                            steps: [
+                                                {
+                                                    userActionRequired: true,
+                                                    last: true,
+                                                },
+                                            ],
+                                        },
+                                    ],
+                                },
                             },
                         },
                     },
@@ -139,16 +154,98 @@
                                 name: 'track-your-health',
                                 title: 'Track Your Health',
                                 route: 'root.healthier-lifestyle_track-your-health',
+                                experience: {
+                                    tabs: [
+                                        {
+                                            title: 'Auto Tracking',
+                                            description: 'Bla bla',
+                                            last: true,
+                                            steps: [
+                                                {
+                                                    timeout: 2,
+                                                    last: true,
+                                                },
+                                            ],
+                                        },
+                                        {
+                                            title: 'Exercise',
+                                            description: 'Bla bla',
+                                            last: true,
+                                            steps: [
+                                                {
+                                                    timeout: 2,
+                                                    last: true,
+                                                },
+                                            ],
+                                        },
+                                        {
+                                            title: 'Heart Rate',
+                                            description: 'Bla bla',
+                                            last: true,
+                                            steps: [
+                                                {
+                                                    timeout: 2,
+                                                    last: true,
+                                                },
+                                            ],
+                                        },
+                                    ],
+                                },
                             },
-                            '24h_activity_log': {
+                            'activity_log': {
                                 name: '24h-activity-log',
                                 title: '24H Activity Log',
                                 route: 'root.healthier-lifestyle_24h-activity-log',
+                                experience: {
+                                    tabs: [
+                                        {
+                                            title: '24H Activity Log',
+                                            description: 'Bla bla',
+                                            last: true,
+                                            steps: [
+                                                {
+                                                    timeout: 1,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                    last: true,
+                                                },
+                                            ],
+                                        },
+                                    ],
+                                },
                             },
                             'health_clock': {
                                 name: 'health-clock',
                                 title: 'Health Clock',
                                 route: 'root.healthier-lifestyle_health-clock',
+                                experience: {
+                                    tabs: [
+                                        {
+                                            title: 'Health Clock',
+                                            description: 'Bla bla',
+                                            last: true,
+                                            steps: [
+                                                {
+                                                    userActionRequired: true,
+                                                    last: true,
+                                                },
+                                            ],
+                                        },
+                                    ],
+                                },
                             },
                         },
                     },
@@ -161,12 +258,62 @@
                                 name: 'notifications',
                                 title: 'Notifications',
                                 route: 'root.convenience-more_notifications',
+                                experience: {
+                                    tabs: [
+                                        {
+                                            title: 'Check Messages',
+                                            description: 'Bla bla',
+                                            last: true,
+                                            steps: [
+                                                {
+                                                    userActionRequired: true,
+                                                    last: true,
+                                                },
+                                            ],
+                                        },
+                                        {
+                                            title: 'Send Messages',
+                                            description: 'Bla bla',
+                                            last: true,
+                                            steps: [
+                                                {
+                                                    userActionRequired: true,
+                                                    last: true,
+                                                },
+                                            ],
+                                        },
+                                    ],
+                                },
                             },
                             'samsung_pay': {
                                 name: 'samsung-pay',
                                 title: 'Samsung Pay',
                                 route: 'root.convenience-more_samsung-pay',
                                 disabled: true,
+                                experience: {
+                                    tabs: [
+                                        {
+                                            title: 'Samsung Pay',
+                                            description: 'Bla bla',
+                                            last: true,
+                                            steps: [
+                                                {
+                                                    timeout: 1,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                    last: true,
+                                                },
+                                            ],
+                                        },
+                                    ],
+                                },
                             },
                             'additional_features': {
                                 name: 'additional-features',
@@ -178,6 +325,21 @@
                                 title: 'Accessories',
                                 description: 'Gear S2 provides a range of watch faces and watchbands that completes your personal style.\n\nThere are unique and colorful bands, including exclusive collection from Italian designer Alessandro Mendini, that brings his taste, humor, and sense of color to the Gear S2.',
                                 route: 'root.convenience-more_accessories',
+                                experience: {
+                                    tabs: [
+                                        {
+                                            title: 'Accessories',
+                                            description: 'Bla bla',
+                                            last: true,
+                                            steps: [
+                                                {
+                                                    userActionRequired: true,
+                                                    last: true,
+                                                },
+                                            ],
+                                        },
+                                    ],
+                                },
                             },
                         },
                     },
@@ -186,6 +348,21 @@
                         title: 'Customize your Gear S2',
                         description: 'You can transform the look of your Gear S2 by choosing from a wide variety of watch face and band options.\n\nTry on different designs, just like you mix and match your outfits everyday.',
                         route: 'root.customize-your-gear',
+                        experience: {
+                            tabs: [
+                                {
+                                    title: 'Customize your Gear S2',
+                                    description: 'Bla bla',
+                                    last: true,
+                                    steps: [
+                                        {
+                                            userActionRequired: true,
+                                            last: true,
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
                     },
                 },
             },

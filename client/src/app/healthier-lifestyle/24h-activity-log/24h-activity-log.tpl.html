@@ -1,16 +1,36 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+<div class="pure-g slider-wrapper healthier-lifestyle 24h-activity-log">
+    <div class="pure-u-1">
+        {{experience.tab}}/{{experience.step}}
+        <div class="slider-container" app-content-carousel>
+            <div class="slide">
+                <div class="title">24H Activity Log</div>
+                <div class="description">Bla bla</div>
+                <div class="experience">
+                    <div class="step2-drag" style="border: 1px solid black; width: 200px; height: 200px; position: relative;">
+                        <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelLeft" /></div>
+                        <div ng-show="experience.step == 4"><ng-include src="data.config.rotatingBezelRight" /></div>
+                    </div>
+                    <div ng-show="experience.step == 2 || experience.step == 4">Turn the bezel to navigate</div>
+                    <div ng-show="experience.step == null || experience.step == 1">
+                        Start
+                    </div>
+                    <div ng-show="experience.step == 2">
+                        Rotate left
+                    </div>
+                    <div ng-show="experience.step == 3">
+                        Previous log
+                    </div>
+                    <div ng-show="experience.step == 4">
+                        Rotate right
+                    </div>
+                    <div ng-show="experience.step == 5">
+                        Next log
+                    </div>
+                    <div ng-show="experience.step == 6">
+                        Daily summary
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

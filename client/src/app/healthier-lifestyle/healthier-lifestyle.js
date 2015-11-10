@@ -60,33 +60,45 @@
    * @name  HealthierTrackController
    * @description Controller
    */
-  function HealthierTrackController(data, DataService, $scope) {
+  function HealthierTrackController(data, DataService, ExperienceService, $scope, $timeout) {
     $scope.data = angular.extend({}, data, {
         template: 'src/app/healthier-lifestyle/track-your-health/track-your-health.tpl.html',
         top: DataService.getSectionByName('healthier-lifestyle'),
     });
+    
+    // Start experience
+    $scope.experience = ExperienceService.get($scope.data.content.sections.healthier_lifestyle.sections.track_your_health.experience, $scope, $timeout);    
+    $scope.experience.initExperience();
   }
 
   /**
    * @name  HealthierActivityController
    * @description Controller
    */
-  function HealthierActivityController(data, DataService, $scope) {
+  function HealthierActivityController(data, DataService, ExperienceService, $scope, $timeout) {
     $scope.data = angular.extend({}, data, {
         template: 'src/app/healthier-lifestyle/24h-activity-log/24h-activity-log.tpl.html',
         top: DataService.getSectionByName('healthier-lifestyle'),
     });
+    
+    // Start experience
+    $scope.experience = ExperienceService.get($scope.data.content.sections.healthier_lifestyle.sections.activity_log.experience, $scope, $timeout);    
+    $scope.experience.initExperience();
   }
 
   /**
    * @name  HealthierHealthClockController
    * @description Controller
    */
-  function HealthierHealthClockController(data, DataService, $scope) {
+  function HealthierHealthClockController(data, DataService, ExperienceService, $scope, $timeout) {
     $scope.data = angular.extend({}, data, {
         template: 'src/app/healthier-lifestyle/health-clock/health-clock.tpl.html',
         top: DataService.getSectionByName('healthier-lifestyle'),
     });
+    
+    // Start experience
+    $scope.experience = ExperienceService.get($scope.data.content.sections.healthier_lifestyle.sections.health_clock.experience, $scope, $timeout);    
+    $scope.experience.initExperience();
   }
 
   angular.module('app.healthierLifestyle', [])

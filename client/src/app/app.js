@@ -60,6 +60,7 @@
       'common.header',
       'common.footer',
       'common.services.data',
+      'common.services.experience',
       'common.directives.version',
       'common.directives.carousel',
       'common.filters.uppercase',

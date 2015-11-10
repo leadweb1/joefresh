@@ -1,35 +1,35 @@
 <div class="pure-g slider-wrapper intuitive-experience rotating-bezel">
     <div class="pure-u-1">
-        {{tab}}/{{step}}
+        {{experience.tab}}/{{experience.step}}
         <div class="slider-container" app-content-carousel>
             <div class="slide">
                 <div class="title">Horizontal Navigation</div>
                 <div class="description">Bla bla</div>
                 <div class="experience">
                     <div class="step2-drag" style="border: 1px solid black; width: 200px; height: 200px; position: relative;">
-                        <div ng-show="step == 2"><ng-include src="data.config.rotatingBezelLeft" /></div>
-                        <div ng-show="step == 4 || step == 6"><ng-include src="data.config.rotatingBezelRight" /></div>
+                        <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelLeft" /></div>
+                        <div ng-show="experience.step == 4 || experience.step == 6"><ng-include src="data.config.rotatingBezelRight" /></div>
                     </div>
-                    <div ng-show="step == 2 || step == 4 || step == 6">Turn the bezel to navigate</div>
-                    <div ng-show="step == null || step == 1">
+                    <div ng-show="experience.step == 2 || experience.step == 4 || experience.step == 6">Turn the bezel to navigate</div>
+                    <div ng-show="experience.step == null || experience.step == 1">
                         Start
                     </div>
-                    <div ng-show="step == 2">
+                    <div ng-show="experience.step == 2">
                         Rotate left
                     </div>
-                    <div ng-show="step == 3">
+                    <div ng-show="experience.step == 3">
                         Message
                     </div>
-                    <div ng-show="step == 4">
+                    <div ng-show="experience.step == 4">
                         Rotate right
                     </div>
-                    <div ng-show="step == 5">
+                    <div ng-show="experience.step == 5">
                         Main screen
                     </div>
-                    <div ng-show="step == 6">
+                    <div ng-show="experience.step == 6">
                         Rotate right
                     </div>
-                    <div ng-show="step == 7">
+                    <div ng-show="experience.step == 7">
                         Icons
                     </div>
                 </div>
@@ -39,25 +39,25 @@
                 <div class="description">Bla bla</div>
                 <div class="experience">
                     <div class="step2-drag" style="border: 1px solid black; width: 200px; height: 200px; position: relative;">
-                        <div ng-show="step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
+                        <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
                     </div>
-                    <div ng-show="step == 2">Turn the bezel to navigate</div>
-                    <div ng-show="step == null || step == 1">
+                    <div ng-show="experience.step == 2">Turn the bezel to navigate</div>
+                    <div ng-show="experience.step == null || experience.step == 1">
                         Start
                     </div>
-                    <div ng-show="step == 2">
+                    <div ng-show="experience.step == 2">
                         Rotate right
                     </div>
-                    <div ng-show="step == 3">
+                    <div ng-show="experience.step == 3">
                         Message
                     </div>
-                    <div ng-show="step == 4">
+                    <div ng-show="experience.step == 4">
                         Scroll
                     </div>
-                    <div ng-show="step == 5">
+                    <div ng-show="experience.step == 5">
                         Scroll more
                     </div>
-                    <div ng-show="step == 6">
+                    <div ng-show="experience.step == 6">
                         Reply
                     </div>
                 </div>
@@ -67,19 +67,19 @@
                 <div class="description">Bla bla</div>
                 <div class="experience">
                     <div class="step2-drag" style="border: 1px solid black; width: 200px; height: 200px; position: relative;">
-                        <div ng-show="step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
+                        <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
                     </div>
-                    <div ng-show="step == 2">Turn the bezel to navigate</div>
-                    <div ng-show="step == null || step == 1">
+                    <div ng-show="experience.step == 2">Turn the bezel to navigate</div>
+                    <div ng-show="experience.step == null || experience.step == 1">
                         Selected icon (Messages)
                     </div>
-                    <div ng-show="step == 2">
+                    <div ng-show="experience.step == 2">
                         Rotate right
                     </div>
-                    <div ng-show="step == 3">
+                    <div ng-show="experience.step == 3">
                         Change selected icon (phone)
                     </div>
-                    <div ng-show="step == 4">
+                    <div ng-show="experience.step == 4">
                         Change selected icon (S Health)
                     </div>
                 </div>
@@ -89,19 +89,19 @@
                 <div class="description">Bla bla</div>
                 <div class="experience">
                     <div class="step2-drag" style="border: 1px solid black; width: 200px; height: 200px; position: relative;">
-                        <div ng-show="step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
+                        <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
                     </div>
-                    <div ng-show="step == 2">Turn the bezel to navigate</div>
-                    <div ng-show="step == null || step == 1">
+                    <div ng-show="experience.step == 2">Turn the bezel to navigate</div>
+                    <div ng-show="experience.step == null || experience.step == 1">
                         Volume (5)
                     </div>
-                    <div ng-show="step == 2">
+                    <div ng-show="experience.step == 2">
                         Rotate right
                     </div>
-                    <div ng-show="step == 3">
+                    <div ng-show="experience.step == 3">
                         Volume up (6)
                     </div>
-                    <div ng-show="step == 4">
+                    <div ng-show="experience.step == 4">
                         Volume up (7)
                     </div>
                 </div>

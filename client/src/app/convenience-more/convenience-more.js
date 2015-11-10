@@ -75,6 +75,10 @@
         section: DataService.getSectionByName('notifications'),
         top: DataService.getSectionByName('convenience-more'),
     });
+    
+    // Start experience
+    $scope.experience = ExperienceService.get($scope.data.content.sections.convenience_more.sections.notifications.experience, $scope, $timeout);    
+    $scope.experience.initExperience();
   }
 
   /**
@@ -87,6 +91,10 @@
         section: DataService.getSectionByName('samsung-pay'),
         top: DataService.getSectionByName('convenience-more'),
     });
+    
+    // Start experience
+    $scope.experience = ExperienceService.get($scope.data.content.sections.convenience_more.sections.samsung_pay.experience, $scope, $timeout);    
+    $scope.experience.initExperience();
   }
 
   /**
@@ -111,6 +119,10 @@
         section: DataService.getSectionByName('accessories'),
         top: DataService.getSectionByName('convenience-more'),
     });
+    
+    // Start experience
+    $scope.experience = ExperienceService.get($scope.data.content.sections.convenience_more.sections.accessories.experience, $scope, $timeout);    
+    $scope.experience.initExperience();
   }
 
   angular.module('app.convenienceAndMore', [])
