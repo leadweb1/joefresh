@@ -68,136 +68,40 @@
         ) * 0.8;
 
         if(event.distance > minDragDistance) {
-            if($scope.tab == 1) {
-                if($scope.step == 2) {
-                    $scope.step = 3;
-
-                    if($scope.tab === 1 && $scope.step === 3) {
-                        $timeout(function(){
-                            $scope.step = 4;
-                        }, 2000);
-                    }
-                }
-
-                if($scope.step == 4) {
-                    $scope.step = 5;
-
-                    if($scope.tab === 1 && $scope.step === 5) {
-                        $timeout(function(){
-                            $scope.step = 6;
-                        }, 2000);
-                    }
-                }
-
-                if($scope.step == 6) {
-                    $scope.step = 7;
-
-                    if($scope.tab === 1 && $scope.step === 7) {
-                        $timeout(function(){
-                            $scope.slider.slick('slickGoTo', $scope.tab);
-                        }, 2000);
-                    }
-                }
-            }
-            else if($scope.tab == 2) {
-                if($scope.step == 2) {
-                    $scope.step = 3;
-
-                    if($scope.tab === 2 && $scope.step === 3) {
-                        $timeout(function(){
-                            $scope.step = 4;
-
-                            if($scope.tab === 2 && $scope.step === 4) {
-                                $timeout(function(){
-                                    $scope.step = 5;
-
-                                    if($scope.tab === 2 && $scope.step === 5) {
-                                        $timeout(function(){
-                                            $scope.step = 6;
-
-                                            if($scope.tab === 2 && $scope.step === 6) {
-                                                $timeout(function(){
-                                                    $scope.slider.slick('slickGoTo', $scope.tab);
-                                                }, 2000);
-                                            }
-                                        }, 500);
-                                    };
-                                }, 500);
-                            }
-                        }, 500);
-                    }
-                }
-            }
-            else if($scope.tab == 3) {
-                if($scope.step == 2) {
-                    $scope.step = 3;
-
-                    if($scope.tab === 3 && $scope.step === 3) {
-                        $timeout(function(){
-                            $scope.step = 4;
-
-                            if($scope.tab === 3 && $scope.step === 4) {
-                                $timeout(function(){
-                                    $scope.slider.slick('slickGoTo', $scope.tab);
-                                }, 2000);
-                            }
-                        }, 500);
-                    }
-                }
-            }
-            else if($scope.tab == 4) {
-                if($scope.step == 2) {
-                    $scope.step = 3;
-
-                    if($scope.tab === 4 && $scope.step === 3) {
-                        $timeout(function(){
-                            $scope.step = 4;
-
-                            if($scope.tab === 4 && $scope.step === 4) {
-                                $timeout(function(){
-                                    alert('Done!')
-                                }, 2000);
-                            }
-                        }, 500);
-                    }
-                }
-            }
+           $scope.step++;
+           $scope.runStep($scope.tab, $scope.step);
         }
     };
     
-    $scope.startExperience = function() {
-        if($scope.tab == 1) {
-            // Animation
-            
-            // Go to step 2
-            $timeout(function(){
-                $scope.step = 2; 
-            }, 1000);
+    $scope.runStep = function(tab, step) {
+        var $tab = $scope.data.content.sections.intuitive_experience.sections.rotating_bezel.experience.tabs[tab - 1];
+        var $step = $tab.steps[step - 1];
+        
+        if(tab === $scope.tab && step == $scope.step) {
+            if($step.timeout !== undefined) {
+                $timeout(function(){
+                    if($step.last === true) {
+                        if($tab.last === true) {
+                            alert('Done!');
+                        }
+                        else {
+                            $scope.slider.slick('slickGoTo', $scope.tab);
+                        }
+                    }
+                    else {
+                        $scope.step++;
+                        $scope.runStep($scope.tab, $scope.step);
+                    }
+                }, $step.timeout * 1000);
+            }
         }
-        else if($scope.tab == 2) {
-            // Animation
-            
-            // Go to step 2
-            $timeout(function(){
-                $scope.step = 2; 
-            }, 1000);
+    }
+    
+    $scope.startExperience = function(animate) {
+        if(animate === true) {
+            // Animate bezel
         }
-        else if($scope.tab == 3) {
-            // Animation
-            
-            // Go to step 2
-            $timeout(function(){
-                $scope.step = 2; 
-            }, 1000);
-        }
-        else if($scope.tab == 4) {
-            // Animation
-            
-            // Go to step 2
-            $timeout(function(){
-                $scope.step = 2; 
-            }, 1000);
-        }
+        $scope.runStep($scope.tab, $scope.step);
     }
 
     // Setup slider events
@@ -227,7 +131,7 @@
     }, 100);
 
     // Start experience
-    $scope.startExperience();
+    $scope.startExperience(true);
   }
 
   angular.module('app.intuitiveExperience', [])

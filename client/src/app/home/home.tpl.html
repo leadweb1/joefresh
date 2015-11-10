@@ -10,7 +10,7 @@
                 <div>{{ section.title}}</div>
             </a>
         </div>
-        <div ng-if="section.sections.length > 0" ng-show="$index == activeSection" class="animate-show ng-hide">
+        <div ng-if="section.sections" ng-show="$index == activeSection" class="animate-show ng-hide">
             <ul>
                 <li ng-repeat="section in section.sections| filterDisabledSections"><a ui-sref="{{section.route}}">{{section.title}}</a></li>
             </ul>
