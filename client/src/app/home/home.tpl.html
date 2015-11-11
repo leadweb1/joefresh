@@ -1,19 +1,10 @@
-<div class="pure-g island">
-    <div ng-repeat="section in filteredSections = (data.content.sections| filterDisabledSections)" class="pure-u-1 pure-u-lg-1-{{ filteredSections.length}} island">
-        <div class="text-center">
-            <a href="#" ng-if="section.sections" ng-click="selectSection($index)">
-                <img alt="logo" class="pure-img" src="assets/images/angular-logo.png">
-                <div>{{ section.title}}</div>
-            </a>
-            <a href="#" ng-if="!section.sections" ui-sref="{{section.route}}">
-                <img alt="logo" class="pure-img" src="assets/images/angular-logo.png">
-                <div>{{ section.title}}</div>
-            </a>
+<div class="pure-g island home">
+    <div ng-repeat="section in filteredSections = (data.content.sections| filterDisabledSections)" class="pure-u-1 pure-u-lg-1-{{ filteredSections.length}} island section {{section.name}}" ng-class="{ 'faded': $index != activeSection }">
+        <div ng-if="section.sections" ng-click="selectSection($index)">
+            <ng-include src="contentTemplate" />
         </div>
-        <div ng-if="section.sections" ng-show="$index == activeSection" class="animate-show ng-hide">
-            <ul>
-                <li ng-repeat="section in section.sections| filterDisabledSections"><a ui-sref="{{section.route}}">{{section.title}}</a></li>
-            </ul>
+        <div ng-if="!section.sections" ui-sref="{{section.route}}">
+            <ng-include src="contentTemplate" />
         </div>
     </div>
 </div>

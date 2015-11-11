@@ -6,6 +6,32 @@ https://github.com/davidrapson/scss-toolkit
 */
 @import 'settings', 'mixins', 'base', 'helpers', 'modules/island','modules/horizontal-list', 'modules/buttons', 'layouts/page', 'states';
 
+.ng-hide {
+    opacity: 0;
+}
+
+.ng-hide-remove,
+.ng-hide-add {
+    display: block !important;
+}
+
+.ng-hide-remove {
+    transition: all linear 250ms;
+}
+
+.ng-hide-add {
+    transition: all linear 250ms;
+}
+
+.l-page {
+    padding: 0;
+
+    .island {
+        padding: 0;
+        height: 1050px;
+    }
+}
+
 .left-nav {
     &.pure-menu {
         &.custom-restricted-width {
@@ -34,28 +60,11 @@ https://github.com/davidrapson/scss-toolkit
 
 .slider-wrapper {
     position: relative;
-    
+
     .slider-container {
         position: absolute;
         width: 100%;
         z-index: 1;
-
-        &.ng-hide {
-            opacity: 0;
-        }
-
-        &.ng-hide-remove,
-        &.ng-hide-add {
-            display: block !important;
-        }
-
-        &.ng-hide-remove {
-            transition: all linear 1000ms;
-        }
-
-        &.ng-hide-add {
-            transition: all linear 500ms;
-        }
 
         .slick-arrow {
             position: absolute;
@@ -102,3 +111,11 @@ https://github.com/davidrapson/scss-toolkit
         }
     }
 }
+
+@import 
+'sections/aesthetic-elegant-design/styles',
+'sections/convenience-more/styles',
+'sections/customize-your-gear/styles',
+'sections/healthier-lifestyle/styles',
+'sections/home/styles',
+'sections/intuitive-experience/styles';

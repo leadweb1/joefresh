@@ -1,0 +1,85 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11-Nov-2015, 12:20:37 PM
+    Author     : christophefaribault
+*/
+.l-page {
+    .island {
+        &.home {
+            padding: 15px;
+
+            .section {
+                height: inherit;
+
+                &.faded {
+                    opacity: 0.6;
+                }
+                &.faded-remove,
+                &.faded-add {
+                    display: block !important;
+                }
+                &.faded-remove {
+                    transition: all linear 250ms;
+                }
+                &.faded-add {
+                    transition: all linear 250ms;
+                }
+
+                > div {
+                    height: inherit;
+                }
+
+                .content-wrapper {
+                    height: inherit;
+                    margin-right: 15px;
+                    //border: 1px solid black;
+
+                    .title {
+                        padding-top: 200px;
+                        font-size: 42px;
+                        color: #000;
+                        letter-spacing: 0.26px;
+                        line-height: 52px;
+                    }
+
+                    .menu {
+                        .menu-container {
+                            list-style: none;
+                            padding: 0;
+
+                            .item {
+                                a {
+                                    // Button
+                                    background: rgba(0,0,0,0.60);
+                                    border-radius: 100px;
+                                    padding: 20px 40px;
+
+                                    // Text
+                                    font-size: 20px;
+                                    color: #FFFFFF;
+                                    letter-spacing: 0.12px;
+                                    line-height: 90px;
+
+                                    .arrow {
+                                        font-size: 1.3em;
+                                        padding-left: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:last-child {
+                    .content-wrapper {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

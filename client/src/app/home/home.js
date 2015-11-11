@@ -25,8 +25,18 @@
   function HomeController(data, $scope) {
     $scope.data = data;
     $scope.activeSection = -1;
+    $scope.contentTemplate = 'src/app/home/_content.tpl.html';
     
     $scope.selectSection = function(index) {
+        // Fade all sections
+        var sections = $scope.data.content.sections;
+        for(var s in sections) {
+            var section = sections[s];
+            var $section = angular.element(document.getElementsByClassName(section.name)[0]);
+            $section.addClass('faded');
+        };
+        
+        // Set selected section and fade opacity to 1 (through ng-class)
         $scope.activeSection = index;
     }
   }
