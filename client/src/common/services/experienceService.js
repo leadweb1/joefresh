@@ -35,7 +35,6 @@
             },
             runStep: function (tab, step) {
                 var $tab = this.data.tabs[tab - 1];
-                console.log($tab);
                 var $step = $tab.steps[step - 1];
 
                 if (tab === this.tab && step == this.step) {
@@ -64,6 +63,10 @@
                 exp.runStep(exp.tab, exp.step);
             },
             initExperience: function () {
+                this.tab = 1;
+                this.step = 1;
+                this.slider = null;
+                
                 // Setup slider events
                 this.$timeout(function (exp) {
                     exp.slider = jQuery('.slick-slider')
@@ -78,7 +81,7 @@
                             })
                             .on('afterChange', function (event, slick, currentSlide) {
                                 var newTab = currentSlide + 1;
-                                if (exp.tab !== newTab) {
+                                if (exp.tab !== newTab && newTab <= exp.data.tabs.length) {
                                     // Change tab
                                     exp.$scope.$apply(function () {
                                         exp.tab = newTab;
