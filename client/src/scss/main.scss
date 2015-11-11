@@ -6,6 +6,23 @@ https://github.com/davidrapson/scss-toolkit
 */
 @import 'settings', 'mixins', 'base', 'helpers', 'modules/island','modules/horizontal-list', 'modules/buttons', 'layouts/page', 'states';
 
+@font-face {
+  font-family: 'SamsungSharpSansRegular';
+  src: url('/assets/fonts/SamsungSharpSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'SamsungSharpSansMedium';
+  src: url('/assets/fonts/SamsungSharpSans-Medium.ttf');
+}
+@font-face {
+  font-family: 'SamsungSharpSansBold';
+  src: url('/assets/fonts/SamsungSharpSans-Bold.ttf');
+}
+
+html, button, input, select, textarea, .pure-g [class*="pure-u"] {
+    font-family: 'SamsungSharpSansMedium';
+}
+
 .ng-hide {
     opacity: 0;
 }
