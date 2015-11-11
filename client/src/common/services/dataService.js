@@ -159,7 +159,6 @@
                                         {
                                             title: 'Auto Tracking',
                                             description: 'Bla bla',
-                                            last: true,
                                             steps: [
                                                 {
                                                     timeout: 2,
@@ -170,7 +169,6 @@
                                         {
                                             title: 'Exercise',
                                             description: 'Bla bla',
-                                            last: true,
                                             steps: [
                                                 {
                                                     timeout: 2,
@@ -184,7 +182,7 @@
                                             last: true,
                                             steps: [
                                                 {
-                                                    timeout: 2,
+                                                    userActionRequired: true,
                                                     last: true,
                                                 },
                                             ],
@@ -219,7 +217,7 @@
                                                     timeout: 2,
                                                 },
                                                 {
-                                                    timeout: 2,
+                                                    userActionRequired: true,
                                                     last: true,
                                                 },
                                             ],
