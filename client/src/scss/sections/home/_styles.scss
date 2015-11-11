@@ -29,13 +29,43 @@ and open the template in the editor.
                     transition: all linear 250ms;
                 }
 
+                .aesthetic-elegant-design {
+                    .content-wrapper {
+                        background: url('/assets/0-home/home_01-ae-bg.jpg') no-repeat top center;
+                    }
+                }
+                .intuitive-experience {
+                    .content-wrapper {
+                        background: url('/assets/0-home/home_02-ie-bg.jpg') no-repeat top center;
+                    }
+                }
+                .healthier-lifestyle {
+                    .content-wrapper {
+                        background: url('/assets/0-home/home_03-hl-bg.jpg') no-repeat top center;
+                    }
+                }
+                .convenience-more {
+                    .content-wrapper {
+                        background: url('/assets/0-home/home_04-cm-bg.jpg') no-repeat top center;
+                    }
+                }
+                .customize-your-gear {
+                    .content-wrapper {
+                        background: url('/assets/0-home/home_05-cg-bg.jpg') no-repeat top center;
+                    }
+                }
+
                 > div {
                     height: inherit;
+                    > div {
+                        height: inherit;
+                    }
                 }
 
                 .content-wrapper {
                     height: inherit;
                     margin-right: 15px;
+                    padding: 30px;
                     //border: 1px solid black;
 
                     .title {
