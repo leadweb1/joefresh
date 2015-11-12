@@ -7,16 +7,16 @@ https://github.com/davidrapson/scss-toolkit
 @import 'settings', 'mixins', 'base', 'helpers', 'modules/island','modules/horizontal-list', 'modules/buttons', 'layouts/page', 'states';
 
 @font-face {
-  font-family: 'SamsungSharpSansRegular';
-  src: url('/assets/_FONT/SamsungSharpSans-Regular.ttf');
+    font-family: 'SamsungSharpSansRegular';
+    src: url('/assets/_FONT/SamsungSharpSans-Regular.ttf');
 }
 @font-face {
-  font-family: 'SamsungSharpSansMedium';
-  src: url('/assets/_FONT/SamsungSharpSans_medium.ttf');
+    font-family: 'SamsungSharpSansMedium';
+    src: url('/assets/_FONT/SamsungSharpSans_medium.ttf');
 }
 @font-face {
-  font-family: 'SamsungSharpSansBold';
-  src: url('/assets/_FONT/SamsungSharpSans-Bold.ttf');
+    font-family: 'SamsungSharpSansBold';
+    src: url('/assets/_FONT/SamsungSharpSans-Bold.ttf');
 }
 
 html, button, input, select, textarea, .pure-g [class*="pure-u"] {
@@ -43,9 +43,27 @@ html, button, input, select, textarea, .pure-g [class*="pure-u"] {
 .l-page {
     padding: 0;
 
+    &.island {
+        width: 1920px;
+        height: 1080px;
+    }
+
     .island {
         padding: 0;
-        height: 1050px;
+        height: 1080px;
+
+        &.section-nav {
+            width: 550px;
+            padding: 50px;
+        }
+        &.section-content {
+            width: 1370px;
+            height: 1080px;
+
+            > div {
+                height: 1080px;
+            }
+        }
     }
 }
 
@@ -53,6 +71,7 @@ html, button, input, select, textarea, .pure-g [class*="pure-u"] {
     &.pure-menu {
         &.custom-restricted-width {
             display: inline-block;
+            width: inherit;
         }
 
         & > ul {
@@ -75,8 +94,23 @@ html, button, input, select, textarea, .pure-g [class*="pure-u"] {
     }
 }
 
+.l-page {
+    &.island {
+        .experience {
+            position: relative;
+            height: 965px;
+            padding-top: 115px;
+        }
+    }
+}
+
+
 .slider-wrapper {
     position: relative;
+
+    > div {
+        height: 1080px;
+    }
 
     .slider-container {
         position: absolute;

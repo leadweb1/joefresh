@@ -8,3 +8,48 @@ and open the template in the editor.
     Author     : christophefaribault
 */
 
+.l-page {
+    &.island {
+        .section-nav {
+            background: url('/assets/1-aesthetic-elegant/ae_sidebar_bg-01.jpg') no-repeat top center;
+            background-size: 100%;
+        }
+
+        .aesthetic-elegant-design {
+            &.stylish-smart-gear {
+                position: relative;
+
+                .model {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: inherit;
+
+                    .experience {                        
+                        .color {
+                            position: absolute;
+                            top: 50px;
+                            left: 0;
+                            width: 100%;
+                        }
+
+                        .nav {
+                            position: absolute;
+                            bottom: 100px;
+                            left: 0;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .nav {
+                    position: absolute;
+                    bottom: 100px;
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

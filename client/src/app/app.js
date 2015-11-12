@@ -63,9 +63,11 @@
       'common.services.experience',
       'common.directives.version',
       'common.directives.carousel',
+      'common.directives.threesixty',
       'common.filters.uppercase',
       'common.filters.filterDisabledSections',
       'common.filters.nl2br',
+      'common.filters.strpad',
       'common.interceptors.http',
       'templates'
     ])

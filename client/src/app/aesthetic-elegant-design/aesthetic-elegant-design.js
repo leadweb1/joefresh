@@ -42,12 +42,30 @@
    * @name  AestheticStylishController
    * @description Controller
    */
-  function AestheticStylishController(data, DataService, $scope) {
+  function AestheticStylishController(data, DataService, ExperienceService, $scope, $timeout) {
     $scope.data = angular.extend({}, data, {
         template: 'src/app/aesthetic-elegant-design/stylish-smart-gear/stylish-smart-gear.tpl.html',
         section: DataService.getSectionByName('stylish-smart-gear'),
         top: DataService.getSectionByName('aesthetic-elegant-design'),
     });
+    
+    $scope.model = 'gears2';
+    $scope.color = 'black';
+    $scope.colorTitle = 'Dark Gray';
+    
+    $scope.changeModel = function(model) {
+        var $model = $scope.experience.data.tabs[model];
+        
+        $scope.model = $model.name;
+        this.changeColor(model, $model.defaultColor)
+    };
+    
+    $scope.changeColor = function(model, color) {
+        var $model = $scope.experience.data.tabs[model];
+        
+        $scope.color = color;
+        $scope.colorTitle = $model.colors[color].title;
+    };
     
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.aesthetic_elegant_design.sections.stylish_smart_gear.experience, $scope, $timeout);    

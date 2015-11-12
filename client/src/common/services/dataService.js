@@ -22,15 +22,51 @@
                                 experience: {
                                     tabs: [
                                         {
-                                            title: 'Stylish Smart Gear',
-                                            description: 'Bla bla',
-                                            last: true,
+                                            name: 'gears2',
+                                            title: 'Gear S2',
+                                            defaultColor: 'black',
+                                            colors: {
+                                                'black': {
+                                                    name: 'black',
+                                                    title: 'Dark Gray',
+                                                    color: '#343434',
+                                                    imagePrefix: 'gear2_sports_black',
+                                                    imageCount: 66,
+                                                },
+                                                'silver': {
+                                                    name: 'silver',
+                                                    title: 'Silver',
+                                                    color: '#D9D9D9',
+                                                    imagePrefix: 'gear2_sports_white',
+                                                    imageCount: 66,
+                                                },
+                                            },
                                             steps: [
                                                 {
                                                     userActionRequired: true,
                                                     last: true,
                                                 },
-                                            ],
+                                            ]
+                                        },
+                                        {
+                                            name: 'gears2classic',
+                                            title: 'Gear S2 Classic',
+                                            defaultColor: 'classicblack',
+                                            colors: {
+                                                'classicblack': {
+                                                    name: 'classicblack',
+                                                    title: 'Black',
+                                                    color: '#000000',
+                                                    imagePrefix: 'gear2_classinc_black',
+                                                    imageCount: 66,
+                                                },
+                                            },
+                                            steps: [
+                                                {
+                                                    userActionRequired: true,
+                                                    last: true,
+                                                },
+                                            ]
                                         },
                                     ],
                                 },
