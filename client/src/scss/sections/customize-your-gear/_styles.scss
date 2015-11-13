@@ -8,3 +8,17 @@ and open the template in the editor.
     Author     : christophefaribault
 */
 
+.l-page {
+    &.island {
+        .customize-your-gear {
+            .section-nav {
+                background: url('/assets/5-customize/cg_sidebar_bg-05.jpg') no-repeat top center;
+                background-size: 100%;
+            }
+
+            &.stylish-smart-gear {
+                position: relative;
+            }
+        }
+    }
+}

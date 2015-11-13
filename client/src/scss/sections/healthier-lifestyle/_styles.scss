@@ -8,3 +8,17 @@ and open the template in the editor.
     Author     : christophefaribault
 */
 
+.l-page {
+    &.island {
+        .healthier-lifestyle {
+            .section-nav {
+                background: url('/assets/3-healthier-lifestyle/hi_sidebar_bg-03.jpg') no-repeat top center;
+                background-size: 100%;
+            }
+
+            &.stylish-smart-gear {
+                position: relative;
+            }
+        }
+    }
+}

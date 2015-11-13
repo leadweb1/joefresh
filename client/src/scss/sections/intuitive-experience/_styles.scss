@@ -8,3 +8,17 @@ and open the template in the editor.
     Author     : christophefaribault
 */
 
+.l-page {
+    &.island {
+        .intuitive-experience {
+            .section-nav {
+                background: url('/assets/2-intuitive-experience/ie_sidebar_bg-02.jpg') no-repeat top center;
+                background-size: 100%;
+            }
+
+            &.stylish-smart-gear {
+                position: relative;
+            }
+        }
+    }
+}
