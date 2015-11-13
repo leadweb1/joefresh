@@ -1,5 +1,5 @@
 <div class="pure-g island home">
-    <div ng-repeat="section in filteredSections = (data.content.sections| filterDisabledSections)" class="pure-u-1 pure-u-lg-1-{{ filteredSections.length}} island section" ng-class="{ 'faded': $index != activeSection }">
+    <div ng-repeat="section in filteredSections = (data.content.sections| filterDisabledSections)" class="pure-u-lg-1-{{ filteredSections.length}} island section" ng-class="{ 'faded': $index != activeSection }">
         <div ng-if="section.sections" ng-click="selectSection($index)" class="{{section.name}}">
             <div ng-include="contentTemplate"></div>
         </div>

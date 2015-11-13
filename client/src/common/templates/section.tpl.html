@@ -1,20 +1,31 @@
 <div class="pure-g island {{data.top.name}}">
     <div class="pure-u-1 island section-nav">
-        <div class="left-nav pure-menu custom-restricted-width">
-            <span class="pure-menu-heading">
-                <div class="btn-home"><a href ui-sref="root.home">Home</a></div>
-                <div class="section-title">{{data.top.title}}</div>
-                <div class="section-description" ng-if="data.top.description" ng-bind-html="data.top.description | nl2br"></div>
-            </span>
-            <ul class="pure-menu-list">
-                <li ng-repeat="section in data.top.sections| filterDisabledSections" ui-sref-active="pure-menu-selected" class="pure-menu-item">
+        <div class="btn-home"><a href ui-sref="root.home"><i class="icon fa fa-home"></i>Home</a></div>
+        <div class="section-title" ng-if="(data.top.sections | objectLength) > 1">{{data.top.title}}</div>
+        <div class="section-title" ng-if="(data.top.sections | objectLength) == 1">{{data.section.title}}</div>
+        <div class="section-description" ng-if="data.top.description" ng-bind-html="data.top.description | nl2p"></div>
+        <div class="section-menu" ng-if="(data.top.sections | objectLength) > 1">
+            <ul class="menu-container">
+                <li ng-repeat="section in data.top.sections| filterDisabledSections" class="item" ng-class="{
+                        active: isActiveState(section.route)
+                    }">
                     <a href ui-sref="{{section.route}}">{{ section.title}}</a>
-                    <div class="section-description" ng-if="section.description" ng-bind-html="section.description | nl2br"></div>
+                    <div class="section-description" ng-show="isActiveState(section.route)" ng-if="section.description" ng-bind-html="section.description | nl2p"></div>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="pure-u-1 island section-content">
-        <div class="pure-u-1-1" ng-include="data.template"></div>
-    </div>
+
+    <!--div class="left-nav pure-menu custom-restricted-width" ng-if="(data.top.sections | objectLength) > 1">
+        <ul class="pure-menu-list">
+            <li ng-repeat="section in data.top.sections| filterDisabledSections" ui-sref-active="pure-menu-selected" class="pure-menu-item">
+                <a href ui-sref="{{section.route}}">{{ section.title}}</a>
+                <div class="section-description" ng-if="section.description" ng-bind-html="section.description | nl2p"></div>
+            </li>
+        </ul>
+    </div-->
+</div>
+<div class="pure-u-1 island section-content">
+    <div class="pure-u-1-1" ng-include="data.template"></div>
+</div>
 </div>

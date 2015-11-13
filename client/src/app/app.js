@@ -38,8 +38,12 @@
     });
   }
 
-  function MainCtrl($log) {
+  function MainCtrl($log, $scope, $state) {
     $log.debug('MainCtrl laoded!');
+    
+    $scope.isActiveState = function(state) {
+        return ($state.current.name === state);
+    };
   }
 
   function run($log) {
@@ -68,6 +72,7 @@
       'common.filters.filterDisabledSections',
       'common.filters.nl2br',
       'common.filters.strpad',
+      'common.filters.objectLength',
       'common.interceptors.http',
       'templates'
     ])
