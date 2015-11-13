@@ -1,5 +1,5 @@
 <div class="pure-g island {{data.top.name}}">
-    <div class="pure-u-1 island section-nav">
+    <div class="pure-u-1-4 island section-nav">
         <div class="btn-home"><a href ui-sref="root.home"><i class="icon fa fa-home"></i>Home</a></div>
         <div class="section-title" ng-if="data.top.sections && (data.top.sections | objectLength) > 1">{{data.top.title}}</div>
         <div class="section-title" ng-if="data.top.sections && (data.top.sections | objectLength) == 1">{{data.section.title}}</div>
@@ -16,8 +16,7 @@
             </ul>
         </div>
     </div>
-</div>
-<div class="pure-u-1 island section-content">
-    <div class="pure-u-1-1" ng-include="data.template"></div>
-</div>
+    <div class="pure-u-3-4 island section-content">
+        <div class="pure-u-1-1" ng-include="data.template"></div>
+    </div>
 </div>
