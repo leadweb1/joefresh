@@ -58,7 +58,7 @@
    * @name  ConvenienceController
    * @description Controller
    */
-  function ConvenienceController(data, DataService, $scope) {
+  function ConvenienceController(data, DataService, ExperienceService, $scope, $timeout) {
     $scope.data = angular.extend({}, data, {
         template: 'src/app/convenience-more/convenience-more.tpl.html',
         top: DataService.getSectionByName('convenience-more'),
@@ -69,7 +69,7 @@
    * @name  NotificationsController
    * @description Controller
    */
-  function NotificationsController(data, DataService, $scope) {
+  function NotificationsController(data, DataService, ExperienceService, $scope, $timeout) {
     $scope.data = angular.extend({}, data, {
         template: 'src/app/convenience-more/notifications/notifications.tpl.html',
         section: DataService.getSectionByName('notifications'),
@@ -85,7 +85,7 @@
    * @name  SamsungPayController
    * @description Controller
    */
-  function SamsungPayController(data, DataService, $scope) {
+  function SamsungPayController(data, DataService, ExperienceService, $scope, $timeout) {
     $scope.data = angular.extend({}, data, {
         template: 'src/app/convenience-more/samsung-pay/samsung-pay.tpl.html',
         section: DataService.getSectionByName('samsung-pay'),
@@ -101,7 +101,7 @@
    * @name  AdditionalFeaturesController
    * @description Controller
    */
-  function AdditionalFeaturesController(data, DataService, $scope) {
+  function AdditionalFeaturesController(data, DataService, ExperienceService, $scope, $timeout) {
     $scope.data = angular.extend({}, data, {
         template: 'src/app/convenience-more/additional-features/additional-features.tpl.html',
         section: DataService.getSectionByName('additional-features'),
@@ -113,7 +113,7 @@
    * @name  AccessoriesController
    * @description Controller
    */
-  function AccessoriesController(data, DataService, $scope) {
+  function AccessoriesController(data, DataService, ExperienceService, $scope, $timeout) {
     $scope.data = angular.extend({}, data, {
         template: 'src/app/convenience-more/accessories/accessories.tpl.html',
         section: DataService.getSectionByName('accessories'),
