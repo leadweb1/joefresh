@@ -55,6 +55,7 @@ html, button, input, select, textarea, .pure-g [class*="pure-u"] {
         &.section-nav {
             width: 550px;
             padding: 50px;
+            padding-right: 0;
         }
         &.section-content {
             width: 1370px;
@@ -89,7 +90,7 @@ html, button, input, select, textarea, .pure-g [class*="pure-u"] {
         }
     }
     .section-title {
-        margin: 50px 0 15px;
+        margin: 50px 50px 15px 0;
         font-size: 61px;
         line-height: 75px;
     }
@@ -132,7 +133,7 @@ html, button, input, select, textarea, .pure-g [class*="pure-u"] {
                     // Background
                     background: rgba(0,0,0,0.60);
                     border-radius: 35px 0 0 35px;
-                    padding: 40px;
+                    padding: 50px 70px 40px 40px;
                     color: #FFFFFF;
                     line-height: 30px;
                     margin-bottom: 20px;
