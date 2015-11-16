@@ -1,109 +1,86 @@
 <div class="pure-g slider-wrapper intuitive-experience rotating-bezel">
     <div class="pure-u-1">
-        {{experience.tab}}/{{experience.step}}
+        <div class="title">{{experienceTitle}}</div>
+        <div class="title sub">{{experienceDescription}}</div>
         <div class="slider-container" app-content-carousel>
             <div class="slide">
-                <div class="title">Horizontal Navigation</div>
-                <div class="description">Bla bla</div>
                 <div class="experience">
-                    <div class="step2-drag" style="border: 1px solid black; width: 200px; height: 200px; position: relative;">
-                        <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelLeft" /></div>
-                        <div ng-show="experience.step == 4 || experience.step == 6"><ng-include src="data.config.rotatingBezelRight" /></div>
-                    </div>
-                    <div ng-show="experience.step == 2 || experience.step == 4 || experience.step == 6">Turn the bezel to navigate</div>
-                    <div ng-show="experience.step == null || experience.step == 1">
-                        Start
-                    </div>
-                    <div ng-show="experience.step == 2">
-                        Rotate left
-                    </div>
-                    <div ng-show="experience.step == 3">
-                        Message
-                    </div>
-                    <div ng-show="experience.step == 4">
-                        Rotate right
-                    </div>
-                    <div ng-show="experience.step == 5">
-                        Main screen
-                    </div>
-                    <div ng-show="experience.step == 6">
-                        Rotate right
-                    </div>
-                    <div ng-show="experience.step == 7">
-                        Icons
+                    <div class="drag-container">
+                        <div class="drag">
+                            <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelLeft" /></div>
+                            <div ng-show="experience.step == 4 || experience.step == 6"><ng-include src="data.config.rotatingBezelRight" /></div>
+                            <div class="bg ng-hide" ng-show="experience.step == null || experience.step == 1 || experience.step == 2 || experience.step == 5 || experience.step == 6">
+                                <img ng-src="../assets/2-intuitive-experience/ie_01-horizontal_screen-01" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 3 || experience.step == 4">
+                                <img ng-src="../assets/2-intuitive-experience/ie_01-horizontal_screen-03" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 7">
+                                <img ng-src="../assets/2-intuitive-experience/ie_01-horizontal_screen-07" />
+                            </div>
+                        </div>
+                        <div class="hint" ng-show="experience.step == 2 || experience.step == 4 || experience.step == 6">Turn the bezel to navigate</div>
                     </div>
                 </div>
             </div>
             <div class="slide">
-                <div class="title">Vertical Navigation</div>
-                <div class="description">Bla bla</div>
                 <div class="experience">
-                    <div class="step2-drag" style="border: 1px solid black; width: 200px; height: 200px; position: relative;">
-                        <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
+                    <div class="drag-container">
+                        <div class="drag">
+                            <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
+                            <div class="bg ng-hide" ng-show="experience.step == null || experience.step == 1 || experience.step == 2 || experience.step == 3">
+                                <img ng-src="../assets/2-intuitive-experience/ie_02-vertical_screen-01" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 4">
+                                <img ng-src="../assets/2-intuitive-experience/ie_02-vertical_screen-04" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 5">
+                                <img ng-src="../assets/2-intuitive-experience/ie_02-vertical_screen-05" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 6">
+                                <img ng-src="../assets/2-intuitive-experience/ie_02-vertical_screen-06" />
+                            </div>
+                        </div>
                     </div>
-                    <div ng-show="experience.step == 2">Turn the bezel to navigate</div>
-                    <div ng-show="experience.step == null || experience.step == 1">
-                        Start
-                    </div>
-                    <div ng-show="experience.step == 2">
-                        Rotate right
-                    </div>
-                    <div ng-show="experience.step == 3">
-                        Message
-                    </div>
-                    <div ng-show="experience.step == 4">
-                        Scroll
-                    </div>
-                    <div ng-show="experience.step == 5">
-                        Scroll more
-                    </div>
-                    <div ng-show="experience.step == 6">
-                        Reply
-                    </div>
+                    <div class="hint" ng-show="experience.step == 2">Turn the bezel to navigate</div>
                 </div>
             </div>
             <div class="slide">
-                <div class="title">Circular Navigation</div>
-                <div class="description">Bla bla</div>
                 <div class="experience">
-                    <div class="step2-drag" style="border: 1px solid black; width: 200px; height: 200px; position: relative;">
-                        <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
+                    <div class="drag-container">
+                        <div class="drag">
+                            <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
+                            <div class="bg ng-hide" ng-show="experience.step == null || experience.step == 1 || experience.step == 2">
+                                <img ng-src="../assets/2-intuitive-experience/ie_03-circular_screen-01" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 3">
+                                <img ng-src="../assets/2-intuitive-experience/ie_03-circular_screen-04" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 4">
+                                <img ng-src="../assets/2-intuitive-experience/ie_03-circular_screen-05" />
+                            </div>
+                        </div>
                     </div>
-                    <div ng-show="experience.step == 2">Turn the bezel to navigate</div>
-                    <div ng-show="experience.step == null || experience.step == 1">
-                        Selected icon (Messages)
-                    </div>
-                    <div ng-show="experience.step == 2">
-                        Rotate right
-                    </div>
-                    <div ng-show="experience.step == 3">
-                        Change selected icon (phone)
-                    </div>
-                    <div ng-show="experience.step == 4">
-                        Change selected icon (S Health)
-                    </div>
+                    <div class="hint" ng-show="experience.step == 2">Turn the bezel to navigate</div>
                 </div>
             </div>
             <div class="slide">
-                <div class="title">Value Control</div>
-                <div class="description">Bla bla</div>
                 <div class="experience">
-                    <div class="step2-drag" style="border: 1px solid black; width: 200px; height: 200px; position: relative;">
-                        <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
+                    <div class="drag-container">
+                        <div class="drag">
+                            <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
+                            <div class="bg ng-hide" ng-show="experience.step == null || experience.step == 1 || experience.step == 2">
+                                <img ng-src="../assets/2-intuitive-experience/ie_04-value_screen-01" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 3">
+                                <img ng-src="../assets/2-intuitive-experience/ie_04-value_screen-03" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 4">
+                                <img ng-src="../assets/2-intuitive-experience/ie_04-value_screen-04" />
+                            </div>
+                        </div>
                     </div>
-                    <div ng-show="experience.step == 2">Turn the bezel to navigate</div>
-                    <div ng-show="experience.step == null || experience.step == 1">
-                        Volume (5)
-                    </div>
-                    <div ng-show="experience.step == 2">
-                        Rotate right
-                    </div>
-                    <div ng-show="experience.step == 3">
-                        Volume up (6)
-                    </div>
-                    <div ng-show="experience.step == 4">
-                        Volume up (7)
-                    </div>
+                    <div class="hint" ng-show="experience.step == 2">Turn the bezel to navigate</div>
                 </div>
             </div>
         </div>

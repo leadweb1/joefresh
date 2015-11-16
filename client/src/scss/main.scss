@@ -178,19 +178,19 @@ html, button, input, select, textarea, .pure-g [class*="pure-u"] {
 
 .l-page {
     &.island {
+        .title {
+            font-size: 46px;
+            text-align: center;
+
+            &.sub {
+                font-size: 28px;
+            }
+        }
+
         .experience {
             position: relative;
             height: 965px;
             padding-top: 115px;
-
-            .title {
-                font-size: 46px;
-                text-align: center;
-
-                &.sub {
-                    font-size: 28px;
-                }
-            }
         }
     }
 }

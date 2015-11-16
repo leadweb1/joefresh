@@ -49,6 +49,9 @@
         top: DataService.getSectionByName('intuitive-experience'),
     });
     
+    $scope.experienceTitle = '';
+    $scope.experienceDescription = '';
+    
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.intuitive_experience.sections.rotating_bezel.experience, $scope, $timeout);    
     $scope.experience.initExperience();

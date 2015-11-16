@@ -26,7 +26,7 @@
                 var minDragDistance = Math.sqrt(
                         (quadrantWidth * quadrantWidth) +
                         (quadrantHeight * quadrantHeight)
-                        ) * 0.8;
+                        ) * 0.6;
 
                 if (event.distance > minDragDistance) {
                     this.step++;
@@ -60,6 +60,7 @@
                 if (animate === true) {
                     // Animate bezel
                 }
+                this.updateTitles(exp);
                 exp.runStep(exp.tab, exp.step);
             },
             initExperience: function () {
@@ -93,6 +94,11 @@
 
                     exp.startExperience(true, exp);
                 }.bind('exp', this), 100);
+            },
+            updateTitles: function(exp) {
+                console.log(exp);
+                exp.$scope.experienceTitle = exp.data.tabs[exp.tab -1].title;
+                exp.$scope.experienceDescription = exp.data.tabs[exp.tab - 1].description;
             }
         };
     }
