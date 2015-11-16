@@ -7,6 +7,7 @@
     //swipeToSlide: true,
     autoplaySpeed: 1,
     swipe: false,
+    arrows: false,
   };
   
   var activeSlider = null;
@@ -24,7 +25,7 @@
         $elem.slick(jQuery.extend({}, carouselDefaults, {
             centerMode: true,
             slidesToShow: 5,
-            overlay: '<div class="slider-overlay"><img src="/assets/images/angular-logo-outer.png" /></div>',
+            overlay: '<div class="slider-overlay"><img src="#" /></div>',
             dots: false,
         }, slickData));
         
