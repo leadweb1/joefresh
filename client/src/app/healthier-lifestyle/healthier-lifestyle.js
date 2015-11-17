@@ -99,6 +99,34 @@
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.healthier_lifestyle.sections.health_clock.experience, $scope, $timeout);    
     $scope.experience.initExperience();
+    
+    $scope.faceTitle = 'Activity Sparkles';
+    $scope.faceDescription = 'More particles appear';
+    $scope.faceDescription2 = 'when you move more';
+    
+    $scope.prevSlide = function() {
+        var $slider = jQuery('.slider-container:not(.ng-hide)');
+        $slider.slick('slickPrev');
+        
+        $scope.setWatchFaceInfo();
+    };
+    
+    $scope.nextSlide = function() {
+        var $slider = jQuery('.slider-container:not(.ng-hide)');
+        $slider.slick('slickNext');
+        
+        $scope.setWatchFaceInfo();
+    };
+    
+    $scope.setWatchFaceInfo = function() {
+        var title = jQuery('#watchFace .slick-current').data('title');
+        var description = jQuery('#watchFace .slick-current').data('description');
+        var description2 = jQuery('#watchFace .slick-current').data('description2');
+        $scope.faceTitle = title;
+        $scope.faceDescription = description;
+        $scope.faceDescription2 = description2;
+    };
+
   }
 
   angular.module('app.healthierLifestyle', [])
