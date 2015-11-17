@@ -6,6 +6,7 @@
             config: {
                 rotatingBezelLeft: 'src/common/templates/rotating-bezel-left.tpl.html',
                 rotatingBezelRight: 'src/common/templates/rotating-bezel-right.tpl.html',
+                tapScreen: 'src/common/templates/tap-screen.tpl.html',
             },
             content: {
                 sections: {
@@ -298,10 +299,27 @@
                                         {
                                             title: 'Check Messages',
                                             description: 'Bla bla',
-                                            last: true,
                                             steps: [
                                                 {
+                                                    timeout: 1,
+                                                },
+                                                {
                                                     userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
                                                     last: true,
                                                 },
                                             ],
@@ -311,6 +329,99 @@
                                             description: 'Bla bla',
                                             last: true,
                                             steps: [
+                                                {
+                                                    timeout: 1,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
                                                 {
                                                     userActionRequired: true,
                                                     last: true,

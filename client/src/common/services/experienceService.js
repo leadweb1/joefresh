@@ -33,6 +33,10 @@
                     this.runStep(this.tab, this.step);
                 }
             },
+            tapScreen: function(event) {
+                this.step++;
+                this.runStep(this.tab, this.step);
+            },
             runStep: function (tab, step) {
                 var $tab = this.data.tabs[tab - 1];
                 var $step = $tab.steps[step - 1];

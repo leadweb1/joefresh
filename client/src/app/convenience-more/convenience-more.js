@@ -76,6 +76,9 @@
         top: DataService.getSectionByName('convenience-more'),
     });
     
+    $scope.experienceTitle = '';
+    $scope.experienceDescription = '';
+    
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.convenience_more.sections.notifications.experience, $scope, $timeout);    
     $scope.experience.initExperience();

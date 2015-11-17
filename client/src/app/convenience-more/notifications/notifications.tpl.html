@@ -1,16 +1,53 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+<div class="pure-g slider-wrapper convenience-more notifications">
+    <div class="pure-u-1">
+        <div class="title">{{experienceTitle}}</div>
+        <div class="title sub">{{experienceDescription}}</div>
+        <div class="slider-container" app-content-carousel>
+            <div class="slide">
+                <div class="experience">
+                    <div class="drag-container">
+                        <div class="drag">
+                            <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelLeft" /></div>
+                            <div ng-show="experience.step == 4"><ng-include src="data.config.tapScreen" /></div>
+                            <div ng-show="experience.step == 6"><ng-include src="data.config.rotatingBezelRight" /></div>
+                            <div class="bg ng-hide" ng-show="experience.step == null || experience.step == 1 || experience.step == 2">
+                                <img ng-src="../assets/4-convenience-more/cm_01-notif_01-check_screen-01" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 3 || experience.step == 4">
+                                <img ng-src="../assets/4-convenience-more/cm_01-notif_01-check_screen-03" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 5 || experience.step == 6 || experience.step == 7">
+                                <img ng-src="../assets/4-convenience-more/cm_01-notif_01-check_screen-05" />
+                            </div>
+                        </div>
+                        <div class="hint" ng-show="experience.step == 2">Turn the bezel to navigate</div>
+                        <div class="hint" ng-show="experience.step == 4">Turn the bezel to navigate</div>
+                        <div class="hint" ng-show="experience.step == 6">Turn the bezel to navigate</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="experience">
+                    <div class="drag-container">
+                        <div class="drag">
+                            <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelRight" /></div>
+                            <div class="bg ng-hide" ng-show="experience.step == null || experience.step == 1 || experience.step == 2 || experience.step == 3">
+                                <img ng-src="../assets/4-convenience-more/cm_01-notif_02-1-icon.png" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 4">
+                                <img ng-src="../assets/2-intuitive-experience/ie_02-vertical_screen-04" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 5">
+                                <img ng-src="../assets/2-intuitive-experience/ie_02-vertical_screen-05" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 6">
+                                <img ng-src="../assets/2-intuitive-experience/ie_02-vertical_screen-06" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hint" ng-show="experience.step == 2">Turn the bezel to navigate</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
