@@ -1,33 +1,28 @@
-<div class="pure-g slider-wrapper healthier-lifestyle 24h-activity-log">
+<div class="pure-g slider-wrapper healthier-lifestyle activity-log">
     <div class="pure-u-1">
-        {{experience.tab}}/{{experience.step}}
+        <div class="title">{{experienceTitle}}</div>
+        <div class="title sub">{{experienceDescription}}</div>
         <div class="slider-container" app-content-carousel>
             <div class="slide">
-                <div class="title">24H Activity Log</div>
-                <div class="description">Bla bla</div>
                 <div class="experience">
-                    <div class="step2-drag" style="border: 1px solid black; width: 200px; height: 200px; position: relative;">
-                        <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelLeft" /></div>
-                        <div ng-show="experience.step == 4"><ng-include src="data.config.rotatingBezelRight" /></div>
-                    </div>
-                    <div ng-show="experience.step == 2 || experience.step == 4">Turn the bezel to navigate</div>
-                    <div ng-show="experience.step == null || experience.step == 1">
-                        Start
-                    </div>
-                    <div ng-show="experience.step == 2">
-                        Rotate left
-                    </div>
-                    <div ng-show="experience.step == 3">
-                        Previous log
-                    </div>
-                    <div ng-show="experience.step == 4">
-                        Rotate right
-                    </div>
-                    <div ng-show="experience.step == 5">
-                        Next log
-                    </div>
-                    <div ng-show="experience.step == 6">
-                        Daily summary
+                    <div class="drag-container">
+                        <div class="drag">
+                            <div ng-show="experience.step == 2"><ng-include src="data.config.rotatingBezelLeft" /></div>
+                            <div ng-show="experience.step == 4"><ng-include src="data.config.rotatingBezelRight" /></div>
+                            <div class="bg ng-hide" ng-show="experience.step == null || experience.step == 1 || experience.step == 2">
+                                <img ng-src="../assets/3-healthier-lifestyle/hi_04-24hactivity_screen-01" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 3 || experience.step == 4">
+                                <img ng-src="../assets/3-healthier-lifestyle/hi_04-24hactivity_screen-03" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 5">
+                                <img ng-src="../assets/3-healthier-lifestyle/hi_04-24hactivity_screen-05" />
+                            </div>
+                            <div class="bg ng-hide" ng-show="experience.step == 6">
+                                <img ng-src="../assets/3-healthier-lifestyle/hi_04-24hactivity_screen-06" />
+                            </div>
+                        </div>
+                        <div class="hint" ng-show="experience.step == 2 || experience.step == 4">Turn the bezel to the right to check daily summary</div>
                     </div>
                 </div>
             </div>
