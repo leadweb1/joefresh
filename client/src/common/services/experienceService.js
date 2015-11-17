@@ -96,7 +96,6 @@
                 }.bind('exp', this), 100);
             },
             updateTitles: function(exp) {
-                console.log(exp);
                 exp.$scope.experienceTitle = exp.data.tabs[exp.tab -1].title;
                 exp.$scope.experienceDescription = exp.data.tabs[exp.tab - 1].description;
             }
