@@ -28,6 +28,8 @@ and open the template in the editor.
                         .slick-list {
                             .slick-track {
                                 .slick-slide {
+                                    transform: none;
+                                    
                                     .experience {
                                         height: inherit;
                                         padding: 0;
