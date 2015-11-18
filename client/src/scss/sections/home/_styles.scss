@@ -10,7 +10,7 @@ and open the template in the editor.
 .l-page {
     .island {
         &.home {
-            padding: 15px;
+            //padding: 15px;
 
             .section {
                 height: inherit;
@@ -69,8 +69,8 @@ and open the template in the editor.
 
                 .content-wrapper {
                     height: inherit;
-                    margin-right: 15px;
-                    padding: 30px;
+                    //margin-right: 15px;
+                    //padding: 30px;
                     //border: 1px solid black;
 
                     .title {
@@ -82,6 +82,8 @@ and open the template in the editor.
                     }
 
                     .menu {
+                        padding-left: 30px;
+                        
                         .menu-container {
                             list-style: none;
                             padding: 0;
@@ -111,7 +113,7 @@ and open the template in the editor.
 
                 &:last-child {
                     .content-wrapper {
-                        margin-right: 0;
+                        //margin-right: 0;
                     }
                 }
             }
