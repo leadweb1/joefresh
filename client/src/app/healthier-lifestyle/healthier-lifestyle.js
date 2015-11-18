@@ -66,6 +66,21 @@
         top: DataService.getSectionByName('healthier-lifestyle'),
     });
     
+    $scope.prevSlide = function() {
+        var $slider = jQuery('.slider-container:not(.ng-hide)');
+        $slider.slick('slickPrev');
+    };
+    
+    $scope.nextSlide = function() {
+        var $slider = jQuery('.slider-container:not(.ng-hide)');
+        $slider.slick('slickNext');
+    };
+    
+    $scope.startExperience = function() {
+        $scope.experience.step = 2;
+        $scope.experience.startExperience(false, $scope.experience);
+    };
+    
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.healthierLifestyle.sections.trackYourHealth.experience, $scope, $timeout);    
     $scope.experience.initExperience();

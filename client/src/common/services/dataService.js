@@ -198,8 +198,33 @@
                                             title: 'Auto Tracking',
                                             description: 'Bla bla',
                                             steps: [
-                                                {
+                                                { // start
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg1 blured',
+                                                },
+                                                { // bg1
                                                     timeout: 2,
+                                                    bgClass: 'bg bg1 clear',
+                                                },
+                                                { // Time to get moving
+                                                    timeout: 2,
+                                                    bgClass: 'bg bg1 blured',
+                                                },
+                                                { // bg1
+                                                    timeout: 1,
+                                                    bgClass: 'bg bg1 clear',
+                                                },
+                                                { // tap
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg1 clear',
+                                                },
+                                                { // bg2
+                                                    timeout: 2,
+                                                    bgClass: 'bg bg2 clear',
+                                                },
+                                                { // Good job
+                                                    timeout: 2,
+                                                    bgClass: 'bg bg2 blured',
                                                     last: true,
                                                 },
                                             ],
@@ -208,8 +233,93 @@
                                             title: 'Exercise',
                                             description: 'Bla bla',
                                             steps: [
+                                                { // start, 1
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg1 blured',
+                                                },
+                                                { // bg1
+                                                    timeout: 1,
+                                                    bgClass: 'bg bg1 clear',
+                                                },
+                                                { // spinner
+                                                    timeout: 1,
+                                                    bgClass: 'bg bg1 clear',
+                                                },
+                                                { // tap, 4
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg1 clear',
+                                                },
+                                                { // start screen
+                                                    timeout: 1,
+                                                    bgClass: 'bg bg1 clear',
+                                                },
+                                                { // tap, 6
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg1 clear',
+                                                },
+                                                { // start screen
+                                                    timeout: 1,
+                                                    bgClass: 'bg bg1 blured',
+                                                },
+                                                { // start screen
+                                                    timeout: 1,
+                                                    bgClass: 'bg bg1 blured',
+                                                },
+                                                { // start screen
+                                                    timeout: 1,
+                                                    bgClass: 'bg bg1 blured',
+                                                },
+                                                { // start screen
+                                                    timeout: 1,
+                                                    bgClass: 'bg bg1 blured',
+                                                },
+                                                { // tap, bg2, left foot, 11
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg2 clear',
+                                                },
+                                                { // tap, bg2, right foot
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg2 clear',
+                                                },
+                                                { // tap, bg2, left foot
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg2 clear',
+                                                },
+                                                { // tap, bg2, right foot
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg2 clear',
+                                                },
+                                                { // tap, bg2, left foot
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg2 clear',
+                                                },
+                                                { // tap, bg2, right foot
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg2 clear',
+                                                },
+                                                { // tap, bg2, left foot
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg2 clear',
+                                                },
+                                                { // tap, bg2, right foot
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg2 clear',
+                                                },
+                                                { // tap, bg2, left foot
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg2 clear',
+                                                },
+                                                { // tap, bg2, right foot
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg2 clear',
+                                                },
+                                                { // tap, bg2, left foot, 21
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg2 clear',
+                                                },
                                                 {
                                                     timeout: 2,
+                                                    bgClass: 'bg bg1 blured',
                                                     last: true,
                                                 },
                                             ],
@@ -219,8 +329,29 @@
                                             description: 'Bla bla',
                                             last: true,
                                             steps: [
-                                                {
+                                                { // start
                                                     userActionRequired: true,
+                                                    bgClass: 'bg bg1 blured',
+                                                },
+                                                {
+                                                    timeout: 1,
+                                                    bgClass: 'bg bg1 clear',
+                                                },
+                                                {
+                                                    timeout: 1,
+                                                    bgClass: 'bg bg1 clear',
+                                                },
+                                                { // tap
+                                                    userActionRequired: true,
+                                                    bgClass: 'bg bg1 clear',
+                                                },
+                                                { // heartbeat
+                                                    timeout: 6,
+                                                    bgClass: 'bg bg1 blured',
+                                                },
+                                                {
+                                                    timeout: 2,
+                                                    bgClass: 'bg bg1 blured',
                                                     last: true,
                                                 },
                                             ],
