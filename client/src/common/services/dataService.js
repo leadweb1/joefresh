@@ -507,6 +507,43 @@
                                 name: 'additional-features',
                                 title: 'Additional Features',
                                 route: 'root.convenience-more_additional-features',
+                                experience: {
+                                    tabs: [
+                                        {
+                                            title: 'Compatibility',
+                                            description: 'Bla bla',
+                                            last: true,
+                                            steps: [
+                                                {
+                                                    userActionRequired: true,
+                                                    last: true,
+                                                },
+                                            ],
+                                        },
+                                        {
+                                            title: 'Wireless Charging',
+                                            description: 'Bla bla',
+                                            last: true,
+                                            steps: [
+                                                {
+                                                    userActionRequired: true,
+                                                    last: true,
+                                                },
+                                            ],
+                                        },
+                                        {
+                                            title: '3G Connectivity',
+                                            description: 'Bla bla',
+                                            last: true,
+                                            steps: [
+                                                {
+                                                    userActionRequired: true,
+                                                    last: true,
+                                                },
+                                            ],
+                                        },
+                                    ],
+                                },
                             },
                             'accessories': {
                                 name: 'accessories',

@@ -6,6 +6,7 @@
             tab: 1,
             step: 1,
             slider: null,
+            currentSlide: 1,
             data: null,
             $scope: null,
             $timeout: null,
@@ -94,10 +95,12 @@
                             })
                             .on('afterChange', function (event, slick, currentSlide) {
                                 var newTab = currentSlide + 1;
+                                
                                 if (exp.tab !== newTab && newTab <= exp.data.tabs.length) {
                                     // Change tab
                                     exp.$scope.$apply(function () {
                                         exp.tab = newTab;
+                                        exp.$scope.currentSlide = newTab;
                                     });
 
                                     exp.startExperience(false, exp);

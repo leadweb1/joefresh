@@ -16,81 +16,81 @@ and open the template in the editor.
                 background-size: 100%;
             }
 
-            &.notifications {
-                padding-top: 115px;
-                position: relative;
+            .slider-wrapper {
+                .arrow {
+                    //margin: 225px 0 0 0;
+                    position: relative;
+                    height: inherit;
 
-                &.slider-wrapper {
-                    .arrow {
-                        //margin: 225px 0 0 0;
-                        position: relative;
-                        height: inherit;
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -25%;
 
-                        img {
-                            position: absolute;
-                            top: 50%;
-                            margin-top: -25%;
+                        &.left {
+                            //margin-left: 215px;
+                            right: 40px;
+                        }
+                        &.right {
+                            //margin-right: 215px;
+                            left: 40px;
+                        }
+                    }
+                }
 
-                            &.left {
-                                //margin-left: 215px;
-                                right: 40px;
-                            }
-                            &.right {
-                                //margin-right: 215px;
-                                left: 40px;
+                .slider-container {
+                    position: relative;
+
+                    .slick-list {
+                        .slick-track {
+                            .slick-slide {
+                                .experience {
+                                    height: inherit;
+                                    padding: 0;
+                                }
                             }
                         }
                     }
+                    .slick-dots {
+                        list-style: none;
+                        margin: 10px auto 0;
+                        padding: 0;
+                        width: 120px;
 
-                    .slider-container {
-                        position: relative;
+                        li {
+                            display: inline-block;
+                            border-radius: 50%;
+                            width: 40px;
+                            height: 40px;
+                            background-color: #D9D9D9;
+                            top: 0px;
+                            left: 0px;
+                            margin: 0 10px;
 
-                        .slick-list {
-                            .slick-track {
-                                .slick-slide {
-                                    .experience {
-                                        height: inherit;
-                                        padding: 0;
-                                    }
+                            button {
+                                color: #D9D9D9;
+                            }
+
+                            &.slick-active {
+                                background-color: #919191;
+                                color: #919191;
+                                button {
+                                    color: #919191;
                                 }
                             }
-                        }
-                        .slick-dots {
-                            list-style: none;
-                            margin: 10px auto 0;
-                            padding: 0;
-                            width: 120px;
 
-                            li {
-                                display: inline-block;
-                                border-radius: 50%;
-                                width: 40px;
-                                height: 40px;
-                                background-color: #D9D9D9;
-                                top: 0px;
-                                left: 0px;
-                                margin: 0 10px;
-
-                                button {
-                                    color: #D9D9D9;
-                                }
-
-                                &.slick-active {
-                                    background-color: #919191;
-                                    color: #919191;
-                                    button {
-                                        color: #919191;
-                                    }
-                                }
-
-                                button {
-                                    background: none;
-                                    border: none;
-                                }
+                            button {
+                                background: none;
+                                border: none;
                             }
                         }
                     }
                 }
+            }
+
+            &.notifications {
+                padding-top: 115px;
+                position: relative;
 
                 .drag-container {
                     position: relative;
@@ -296,6 +296,111 @@ and open the template in the editor.
                                 background: url('/assets/4-convenience-more/cm_01-notif_02-5-icon.png') no-repeat top left;
                             }
                         }
+                    }
+                }
+            }
+
+            &.additional-features {
+                .pure-g {
+                    height: inherit;
+                }
+
+                .arrow {
+                    position: absolute;
+                    z-index: 9;
+                    height: 1080px;
+                    width: 150px;
+                    top: 0;
+
+                    &.left {
+                        left: 0;
+                    }
+                    &.right {
+                        right: 0;
+                    }
+                }
+
+                .slider-container {
+                    //margin-top: 25%;
+
+                    .slick-list {
+
+                        .slick-track {
+                            .slick-slide {
+                                transform: none;
+                                padding: 9% 0 3%;
+                            }
+                            .slide {
+                                .experience {
+                                    > div {
+                                        display: inline-block;
+                                    }
+
+                                    &.compatibility {
+                                        img {
+
+                                        }
+                                    }
+                                    &.wireless-charging {
+
+                                    }
+                                    &.connectivity {
+
+                                    }
+
+                                    .content {
+                                        text-align: left;
+                                        
+                                        &.left {
+                                            
+                                            float: left;
+                                            margin-left: 200px;
+                                        }
+                                        &.right {
+                                            float: right;
+                                            margin-right: 200px;
+                                        }
+                                        .title {
+                                            text-align: inherit;
+                                            font-size: 46px;
+                                            line-height: 57px;
+
+                                            &.main {
+                                                margin-bottom: 20px;
+                                            }
+                                            &.sub {
+                                                font-size: 28px;
+                                                line-height: 35px;
+                                            }
+                                            &.note {
+                                                font-size: 20px;
+                                                line-height: 25px;
+                                                margin-top: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                                img {
+                                    width: initial;
+                                    margin-top: -20%;
+
+                                    &.left {
+                                        float: left;
+                                    }
+                                    &.right {
+                                        float: right;
+                                    }
+                                    &.float-right {
+                                        float: right;
+                                        margin: -3% 13% 0 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .slick-dots {
+                        width: 180px;
                     }
                 }
             }

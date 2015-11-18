@@ -122,6 +122,22 @@
         section: DataService.getSectionByName('additional-features'),
         top: DataService.getSectionByName('convenience-more'),
     });
+    
+    $scope.currentSlide = 1;
+    
+    $scope.prevSlide = function() {
+        var $slider = jQuery('.slider-container:not(.ng-hide)');
+        $slider.slick('slickPrev');
+    };
+    
+    $scope.nextSlide = function() {
+        var $slider = jQuery('.slider-container:not(.ng-hide)');
+        $slider.slick('slickNext');
+    };
+    
+    // Start experience
+    $scope.experience = ExperienceService.get($scope.data.content.sections.convenience_more.sections.additional_features.experience, $scope, $timeout);    
+    $scope.experience.initExperience();
   }
 
   /**
