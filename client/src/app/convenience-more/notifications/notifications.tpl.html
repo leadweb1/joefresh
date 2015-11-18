@@ -1,6 +1,5 @@
 <div class="pure-g slider-wrapper convenience-more notifications">
     <div class="pure-u-1">
-        {{experience.tab}}/{{experience.step}}
         <div class="title">{{experienceTitle}}</div>
         <div class="title description sub" ng-if="experienceDescription" ng-bind-html="experienceDescription | nl2br"></div>
         <div class="pure-g">
@@ -40,24 +39,24 @@
                                 <div class="drag">
                                     <div ng-show="experience.step == 8 || experience.step == 16 || experience.step == 26"><ng-include src="data.config.rotatingBezelLeft" /></div>
                                     <div ng-show="experience.step == 4 || experience.step == 21"><ng-include src="data.config.rotatingBezelRight" /></div>
-                                    <div ng-show="experience.step == 2 || experience.step == 11 || experience.step == 19 
-                                                || experience.step == 29 || experience.step == 31 || experience.step == 33
-                                                || experience.step == 35 || experience.step == 37 || experience.step == 39
-                                                || experience.step == 41"><ng-include src="data.config.tapScreen" /></div>
+                                    <div ng-show="experience.step == 2 || experience.step == 11 || experience.step == 19
+                                                    || experience.step == 29 || experience.step == 31 || experience.step == 33
+                                                    || experience.step == 35 || experience.step == 37 || experience.step == 39
+                                                    || experience.step == 41"><ng-include src="data.config.tapScreen" /></div>
                                     <div class="bg ng-hide" ng-class="{darker: experience.step == 2}" ng-show="experience.step == null || experience.step == 1 || experience.step == 2">
                                         <img ng-src="../assets/4-convenience-more/cm_01-notif_02-1-send_screen-01" />
                                     </div>
-                                    <div class="bg ng-hide" ng-show="experience.step == 3 || experience.step == 4 || experience.step == 5 
-                                                || experience.step == 7 || experience.step == 8 || experience.step == 9 || experience.step == 15 
-                                                || experience.step == 16 || experience.step == 17 || experience.step == 25 || experience.step == 26 || experience.step == 27">
+                                    <div class="bg ng-hide" ng-show="experience.step == 3 || experience.step == 4 || experience.step == 5
+                                                    || experience.step == 7 || experience.step == 8 || experience.step == 9 || experience.step == 15
+                                                    || experience.step == 16 || experience.step == 17 || experience.step == 25 || experience.step == 26 || experience.step == 27">
                                         <img ng-src="../assets/4-convenience-more/cm_01-notif_02-2-presets_screen-01" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 6">
                                         <img ng-src="../assets/4-convenience-more/cm_01-notif_02-2-presets_screen-02" />
                                     </div>
-                                    <div class="bg ng-hide" ng-class="{darker: experience.step == 11 || experience.step == 19 
-                                                || experience.step == 26 || experience.step == 29}" ng-show="experience.step == 10 || experience.step == 11 
-                                                || experience.step == 18 || experience.step == 19 || experience.step == 28 || experience.step == 29">
+                                    <div class="bg ng-hide" ng-class="{darker: experience.step == 11 || experience.step == 19
+                                                || experience.step == 26 || experience.step == 29}" ng-show="experience.step == 10 || experience.step == 11
+                                                                || experience.step == 18 || experience.step == 19 || experience.step == 28 || experience.step == 29">
                                         <img ng-src="../assets/4-convenience-more/cm_01-notif_02-3-voice_screen-02" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 12">
@@ -102,11 +101,40 @@
                                 </div>
                                 <div class="hint" ng-show="experience.tab == 2 && (experience.step == 8 || experience.step == 16 || experience.step == 26)">Turn the bezel to the left</div>
                                 <div class="hint" ng-show="experience.tab == 2 && (experience.step == 4 || experience.step == 21)">Turn the bezel to the right</div>
-                                <div class="hint" ng-show="experience.tab == 2 && (experience.step == 2 || experience.step == 11 || experience.step == 19 
+                                <div class="hint" ng-show="experience.tab == 2 && (experience.step == 2 || experience.step == 11 || experience.step == 19
                                                 || experience.step == 29 || experience.step == 31 || experience.step == 33
                                                 || experience.step == 35 || experience.step == 37 || experience.step == 39
                                                 || experience.step == 41)">Tap on the screen</div>
                                 <div class="hint" ng-show="experience.tab == 2 && (experience.step == 13)">" Okay "</div>
+                            </div>
+                            <div class="feature-nav">
+                                <div class="nav-container pure-g">
+                                    <div class="item pure-u-1-5">
+                                        <div class="circle outer" ng-class="{active: experience.step < 3}">
+                                            <div class="start circle inner" ng-click="changeFeature(1)"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item pure-u-1-5">
+                                        <div class="circle outer" ng-class="{active: experience.step >= 3 && experience.step < 7}">
+                                            <div class="feature1 circle inner" ng-click="changeFeature(3)"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item pure-u-1-5">
+                                        <div class="circle outer" ng-class="{active: experience.step >= 7 && experience.step < 15}">
+                                            <div class="feature2 circle inner" ng-click="changeFeature(7)"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item pure-u-1-5">
+                                        <div class="circle outer" ng-class="{active: experience.step >= 15 && experience.step < 25}">
+                                            <div class="feature3 circle inner" ng-click="changeFeature(15)"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item pure-u-1-5">
+                                        <div class="circle outer" ng-class="{active: experience.step >= 25}">
+                                            <div class="feature4 circle inner" ng-click="changeFeature(25)"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

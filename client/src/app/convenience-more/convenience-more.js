@@ -86,6 +86,11 @@
         $slider.slick('slickNext');
     };
     
+    $scope.changeFeature = function(index) {
+        $scope.experience.step = index;
+        $scope.experience.startExperience(false, $scope.experience);
+    };
+    
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.convenience_more.sections.notifications.experience, $scope, $timeout);    
     $scope.experience.initExperience();
