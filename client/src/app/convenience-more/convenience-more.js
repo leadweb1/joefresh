@@ -76,8 +76,15 @@
         top: DataService.getSectionByName('convenience-more'),
     });
     
-    $scope.experienceTitle = '';
-    $scope.experienceDescription = '';
+    $scope.prevSlide = function() {
+        var $slider = jQuery('.slider-container:not(.ng-hide)');
+        $slider.slick('slickPrev');
+    };
+    
+    $scope.nextSlide = function() {
+        var $slider = jQuery('.slider-container:not(.ng-hide)');
+        $slider.slick('slickNext');
+    };
     
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.convenience_more.sections.notifications.experience, $scope, $timeout);    

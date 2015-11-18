@@ -40,6 +40,14 @@
             runStep: function (tab, step) {
                 var $tab = this.data.tabs[tab - 1];
                 var $step = $tab.steps[step - 1];
+                
+                if($step.title) {
+                    this.$scope.experienceTitle = $step.title;
+                }
+                
+                if($step.description) {
+                    this.$scope.experienceDescription = $step.description;
+                }
 
                 if (tab === this.tab && step == this.step) {
                     if ($step.timeout !== undefined) {
@@ -64,7 +72,7 @@
                 if (animate === true) {
                     // Animate bezel
                 }
-                this.updateTitles(exp);
+                exp.updateTitles(exp);
                 exp.runStep(exp.tab, exp.step);
             },
             initExperience: function () {
@@ -100,8 +108,18 @@
                 }.bind('exp', this), 100);
             },
             updateTitles: function(exp) {
-                exp.$scope.experienceTitle = exp.data.tabs[exp.tab -1].title;
-                exp.$scope.experienceDescription = exp.data.tabs[exp.tab - 1].description;
+                var $tab = exp.data.tabs[exp.tab - 1];
+                var $step = $tab.steps[exp.step - 1];
+                exp.$scope.experienceTitle = $tab.title;
+                exp.$scope.experienceDescription = $tab.description;
+                
+                if($step.title) {
+                    exp.$scope.experienceTitle = $step.title;
+                }
+                
+                if($step.title) {
+                    exp.$scope.experienceDescription = $step.description;
+                }
             }
         };
     }

@@ -21,7 +21,30 @@ and open the template in the editor.
                 position: relative;
 
                 &.slider-wrapper {
+                    .arrow {
+                        //margin: 225px 0 0 0;
+                        position: relative;
+                        height: inherit;
+
+                        img {
+                            position: absolute;
+                            top: 50%;
+                            margin-top: -25%;
+
+                            &.left {
+                                //margin-left: 215px;
+                                right: 40px;
+                            }
+                            &.right {
+                                //margin-right: 215px;
+                                left: 40px;
+                            }
+                        }
+                    }
+
                     .slider-container {
+                        position: relative;
+
                         .slick-list {
                             .slick-track {
                                 .slick-slide {
@@ -36,7 +59,7 @@ and open the template in the editor.
                             list-style: none;
                             margin: 60px auto 0;
                             padding: 0;
-                            width: 240px;
+                            width: 120px;
 
                             li {
                                 display: inline-block;
@@ -85,7 +108,7 @@ and open the template in the editor.
                         position: absolute;
                         bottom: 0;
                         left: 50%;
-                        margin: 0 -28%;
+                        margin: 0 -35%;
                     }
 
                     .drag {
@@ -101,12 +124,17 @@ and open the template in the editor.
                             position: absolute;
                             padding: 55px 55px;
                             overflow: hidden;
+
+                            &.darker {
+                                opacity: 0.5;
+                            }
                         }
 
                         .tap-screen {
                             position: absolute;
                             //padding: 40px;
                             z-index: 9;
+                            display: none;
 
                             width: 100%;
                             height: 100%;
@@ -117,6 +145,55 @@ and open the template in the editor.
                             .tap-area {
                                 width: 100%;
                                 height: 100%;
+                            }
+                            
+                            &.tab1 {
+                                &.step4 {
+                                    display: block;
+                                }
+                            }
+
+                            &.tab2 {
+                                &.step2 {
+                                    background-position-y: 78%;
+                                    display: block;
+                                }
+                                &.step11 {
+                                    background-position: 22% 51%;
+                                    display: block;
+                                }
+                                &.step19 {
+                                    background-position-y: 51%;
+                                    display: block;
+                                }
+                                &.step29 {
+                                    background-position: 78% 51%;
+                                    display: block;
+                                }
+                                &.step31 {
+                                    //background-position: 80% 50%;
+                                    display: block;
+                                }
+                                &.step33 {
+                                    background-position: 59% 57%;
+                                    display: block;
+                                }
+                                &.step35 {
+                                    background-position: 40% 57%;
+                                    display: block;
+                                }
+                                &.step37 {
+                                    background-position: 40% 42%;
+                                    display: block;
+                                }
+                                &.step39 {
+                                    background-position: 80% 56%;
+                                    display: block;
+                                }
+                                &.step41 {
+                                    background-position: 80% 49%;
+                                    display: block;
+                                }
                             }
                         }
 

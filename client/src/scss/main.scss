@@ -185,6 +185,11 @@ html, button, input, select, textarea, .pure-g [class*="pure-u"] {
             &.sub {
                 font-size: 28px;
             }
+            
+            &.description {
+                width: 90%;
+                margin: 0 auto;
+            }
         }
 
         .experience {

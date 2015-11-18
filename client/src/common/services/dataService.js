@@ -298,8 +298,16 @@
                                     tabs: [
                                         {
                                             title: 'Check Messages',
-                                            description: 'Bla bla',
+                                            description: 'Gear S2 provides quick and easy access to notifications. From the\nwatch face, turn the bezel to the left to check your notifications.',
                                             steps: [
+                                                {
+                                                    title: 'Check Messages',
+                                                    description: 'Gear S2 provides quick and easy access to notifications. From the\nwatch face, turn the bezel to the left to check your notifications.',
+                                                    timeout: 1,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
                                                 {
                                                     timeout: 1,
                                                 },
@@ -307,13 +315,7 @@
                                                     userActionRequired: true,
                                                 },
                                                 {
-                                                    timeout: 2,
-                                                },
-                                                {
-                                                    userActionRequired: true,
-                                                },
-                                                {
-                                                    timeout: 2,
+                                                    timeout: 1,
                                                 },
                                                 {
                                                     userActionRequired: true,
@@ -326,10 +328,43 @@
                                         },
                                         {
                                             title: 'Send Messages',
-                                            description: 'Bla bla',
+                                            description: 'Gear S2 gives you four different ways\nto respond to messages from your wrist.',
                                             last: true,
                                             steps: [
                                                 {
+                                                    title: 'Send Messages', // 1
+                                                    description: 'Gear S2 gives you four different ways\nto respond to messages from your wrist.',
+                                                    timeout: 1,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                {
+                                                    title: 'Presets', // 3
+                                                    description: 'Turn the bezel to select preset texts.\nYou can also add more presets from your phone.',
+                                                    timeout: 1,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                { // Animate bezel
+                                                    timeout: 1,
+                                                },
+                                                { // Change screen
+                                                    timeout: 1,
+                                                },
+                                                {
+                                                    title: 'Voice Input', // 7
+                                                    description: 'Select the S Voice icon to write messages\nwith your voice.',
+                                                    timeout: 1,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                { // Animate bezel
+                                                    timeout: 1,
+                                                },
+                                                { // Change
                                                     timeout: 1,
                                                 },
                                                 {
@@ -339,85 +374,92 @@
                                                     timeout: 2,
                                                 },
                                                 {
-                                                    userActionRequired: true,
-                                                },
-                                                {
-                                                    timeout: 2,
-                                                },
-                                                {
-                                                    userActionRequired: true,
-                                                },
-                                                {
-                                                    timeout: 2,
-                                                },
-                                                {
-                                                    userActionRequired: true,
-                                                },
-                                                {
                                                     timeout: 2,
                                                 },
                                                 {
                                                     timeout: 2,
                                                 },
                                                 {
-                                                    timeout: 2,
+                                                    title: 'Emoticon', // 15
+                                                    description: 'Choose from a variety of emoticons\nto send quick messages.',
+                                                    timeout: 1,
                                                 },
                                                 {
                                                     userActionRequired: true,
                                                 },
+                                                { // Animate bezel
+                                                    timeout: 1,
+                                                },
+                                                { // Change screen
+                                                    timeout: 1,
+                                                },
                                                 {
-                                                    timeout: 2,
+                                                    userActionRequired: true,
+                                                },
+                                                { // Change screen
+                                                    timeout: 1,
                                                 },
                                                 {
                                                     userActionRequired: true,
                                                 },
                                                 {
-                                                    timeout: 2,
+                                                    timeout: 0.5,
                                                 },
                                                 {
-                                                    timeout: 2,
+                                                    timeout: 0.5,
                                                 },
                                                 {
-                                                    timeout: 2,
+                                                    timeout: 1.5,
+                                                },
+                                                { // Change screen
+                                                    title: 'Keypads', // 25
+                                                    description: 'Gear S2 also has a keypad to let you type\nmessages without taking out your phone.',
+                                                    timeout: 1,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                { // Animate bezel
+                                                    timeout: 1,
+                                                },
+                                                { // Change screen
+                                                    timeout: 1,
+                                                },
+                                                {
+                                                    userActionRequired: true,
+                                                },
+                                                { // Change screen
+                                                    timeout: 1,
                                                 },
                                                 {
                                                     userActionRequired: true,
                                                 },
                                                 {
-                                                    userActionRequired: true,
-                                                },
-                                                {
-                                                    timeout: 2,
+                                                    timeout: 0.5,
                                                 },
                                                 {
                                                     userActionRequired: true,
                                                 },
                                                 {
-                                                    timeout: 2,
+                                                    timeout: 0.5,
                                                 },
                                                 {
                                                     userActionRequired: true,
                                                 },
                                                 {
-                                                    timeout: 2,
+                                                    timeout: 0.5,
                                                 },
                                                 {
                                                     userActionRequired: true,
                                                 },
                                                 {
-                                                    userActionRequired: true,
+                                                    timeout: 0.5,
                                                 },
                                                 {
                                                     userActionRequired: true,
                                                 },
                                                 {
-                                                    timeout: 2,
-                                                },
-                                                {
-                                                    userActionRequired: true,
-                                                },
-                                                {
-                                                    timeout: 2,
+                                                    timeout: 0.5,
                                                 },
                                                 {
                                                     userActionRequired: true,
