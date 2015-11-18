@@ -96,13 +96,13 @@
                                                     userActionRequired: true,
                                                 },
                                                 {
-                                                    timeout: 2,
+                                                    timeout: 1,
                                                 },
                                                 {
                                                     userActionRequired: true,
                                                 },
                                                 {
-                                                    timeout: 2,
+                                                    timeout: 1,
                                                 },
                                                 {
                                                     userActionRequired: true,

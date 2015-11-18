@@ -21,6 +21,9 @@ and open the template in the editor.
                 position: relative;
 
                 &.slider-wrapper {
+                    > div {
+                        height: inherit;
+                    }
                     .slider-container {
                         .slick-list {
                             .slick-track {
