@@ -88,7 +88,7 @@
                                 var newTab = nextSlide + 1;
                                 if (exp.tab !== newTab) {
                                     // Reset step
-                                    exp.$scope.$apply(function () {
+                                    exp.$scope.safeApply(function () {
                                         exp.step = 1;
                                     });
                                 }
@@ -98,7 +98,7 @@
                                 
                                 if (exp.tab !== newTab && newTab <= exp.data.tabs.length) {
                                     // Change tab
-                                    exp.$scope.$apply(function () {
+                                    exp.$scope.safeApply(function () {
                                         exp.tab = newTab;
                                         exp.$scope.currentSlide = newTab;
                                     });
