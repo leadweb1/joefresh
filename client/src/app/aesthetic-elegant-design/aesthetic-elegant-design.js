@@ -57,7 +57,7 @@
         var $model = $scope.experience.data.tabs[model];
         
         $scope.model = $model.name;
-        this.changeColor(model, $model.defaultColor)
+        this.changeColor(model, $model.defaultColor);
     };
     
     $scope.changeColor = function(model, color) {

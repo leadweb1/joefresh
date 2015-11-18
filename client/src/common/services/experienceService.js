@@ -29,12 +29,12 @@
                         ) * 0.6;
 
                 if (event.distance > minDragDistance) {
-                    this.step++;
+                    this.step = this.step + 1;
                     this.runStep(this.tab, this.step);
                 }
             },
             tapScreen: function(event) {
-                this.step++;
+                this.step = this.step + 1;
                 this.runStep(this.tab, this.step);
             },
             runStep: function (tab, step) {
@@ -49,7 +49,7 @@
                     this.$scope.experienceDescription = $step.description;
                 }
 
-                if (tab === this.tab && step == this.step) {
+                if (tab === this.tab && step === this.step) {
                     if ($step.timeout !== undefined) {
                         this.$timeout(function (exp) {
                             if ($step.last === true) {
@@ -61,7 +61,7 @@
                                 }
                             }
                             else {
-                                exp.step++;
+                                exp.step = exp.step + 1;
                                 exp.runStep(exp.tab, exp.step);
                             }
                         }.bind('exp', this).bind('$tab', $tab).bind('$step', $step), $step.timeout * 1000);

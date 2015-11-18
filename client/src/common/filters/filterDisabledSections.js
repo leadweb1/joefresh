@@ -6,7 +6,9 @@
             var inputArray = [];
 
             for (var item in input) {
-                inputArray.push(input[item]);
+                if(item) {
+                    inputArray.push(input[item]);
+                }
             }
 
             return inputArray.filter(function (v) {

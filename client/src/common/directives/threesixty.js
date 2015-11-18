@@ -23,7 +23,6 @@
             }
         };
     }
-    ;
 
 
     angular.module('common.directives.threesixty', [])

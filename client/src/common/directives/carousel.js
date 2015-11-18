@@ -89,7 +89,7 @@
     .directive('appWatchCarousel', watchCarouselDirective)
     .directive('appContentCarousel', contentCarouselDirective);
 
-  $(window).on('resize', function(e) {
+  jQuery(window).on('resize', function(e) {
       resizeOverlay(); 
   });
   

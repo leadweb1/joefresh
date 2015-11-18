@@ -568,14 +568,16 @@
                     sections = this.content.sections;
                 }
                 for (var s in sections) {
-                    var section = sections[s];
-                    if (section.name === name) {
-                        return section;
-                    }
-                    if (section.sections) {
-                        subsection = self.getSectionByName(name, section.sections);
-                        if (subsection !== false) {
-                            return subsection;
+                    if(s) {
+                        var section = sections[s];
+                        if (section.name === name) {
+                            return section;
+                        }
+                        if (section.sections) {
+                            subsection = self.getSectionByName(name, section.sections);
+                            if (subsection !== false) {
+                                return subsection;
+                            }
                         }
                     }
                 }
