@@ -58,7 +58,7 @@
    * @name  ConvenienceController
    * @description Controller
    */
-  function ConvenienceController(data, DataService, ExperienceService, $scope, $timeout) {
+  function ConvenienceController(data, DataService, ExperienceService, $scope) {
     $scope.data = angular.extend({}, data, {
         template: 'src/app/convenience-more/convenience-more.tpl.html',
         top: DataService.getSectionByName('convenience-more'),
@@ -92,7 +92,7 @@
     };
     
     // Start experience
-    $scope.experience = ExperienceService.get($scope.data.content.sections.convenience_more.sections.notifications.experience, $scope, $timeout);    
+    $scope.experience = ExperienceService.get($scope.data.content.sections.convenienceMore.sections.notifications.experience, $scope, $timeout);    
     $scope.experience.initExperience();
   }
 
@@ -108,7 +108,7 @@
     });
     
     // Start experience
-    $scope.experience = ExperienceService.get($scope.data.content.sections.convenience_more.sections.samsung_pay.experience, $scope, $timeout);    
+    $scope.experience = ExperienceService.get($scope.data.content.sections.convenienceMore.sections.samsungPay.experience, $scope, $timeout);    
     $scope.experience.initExperience();
   }
 
@@ -136,7 +136,7 @@
     };
     
     // Start experience
-    $scope.experience = ExperienceService.get($scope.data.content.sections.convenience_more.sections.additional_features.experience, $scope, $timeout);    
+    $scope.experience = ExperienceService.get($scope.data.content.sections.convenienceMore.sections.additionalFeatures.experience, $scope, $timeout);    
     $scope.experience.initExperience();
   }
 
@@ -152,7 +152,7 @@
     });
     
     // Start experience
-    $scope.experience = ExperienceService.get($scope.data.content.sections.convenience_more.sections.accessories.experience, $scope, $timeout);    
+    $scope.experience = ExperienceService.get($scope.data.content.sections.convenienceMore.sections.accessories.experience, $scope, $timeout);    
     $scope.experience.initExperience();
   }
 

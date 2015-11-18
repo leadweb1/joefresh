@@ -10,13 +10,13 @@
             },
             content: {
                 sections: {
-                    'aesthetic_elegant_design': {
+                    'aestheticElegantDesign': {
                         name: 'aesthetic-elegant-design',
                         title: 'Aesthetic and Elegant Design',
                         description: 'Gear S2 comes full circle with a durable stainless steel body that sits slim and sleek on your wrist. Enjoy the perfect harmony between technology and design.',
                         route: 'root.aesthetic-elegant-design',
                         sections: {
-                            'stylish_smart_gear': {
+                            'stylishSmartGear': {
                                 name: 'stylish-smart-gear',
                                 title: 'Stylish Smart Gear',
                                 route: 'root.aesthetic-elegant-design_stylish-smart-gear',
@@ -74,12 +74,12 @@
                             },
                         },
                     },
-                    'intuitive_experience': {
+                    'intuitiveExperience': {
                         name: 'intuitive-experience',
                         title: 'Intuitive Experience',
                         route: 'root.intuitive-experience',
                         sections: {
-                            'rotating_bezel': {
+                            'rotatingBezel': {
                                 name: 'rotating-bezel',
                                 title: 'Rotating Bezel',
                                 route: 'root.intuitive-experience_rotating-bezel',
@@ -182,12 +182,12 @@
                             },
                         },
                     },
-                    'healthier_lifestyle': {
+                    'healthierLifestyle': {
                         name: 'healthier-lifestyle',
                         title: 'Healthier Lifestyle',
                         route: 'root.healthier-lifestyle',
                         sections: {
-                            'track_your_health': {
+                            'trackYourHealth': {
                                 name: 'track-your-health',
                                 title: 'Track Your Health',
                                 description: 'Gear S2 comes full circle with a durable stainless steel body that sits slim and sleek on your wrist.',
@@ -228,7 +228,7 @@
                                     ],
                                 },
                             },
-                            'activity_log': {
+                            'activityLog': {
                                 name: '24h-activity-log',
                                 title: '24H Activity Log',
                                 route: 'root.healthier-lifestyle_24h-activity-log',
@@ -263,7 +263,7 @@
                                     ],
                                 },
                             },
-                            'health_clock': {
+                            'healthClock': {
                                 name: 'health-clock',
                                 title: 'Health Clock',
                                 route: 'root.healthier-lifestyle_health-clock',
@@ -285,7 +285,7 @@
                             },
                         },
                     },
-                    'convenience_more': {
+                    'convenienceMore': {
                         name: 'convenience-more',
                         title: 'Convenience & More',
                         route: 'root.convenience-more',
@@ -473,7 +473,7 @@
                                     ],
                                 },
                             },
-                            'samsung_pay': {
+                            'samsungPay': {
                                 name: 'samsung-pay',
                                 title: 'Samsung Pay',
                                 route: 'root.convenience-more_samsung-pay',
@@ -503,7 +503,7 @@
                                     ],
                                 },
                             },
-                            'additional_features': {
+                            'additionalFeatures': {
                                 name: 'additional-features',
                                 title: 'Additional Features',
                                 route: 'root.convenience-more_additional-features',
@@ -568,7 +568,7 @@
                             },
                         },
                     },
-                    'customize_your_gear': {
+                    'customizeYourGear': {
                         name: 'customize-your-gear',
                         title: 'Customize your Gear S2',
                         description: 'You can transform the look of your Gear S2 by choosing from a wide variety of watch face and band options.\nTry on different designs, just like you mix and match your outfits everyday.',

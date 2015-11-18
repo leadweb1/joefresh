@@ -68,7 +68,7 @@
     };
     
     // Start experience
-    $scope.experience = ExperienceService.get($scope.data.content.sections.aesthetic_elegant_design.sections.stylish_smart_gear.experience, $scope, $timeout);    
+    $scope.experience = ExperienceService.get($scope.data.content.sections.aestheticElegantDesign.sections.stylishSmartGear.experience, $scope, $timeout);    
     $scope.experience.initExperience();
   }
 

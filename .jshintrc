@@ -1,6 +1,9 @@
 {
   "globals": {
-    "angular": false
+    "angular": false,
+    "$": false,
+    "jQuery": false,
+    "Hammer": false
   },
   "node": true,
   "browser": true,

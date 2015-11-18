@@ -10,7 +10,7 @@
     arrows: false,
   };
   
-  var activeSlider = null;
+  //var activeSlider = null;
 
   function watchCarouselDirective() {
     return {
@@ -74,7 +74,7 @@
   
   function resizeOverlay($carousel) {
     $carousel = $carousel || jQuery('.slick-list');
-    $carousel.each(function(elem){
+    $carousel.each(function(){
         $carousel = jQuery(this);
         var $overlay = $carousel.find('.slider-overlay');
         var width = $carousel.find('.slick-slide.slick-current').width();
@@ -89,7 +89,7 @@
     .directive('appWatchCarousel', watchCarouselDirective)
     .directive('appContentCarousel', contentCarouselDirective);
 
-  jQuery(window).on('resize', function(e) {
+  jQuery(window).on('resize', function() {
       resizeOverlay(); 
   });
   

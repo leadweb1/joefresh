@@ -53,7 +53,7 @@
     $scope.experienceDescription = '';
     
     // Start experience
-    $scope.experience = ExperienceService.get($scope.data.content.sections.intuitive_experience.sections.rotating_bezel.experience, $scope, $timeout);    
+    $scope.experience = ExperienceService.get($scope.data.content.sections.intuitiveExperience.sections.rotatingBezel.experience, $scope, $timeout);    
     $scope.experience.initExperience();
   }
 

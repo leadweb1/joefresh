@@ -67,7 +67,7 @@
     });
     
     // Start experience
-    $scope.experience = ExperienceService.get($scope.data.content.sections.healthier_lifestyle.sections.track_your_health.experience, $scope, $timeout);    
+    $scope.experience = ExperienceService.get($scope.data.content.sections.healthierLifestyle.sections.trackYourHealth.experience, $scope, $timeout);    
     $scope.experience.initExperience();
   }
 
@@ -82,7 +82,7 @@
     });
     
     // Start experience
-    $scope.experience = ExperienceService.get($scope.data.content.sections.healthier_lifestyle.sections.activity_log.experience, $scope, $timeout);    
+    $scope.experience = ExperienceService.get($scope.data.content.sections.healthierLifestyle.sections.activityLog.experience, $scope, $timeout);    
     $scope.experience.initExperience();
   }
 
@@ -97,7 +97,7 @@
     });
     
     // Start experience
-    $scope.experience = ExperienceService.get($scope.data.content.sections.healthier_lifestyle.sections.health_clock.experience, $scope, $timeout);    
+    $scope.experience = ExperienceService.get($scope.data.content.sections.healthierLifestyle.sections.healthClock.experience, $scope, $timeout);    
     $scope.experience.initExperience();
     
     $scope.faceTitle = 'Activity Sparkles';

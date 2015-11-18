@@ -48,7 +48,7 @@
           else {
               var $watchFaceSlider = jQuery('.slider-container.ng-hide');
               var backgroundImage = $watchFaceSlider.find('.slick-current img').attr('src');
-              $slider.css('background-image',"url('"+backgroundImage+"')");
+              $slider.css('background-image','url(\''+backgroundImage+'\')');
           }
           
           $slides.each(function(index){

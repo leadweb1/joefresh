@@ -16,7 +16,7 @@
                 this.$timeout = timeout;
                 return this;
             },
-            bezelRotateDragStart: function (event) {
+            bezelRotateDragStart: function () {
             },
             bezelRotateDragEnd: function (event) {
                 var target = angular.element(event.target).parent()[0];
@@ -34,7 +34,7 @@
                     this.runStep(this.tab, this.step);
                 }
             },
-            tapScreen: function(event) {
+            tapScreen: function() {
                 this.step = this.step + 1;
                 this.runStep(this.tab, this.step);
             },
