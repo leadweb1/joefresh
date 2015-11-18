@@ -77,6 +77,7 @@
                     'intuitiveExperience': {
                         name: 'intuitive-experience',
                         title: 'Intuitive Experience',
+                        description: 'Gear S2 provides an analog-inspired, circular interface for easier navigation.\nWith the rotating bezel, you can navigate quickly, precisely, and clearly without blocking the screen with fingers.',
                         route: 'root.intuitive-experience',
                         sections: {
                             'rotatingBezel': {
@@ -87,7 +88,7 @@
                                     tabs: [
                                         {
                                             title: 'Horizontal Navigation',
-                                            description: 'Bla bla',
+                                            description: 'Rotate the bezel to navigate left and right.',
                                             steps: [
                                                 {
                                                     timeout: 1,
@@ -115,7 +116,7 @@
                                         },
                                         {
                                             title: 'Vertical Navigation',
-                                            description: 'Bla bla',
+                                            description: 'Rotate the bezel to navigate up and down.',
                                             steps: [
                                                 {
                                                     timeout: 1,
@@ -140,7 +141,7 @@
                                         },
                                         {
                                             title: 'Circular Navigation',
-                                            description: 'Bla bla',
+                                            description: 'Rotate the bezel to browse options.',
                                             steps: [
                                                 {
                                                     timeout: 1,
@@ -159,7 +160,7 @@
                                         },
                                         {
                                             title: 'Volume Control',
-                                            description: 'Bla bla',
+                                            description: 'Rotate the bezel to change volumes.',
                                             last: true,
                                             steps: [
                                                 {
@@ -196,7 +197,7 @@
                                     tabs: [
                                         {
                                             title: 'Auto Tracking',
-                                            description: 'Bla bla',
+                                            description: 'Gear S2 automatically detects your movement, exercise, and heart rate. It recognizes your activity level and also motivates you to move more to stay fit.',
                                             steps: [
                                                 { // start
                                                     userActionRequired: true,
@@ -231,7 +232,7 @@
                                         },
                                         {
                                             title: 'Exercise',
-                                            description: 'Bla bla',
+                                            description: 'Before working out, set your goals. Gear S2 will notify you when you reach your goal and record your fitness data.',
                                             steps: [
                                                 { // start, 1
                                                     userActionRequired: true,
@@ -326,7 +327,7 @@
                                         },
                                         {
                                             title: 'Heart Rate',
-                                            description: 'Bla bla',
+                                            description: 'With Gear S2, you can check the heart rate and see the record on a chart.',
                                             last: true,
                                             steps: [
                                                 { // start
@@ -362,12 +363,13 @@
                             'activityLog': {
                                 name: '24h-activity-log',
                                 title: '24H Activity Log',
+                                description: 'Track your activity throughout the day and easily identify the types of activity by different colors.',
                                 route: 'root.healthier-lifestyle_24h-activity-log',
                                 experience: {
                                     tabs: [
                                         {
                                             title: '24H Activity Log',
-                                            description: 'Bla bla',
+                                            description: 'Review summaries of your daily movements to stay healthy.\nThe 24H Activity Log measures all your movements during the day.',
                                             last: true,
                                             steps: [
                                                 {
@@ -397,6 +399,7 @@
                             'healthClock': {
                                 name: 'health-clock',
                                 title: 'Health Clock',
+                                description: 'Gear S2 encourages a healthier lifestyle with Health Clock watch faces. Check the screen on the Gear S2 to see if you are getting enough exercise.',
                                 route: 'root.healthier-lifestyle_health-clock',
                                 experience: {
                                     tabs: [
@@ -679,7 +682,7 @@
                             'accessories': {
                                 name: 'accessories',
                                 title: 'Accessories',
-                                description: 'Gear S2 provides a range of watch faces and watchbands that completes your personal style.\nThere are unique and colorful bands, including exclusive collection from Italian designer Alessandro Mendini, that brings his taste, humor, and sense of color to the Gear S2.',
+                                description: 'Gear S2 provides a range of watch faces and watchbands that completes your personal style.\nA special collection from Italian designer Alessandro Mendini brings his taste, humor, and sense of color to the Gear S2.',
                                 route: 'root.convenience-more_accessories',
                                 experience: {
                                     tabs: [

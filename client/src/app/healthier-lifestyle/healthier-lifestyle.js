@@ -117,7 +117,7 @@
     
     $scope.faceTitle = 'Activity Sparkles';
     $scope.faceDescription = 'More particles appear';
-    $scope.faceDescription2 = 'when you move more';
+    $scope.faceDescription2 = 'when you move';
     
     $scope.prevSlide = function() {
         var $slider = jQuery('.slider-container:not(.ng-hide)');
