@@ -86,9 +86,10 @@ and open the template in the editor.
                                         width: 75px;
                                         height: 75px; 
                                         position: relative;
+                                        border: 3px solid #FFF;
 
                                         &.active {
-                                            border: 3px solid #000;
+                                            border-color: #000;
                                         }
                                     }
                                     &.inner {
