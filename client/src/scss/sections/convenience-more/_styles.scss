@@ -17,6 +17,10 @@ and open the template in the editor.
             }
 
             .slider-wrapper {
+                > div {
+                    height: inherit;
+                }
+                
                 .arrow {
                     //margin: 225px 0 0 0;
                     position: relative;
