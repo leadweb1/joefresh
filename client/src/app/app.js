@@ -38,7 +38,7 @@
     });
     
     //IdleProvider.idle(5 * 60); // In seconds, default is 20min
-    //IdleProvider.timeout(5); // In seconds, default is 30sec
+    IdleProvider.timeout(5); // In seconds, default is 30sec
   }
 
   function MainCtrl($log, $scope, $state) {
@@ -46,7 +46,7 @@
     
     $scope.$on('IdleTimeout', function() {
         console.log('Timeout');
-        $state.go('root.splash')
+        $state.go('root.splash');
     });
     
     $scope.isActiveState = function(state) {
