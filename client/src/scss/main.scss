@@ -23,6 +23,21 @@ html, body, div, button, input, select, textarea, .pure-g [class*="pure-u"] {
     font-family: 'SamsungSharpSansMedium';
 }
 
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+:focus {
+    outline: 0;
+    /* or */
+    //outline: none;
+}
+
 .ng-hide {
     opacity: 0;
 }
