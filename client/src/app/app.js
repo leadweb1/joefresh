@@ -37,7 +37,7 @@
         ],
     });
     
-    //IdleProvider.idle(5 * 60); // In seconds, default is 20min
+    IdleProvider.idle(30); // In seconds, default is 20min
     IdleProvider.timeout(5); // In seconds, default is 30sec
   }
 
