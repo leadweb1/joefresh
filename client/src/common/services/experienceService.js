@@ -93,6 +93,7 @@
                                     // Reset step
                                     exp.$scope.safeApply(function () {
                                         exp.step = 1;
+                                        exp.currentSlide = newTab;
                                     });
                                 }
                             })
@@ -103,7 +104,6 @@
                                     // Change tab
                                     exp.$scope.safeApply(function () {
                                         exp.tab = newTab;
-                                        exp.$scope.currentSlide = newTab;
                                     });
 
                                     exp.startExperience(false, exp);

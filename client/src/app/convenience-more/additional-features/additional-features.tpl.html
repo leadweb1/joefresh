@@ -1,6 +1,7 @@
 <div class="pure-g slider-wrapper convenience-more additional-features">
     <div class="pure-u-1">
-        <div class="arrow left"><img class="left" ng-src="assets/0-UI/icon_arrow_slider_left.svg" ng-click="prevSlide();
+        {{experience.currentSlide}}
+        <div class="arrow left" ng-show="experience.currentSlide > 1"><img class="left" ng-src="assets/0-UI/icon_arrow_slider_left.svg" ng-click="prevSlide();
             $event.stopPropagation();" /></div>
         <div class="content ">
             <div class="slider-container" app-content-carousel data-slick='{"swipe": true}'>
@@ -35,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div class="arrow right"><img class="right" ng-src="assets/0-UI/icon_arrow_slider_right.svg" ng-click="nextSlide();
+        <div class="arrow right" ng-show="experience.currentSlide < 3"><img class="right" ng-src="assets/0-UI/icon_arrow_slider_right.svg" ng-click="nextSlide();
             $event.stopPropagation();" /></div>
     </div>
 </div>

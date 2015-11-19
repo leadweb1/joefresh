@@ -7,7 +7,7 @@
                 <div class="title sub face">{{faceTitle}} Watch Face</div>
                 <div class="watch">
                     <div class="watch-container pure-g">
-                        <div class="arrow pure-u-2-24"><img class="left" ng-src="assets/0-UI/icon_arrow_slider_left.svg" ng-click="prevSlide();
+                        <div class="arrow pure-u-2-24"><img class="left" ng-show="experience.currentSlide > 1" ng-src="assets/0-UI/icon_arrow_slider_left.svg" ng-click="prevSlide();
                     $event.stopPropagation();" /></div>
                         <div class="content pure-u-20-24">
                             <div id="watch" class="slider-container ng-hide" ng-show="activeSlider == 'watch' || activeSlider == null" app-watch-carousel data-slick='{"startSlide": 2, "overlay": "", "swipe": true}'>
@@ -34,7 +34,7 @@
                                 <div class="slide" data-title="QUADRO / A.Mendini"><img ng-src="assets/5-customize/cg_02-watchface_16.png" /></div>
                             </div>
                         </div>
-                        <div class="arrow pure-u-2-24"><img class="right" ng-src="assets/0-UI/icon_arrow_slider_right.svg" ng-click="nextSlide();
+                        <div class="arrow pure-u-2-24"><img class="right" ng-show="experience.currentSlide < 2" ng-src="assets/0-UI/icon_arrow_slider_right.svg" ng-click="nextSlide();
                     $event.stopPropagation();" /></div>
                     </div>
                 </div>

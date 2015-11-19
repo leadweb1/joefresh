@@ -7,7 +7,7 @@
         <div class="title main" ng-show="experience.step == 1">{{experienceTitle}}</div>
         <div class="title description sub" ng-show="experience.step == 1" ng-if="experienceDescription" ng-bind-html="experienceDescription | nl2br"></div>
         <div class="pure-g">
-            <div class="arrow pure-u-2-24"><img class="left" ng-src="assets/0-UI/icon_arrow_slider_left.svg" ng-click="prevSlide();
+            <div class="arrow pure-u-2-24"><img class="left" ng-show="experience.currentSlide > 1" ng-src="assets/0-UI/icon_arrow_slider_left.svg" ng-click="prevSlide();
                 $event.stopPropagation();" /></div>
             <div class="content pure-u-20-24">
                 <div class="slider-container" app-content-carousel>
@@ -121,7 +121,7 @@
                     </div>
                 </div>
             </div>
-            <div class="arrow pure-u-2-24"><img class="right" ng-src="assets/0-UI/icon_arrow_slider_right.svg" ng-click="nextSlide();
+            <div class="arrow pure-u-2-24"><img class="right" ng-show="experience.currentSlide < 3" ng-src="assets/0-UI/icon_arrow_slider_right.svg" ng-click="nextSlide();
                 $event.stopPropagation();" /></div>
         </div>
     </div>
