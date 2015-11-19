@@ -12,7 +12,7 @@ and open the template in the editor.
     &.island {
         .intuitive-experience {
             .section-nav {
-                background: url('/assets/2-intuitive-experience/ie_sidebar_bg-02.jpg') no-repeat top center;
+                background: url('../2-intuitive-experience/ie_sidebar_bg-02.jpg') no-repeat top center;
                 background-size: 100%;
             }
 
@@ -94,7 +94,7 @@ and open the template in the editor.
                     }
 
                     .drag {
-                        background: url('/assets/0-UI/element_watch-frame.png') no-repeat center center;
+                        background: url('../0-UI/element_watch-frame.png') no-repeat center center;
                         background-size: contain;
                         margin: 0 auto;
 
@@ -126,7 +126,7 @@ and open the template in the editor.
                         }
 
                         .bezel-rotate-left {
-                            background: url('/assets/0-UI/fleche_gauche.svg') no-repeat top left;
+                            background: url('../0-UI/fleche_gauche.svg') no-repeat top left;
                             margin: -40px 0 0 -40px;
 
                             .drag-end {
@@ -135,7 +135,7 @@ and open the template in the editor.
                         }
 
                         .bezel-rotate-right {
-                            background: url('/assets/0-UI/fleche_droite.svg') no-repeat top right;
+                            background: url('../0-UI/fleche_droite.svg') no-repeat top right;
                             margin: -40px 0 0 -40px;
 
                             .drag-start {

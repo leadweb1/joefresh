@@ -14,7 +14,7 @@ and open the template in the editor.
             position: relative;
 
             .section-nav {
-                background: url('/assets/5-customize/cg_sidebar_bg-05.jpg') no-repeat top center;
+                background: url('../5-customize/cg_sidebar_bg-05.jpg') no-repeat top center;
                 background-size: 100%;
             }
 
@@ -74,7 +74,7 @@ and open the template in the editor.
                                 }
 
                                 #watch {
-                                    background: url("/assets/5-customize/cg_02-watchface_02.png") no-repeat top center;
+                                    background: url("../5-customize/cg_02-watchface_02.png") no-repeat top center;
                                     background-position: 468px 0px;
                                     background-size: 209px 346px;
 

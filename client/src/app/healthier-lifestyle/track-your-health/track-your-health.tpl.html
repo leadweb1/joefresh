@@ -3,7 +3,7 @@
         <div class="title main" ng-show="experience.step == 1">{{experienceTitle}}</div>
         <div class="title description sub" ng-show="experience.step == 1" ng-if="experienceDescription" ng-bind-html="experienceDescription | nl2br"></div>
         <div class="pure-g">
-            <div class="arrow pure-u-2-24"><img class="left" ng-src="/assets/0-UI/icon_arrow_slider_left.svg" ng-click="prevSlide();
+            <div class="arrow pure-u-2-24"><img class="left" ng-src="assets/0-UI/icon_arrow_slider_left.svg" ng-click="prevSlide();
                 $event.stopPropagation();" /></div>
             <div class="content pure-u-20-24">
                 <div class="slider-container" app-content-carousel>
@@ -14,10 +14,10 @@
                                 <div class="drag" ng-class="{'drag-without-preview': experience.step == 5 || experience.step == 6}">
                                     <div ng-show="experience.step == 5"><ng-include src="data.config.tapScreen" /></div>
                                     <div class="bg ng-hide" ng-show="experience.step == 1 || experience.step == 7">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_01-autotrack_screen-01.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_01-autotrack_screen-01.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 3">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_01-autotrack_screen-03.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_01-autotrack_screen-03.png" />
                                     </div>
                                 </div>
                                 <div class="hint" ng-show="experience.tab == 1 && experience.step == 5">Tap on the screen</div>
@@ -33,58 +33,58 @@
                                 <div class="drag" ng-class="{'steps': experience.step >= 11 && experience.step <= 21}">
                                     <div ng-show="experience.step == 4 || experience.step == 6 || (experience.step >= 11 && experience.step <= 21)"><ng-include src="data.config.tapScreen" /></div>
                                     <div class="bg ng-hide" ng-show="experience.step == 1 || experience.step == 22">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-01.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-01.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-class="{darker: experience.step == 4}" ng-show="experience.step == 3 || experience.step == 4">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-03.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-03.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-class="{darker: experience.step == 6}" ng-show="experience.step == 5 || experience.step == 6">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-05.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-05.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 7">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-07.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-07.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 8">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-08.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-08.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 9">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-09.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-09.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 10">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-10.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-10.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 11">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-11.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-11.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 12">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-12.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-12.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 13">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-13.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-13.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 14">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-14.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-14.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 15">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-15.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-15.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 16">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-16.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-16.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 17">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-17.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-17.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 18">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-18.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-18.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 19">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-19.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-19.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 20">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-20.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-20.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 21">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_02-exercise_screen-21.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_02-exercise_screen-21.png" />
                                     </div>
                                 </div>
                                 <div class="hint" ng-show="experience.tab == 3 && experience.step == 4">Tap on the screen</div>
@@ -100,13 +100,13 @@
                                 <div class="drag">
                                     <div ng-show="experience.step == 4"><ng-include src="data.config.tapScreen" /></div>
                                     <div class="bg ng-hide" ng-show="experience.step == 1 || experience.step == 6">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_03-heartrate_screen-01.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_03-heartrate_screen-01.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 3 || experience.step == 4">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_03-heartrate_screen-03.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_03-heartrate_screen-03.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 5">
-                                        <img ng-src="../assets/3-healthier-lifestyle/hi_03-heartrate_screen-05.png" />
+                                        <img ng-src="assets/3-healthier-lifestyle/hi_03-heartrate_screen-05.png" />
                                     </div>
                                 </div>
                                 <div class="hint" ng-show="experience.tab == 3 && experience.step == 4">Tap on the screen</div>
@@ -117,7 +117,7 @@
                     </div>
                 </div>
             </div>
-            <div class="arrow pure-u-2-24"><img class="right" ng-src="/assets/0-UI/icon_arrow_slider_right.svg" ng-click="nextSlide();
+            <div class="arrow pure-u-2-24"><img class="right" ng-src="assets/0-UI/icon_arrow_slider_right.svg" ng-click="nextSlide();
                 $event.stopPropagation();" /></div>
         </div>
     </div>

@@ -12,7 +12,7 @@ and open the template in the editor.
     &.island {
         .convenience-more {
             .section-nav {
-                background: url('/assets/4-convenience-more/cm_sidebar_bg-04.jpg') no-repeat top center;
+                background: url('../4-convenience-more/cm_sidebar_bg-04.jpg') no-repeat top center;
                 background-size: 100%;
             }
 
@@ -124,7 +124,7 @@ and open the template in the editor.
                                     }
 
                                     .drag {
-                                        background: url('/assets/0-UI/element_watch-frame.png') no-repeat center center;
+                                        background: url('../0-UI/element_watch-frame.png') no-repeat center center;
                                         background-size: contain;
                                         margin: 0 auto;
 
@@ -151,7 +151,7 @@ and open the template in the editor.
                                             width: 100%;
                                             height: 100%;
 
-                                            background: url('/assets/0-UI/element_red-dot.svg') no-repeat top left;
+                                            background: url('../0-UI/element_red-dot.svg') no-repeat top left;
                                             background-position: 50% 50%;
 
                                             .tap-area {
@@ -227,7 +227,7 @@ and open the template in the editor.
                                         }
 
                                         .bezel-rotate-left {
-                                            background: url('/assets/0-UI/fleche_gauche.svg') no-repeat top left;
+                                            background: url('../0-UI/fleche_gauche.svg') no-repeat top left;
                                             margin: -40px 0 0 -40px;
 
                                             .drag-end {
@@ -236,7 +236,7 @@ and open the template in the editor.
                                         }
 
                                         .bezel-rotate-right {
-                                            background: url('/assets/0-UI/fleche_droite.svg') no-repeat top right;
+                                            background: url('../0-UI/fleche_droite.svg') no-repeat top right;
                                             margin: -40px 0 0 -40px;
 
                                             .drag-start {
@@ -297,19 +297,19 @@ and open the template in the editor.
                                 }
                             }
                             .start {
-                                background: url('/assets/4-convenience-more/cm_01-notif_02-1-icon.png') no-repeat top left;
+                                background: url('../4-convenience-more/cm_01-notif_02-1-icon.png') no-repeat top left;
                             }
                             .feature1 {
-                                background: url('/assets/4-convenience-more/cm_01-notif_02-2-icon.png') no-repeat top left;
+                                background: url('../4-convenience-more/cm_01-notif_02-2-icon.png') no-repeat top left;
                             }
                             .feature2 {
-                                background: url('/assets/4-convenience-more/cm_01-notif_02-3-icon.png') no-repeat top left;
+                                background: url('../4-convenience-more/cm_01-notif_02-3-icon.png') no-repeat top left;
                             }
                             .feature3 {
-                                background: url('/assets/4-convenience-more/cm_01-notif_02-4-icon.png') no-repeat top left;
+                                background: url('../4-convenience-more/cm_01-notif_02-4-icon.png') no-repeat top left;
                             }
                             .feature4 {
-                                background: url('/assets/4-convenience-more/cm_01-notif_02-5-icon.png') no-repeat top left;
+                                background: url('../4-convenience-more/cm_01-notif_02-5-icon.png') no-repeat top left;
                             }
                         }
                     }

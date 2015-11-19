@@ -12,7 +12,7 @@ and open the template in the editor.
     &.island {
         .healthier-lifestyle {
             .section-nav {
-                background: url('/assets/3-healthier-lifestyle/hi_sidebar_bg-03.jpg') no-repeat top center;
+                background: url('../3-healthier-lifestyle/hi_sidebar_bg-03.jpg') no-repeat top center;
                 background-size: 100%;
             }
 
@@ -102,7 +102,7 @@ and open the template in the editor.
                 }
 
                 .drag {
-                    background: url('/assets/0-UI/element_watch-frame.png') no-repeat center center;
+                    background: url('../0-UI/element_watch-frame.png') no-repeat center center;
                     background-size: contain;
                     margin: 0 auto;
 
@@ -141,24 +141,24 @@ and open the template in the editor.
                         width: 100%;
                         height: 100%;
 
-                        background: url('/assets/0-UI/element_red-dot.svg') no-repeat top left;
+                        background: url('../0-UI/element_red-dot.svg') no-repeat top left;
                         background-position: 50% 50%;
 
                         &.step11, &.step13, &.step15, &.step17, &.step19, &.step21 {
-                            background: url('/assets/3-healthier-lifestyle/hi_02-exercise_steps-left.png') no-repeat top left;
+                            background: url('../3-healthier-lifestyle/hi_02-exercise_steps-left.png') no-repeat top left;
                             background-position: 50% 120%;
 
                             .tap-area {
-                                background: url('/assets/0-UI/element_red-dot.svg') no-repeat top left;
+                                background: url('../0-UI/element_red-dot.svg') no-repeat top left;
                                 background-position: 15% 60%;
                             }
                         }
                         &.step12, &.step14, &.step16, &.step18, &.step20 {
-                            background: url('/assets/3-healthier-lifestyle/hi_02-exercise_steps-right.png') no-repeat top left;
+                            background: url('../3-healthier-lifestyle/hi_02-exercise_steps-right.png') no-repeat top left;
                             background-position: 50% 120%;
 
                             .tap-area {
-                                background: url('/assets/0-UI/element_red-dot.svg') no-repeat top left;
+                                background: url('../0-UI/element_red-dot.svg') no-repeat top left;
                                 background-position: 85% 60%;
                             }
                         }
@@ -223,7 +223,7 @@ and open the template in the editor.
                     }
 
                     .bezel-rotate-left {
-                        background: url('/assets/0-UI/fleche_gauche.svg') no-repeat top left;
+                        background: url('../0-UI/fleche_gauche.svg') no-repeat top left;
                         margin: -40px 0 0 -40px;
 
                         .drag-end {
@@ -232,7 +232,7 @@ and open the template in the editor.
                     }
 
                     .bezel-rotate-right {
-                        background: url('/assets/0-UI/fleche_droite.svg') no-repeat top right;
+                        background: url('../0-UI/fleche_droite.svg') no-repeat top right;
                         margin: -40px 0 0 -40px;
 
                         .drag-start {
@@ -286,46 +286,46 @@ and open the template in the editor.
                         &.tab1 {
                             &.bg1 {
                                 &.clear {
-                                    background: url('/assets/3-healthier-lifestyle/hi_01-autotrack_bg01.jpg') no-repeat top right;
+                                    background: url('../3-healthier-lifestyle/hi_01-autotrack_bg01.jpg') no-repeat top right;
                                 }
                                 &.blured {
-                                    background: url('/assets/3-healthier-lifestyle/hi_01-autotrack_bg01-blur.jpg') no-repeat top right;
+                                    background: url('../3-healthier-lifestyle/hi_01-autotrack_bg01-blur.jpg') no-repeat top right;
                                 }
                             }
                             &.bg2 {
                                 &.clear {
-                                    background: url('/assets/3-healthier-lifestyle/hi_01-autotrack_bg02.jpg') no-repeat top right;
+                                    background: url('../3-healthier-lifestyle/hi_01-autotrack_bg02.jpg') no-repeat top right;
                                 }
                                 &.blured {
-                                    background: url('/assets/3-healthier-lifestyle/hi_01-autotrack_bg02-blur.jpg') no-repeat top right;
+                                    background: url('../3-healthier-lifestyle/hi_01-autotrack_bg02-blur.jpg') no-repeat top right;
                                 }
                             }
                         }
                         &.tab2 {
                             &.bg1 {
                                 &.clear {
-                                    background: url('/assets/3-healthier-lifestyle/hi_02-exercise_bg01.jpg') no-repeat top right;
+                                    background: url('../3-healthier-lifestyle/hi_02-exercise_bg01.jpg') no-repeat top right;
                                 }
                                 &.blured {
-                                    background: url('/assets/3-healthier-lifestyle/hi_02-exercise_bg01-blur.jpg') no-repeat top right;
+                                    background: url('../3-healthier-lifestyle/hi_02-exercise_bg01-blur.jpg') no-repeat top right;
                                 }
                             }
                             &.bg2 {
                                 &.clear {
-                                    background: url('/assets/3-healthier-lifestyle/hi_02-exercise_bg02.jpg') no-repeat top right;
+                                    background: url('../3-healthier-lifestyle/hi_02-exercise_bg02.jpg') no-repeat top right;
                                 }
                                 &.blured {
-                                    background: url('/assets/3-healthier-lifestyle/hi_02-exercise_bg02-blur.jpg') no-repeat top right;
+                                    background: url('../3-healthier-lifestyle/hi_02-exercise_bg02-blur.jpg') no-repeat top right;
                                 }
                             }
                         }
                         &.tab3 {
                             &.bg1 {
                                 &.clear {
-                                    background: url('/assets/3-healthier-lifestyle/hi_03-heartrate_bg01.jpg') no-repeat top right;
+                                    background: url('../3-healthier-lifestyle/hi_03-heartrate_bg01.jpg') no-repeat top right;
                                 }
                                 &.blured {
-                                    background: url('/assets/3-healthier-lifestyle/hi_03-heartrate_bg01-blur.jpg') no-repeat top right;
+                                    background: url('../3-healthier-lifestyle/hi_03-heartrate_bg01-blur.jpg') no-repeat top right;
                                 }
                             }
                         }
@@ -464,7 +464,7 @@ and open the template in the editor.
                                     }
 
                                     #watchFace {
-                                        //background: url("/assets/5-customize/cg_01-watch_black.png") no-repeat top center;
+                                        //background: url("../5-customize/cg_01-watch_black.png") no-repeat top center;
                                         //background-position: 468px 0px;
                                         //background-size: 209px 346px;
 

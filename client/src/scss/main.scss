@@ -8,15 +8,15 @@ https://github.com/davidrapson/scss-toolkit
 
 @font-face {
     font-family: 'SamsungSharpSansRegular';
-    src: url('/assets/_FONT/SamsungSharpSans-Regular.ttf');
+    src: url('../_FONT/SamsungSharpSans-Regular.ttf');
 }
 @font-face {
     font-family: 'SamsungSharpSansMedium';
-    src: url('/assets/_FONT/samsungsharpsans_medium.ttf');
+    src: url('../_FONT/samsungsharpsans_medium.ttf');
 }
 @font-face {
     font-family: 'SamsungSharpSansBold';
-    src: url('/assets/_FONT/SamsungSharpSans-Bold.ttf');
+    src: url('../_FONT/SamsungSharpSans-Bold.ttf');
 }
 
 html, body, div, button, input, select, textarea, .pure-g [class*="pure-u"] {
