@@ -688,7 +688,7 @@
                                     tabs: [
                                         {
                                             title: 'Accessories',
-                                            description: 'Bla bla',
+                                            description: 'For every occasion, you can find the perfect\nwatch band to match your style.',
                                             last: true,
                                             steps: [
                                                 {

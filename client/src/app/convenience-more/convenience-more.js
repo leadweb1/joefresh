@@ -151,6 +151,24 @@
         top: DataService.getSectionByName('convenience-more'),
     });
     
+    $scope.activeWatch = '';
+    $scope.activeBand = '01';
+    $scope.selectBand = false;
+    
+    $scope.changeWatch = function(watch) {
+        $scope.activeWatch = watch;
+        $scope.activeBand = '01';
+    };
+    
+    $scope.changeBand = function(watch) {
+        $scope.selectBand = true;
+    };
+    
+    $scope.chooseBand = function(band) {
+        $scope.activeBand = band;
+        $scope.selectBand = false;
+    };
+    
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.convenienceMore.sections.accessories.experience, $scope, $timeout);    
     $scope.experience.initExperience();

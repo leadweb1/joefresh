@@ -1,16 +1,57 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
-</html>
+<div class="pure-g slider-wrapper convenience-more accessories">
+    <div class="pure-u-1 pure-u-1-1">
+        <div class="customize">
+            <div class="experience">
+                <div class="title description sub" ng-if="experienceDescription" ng-bind-html="experienceDescription | nl2br"></div>
+                <div class="elements"><img ng-src="../assets/4-convenience-more/cm_03-ac_element_icon-batch.png" /></div>
+                <div class="watch">
+                    <div class="watch-container pure-g">
+                        <div class="pure-u-6-24"></div>
+                        <div class="preview-container pure-u-12-24"><img class="preview" ng-src="../assets/4-convenience-more/cm_03-ac_watch-persp_{{activeWatch}}{{activeBand}}.png" /></div>
+                        <div class="pure-u-6-24">
+                            <div class="change-band" ng-click="changeBand()">
+                                <div class="circle outer">
+                                    <div class="circle inner" ng-click="changeBand()">
+                                        <div class="text">Change Band</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="band-selector ng-hide" ng-show="activeWatch == '' && selectBand == true">
+                    <div class="pure-g">
+                        <div class="pure-u-3-24"></div>
+                        <div class="pure-u-3-24"><img ng-click="chooseBand('01')" ng-src="../assets/4-convenience-more/cm_03-ac_watchband_01.png" /></div>
+                        <div class="pure-u-3-24"><img ng-click="chooseBand('02')" ng-src="../assets/4-convenience-more/cm_03-ac_watchband_02.png" /></div>
+                        <div class="pure-u-3-24"><img ng-click="chooseBand('03')" ng-src="../assets/4-convenience-more/cm_03-ac_watchband_03.png" /></div>
+                        <div class="pure-u-3-24"><img ng-click="chooseBand('04')" ng-src="../assets/4-convenience-more/cm_03-ac_watchband_04.png" /></div>
+                        <div class="pure-u-3-24"><img ng-click="chooseBand('05')" ng-src="../assets/4-convenience-more/cm_03-ac_watchband_05.png" /></div>
+                        <div class="pure-u-3-24"><img ng-click="chooseBand('06')" ng-src="../assets/4-convenience-more/cm_03-ac_watchband_06.png" /></div>
+                        <div class="pure-u-3-24"></div>
+                    </div>
+                </div>
+                <div class="band-selector ng-hide" ng-show="activeWatch == 'classic-' && selectBand == true">
+                    <div class="pure-g">
+                        <div class="pure-u-9-24"></div>
+                        <div class="pure-u-3-24"><img ng-click="chooseBand('01')" ng-src="../assets/4-convenience-more/cm_03-ac_watchband_classic-01.png" /></div>
+                        <div class="pure-u-3-24"><img ng-click="chooseBand('02')" ng-src="../assets/4-convenience-more/cm_03-ac_watchband_classic-02.png" /></div>
+                        <div class="pure-u-9-24"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="nav-container pure-g">
+                    <div class="pure-u-4-24"></div>
+                    <div class="pure-u-8-24">
+                        <div class="item" ng-class="{active: activeWatch == ''}" ng-click="changeWatch('');">Gear S2</div>
+                    </div>
+                    <div class="pure-u-8-24">
+                        <div class="item" ng-class="{active: activeWatch == 'classic-'}" ng-click="changeWatch('classic-');">Gear S2 Classic</div>
+                    </div>
+                    <div class="pure-u-4-24"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
