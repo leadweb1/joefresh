@@ -6,7 +6,7 @@
     infinite: false, // Disabled because of a bug in Slick that gives wrong dots count when on infinite center mode
     swipeToSlide: true,
     autoplaySpeed: 1,
-    //swipe: false,
+    swipe: false,
     arrows: false,
   };
   
