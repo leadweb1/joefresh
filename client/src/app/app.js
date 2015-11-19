@@ -5,7 +5,7 @@
     angular.bootstrap(document, ['app']);
   });
   
-  var timeout = 30; // In seconds
+  var timeout = 0; // In seconds
 
   function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider, hammerDefaultOptsProvider, IdleProvider) {
     $urlRouterProvider.otherwise('/begin');
@@ -57,7 +57,7 @@
     };
   }
 
-  function run($rootScope, $log, Idle) {
+  function run($rootScope, $state, $log, Idle) {
     $log.debug('App is running!');
     
     Idle.watch();
@@ -72,6 +72,10 @@
           this.$apply(fn);
       }
     };
+    
+    $rootScope.changeState = function(state) {
+        $state.go(state);
+    }
   }
 
   angular.module('app', [

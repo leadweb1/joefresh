@@ -40,32 +40,35 @@
             },
             runStep: function (tab, step) {
                 var $tab = this.data.tabs[tab - 1];
-                var $step = $tab.steps[step - 1];
-                
-                if($step.title) {
-                    this.$scope.experienceTitle = $step.title;
-                }
-                
-                if($step.description) {
-                    this.$scope.experienceDescription = $step.description;
-                }
+                if($tab) {
+                    var $step = $tab.steps[step - 1];
+                    if($step) {
+                        if($step.title) {
+                            this.$scope.experienceTitle = $step.title;
+                        }
 
-                if (tab === this.tab && step === this.step) {
-                    if ($step.timeout !== undefined) {
-                        this.$timeout(function (exp) {
-                            if ($step.last === true) {
-                                if ($tab.last === true) {
-                                    //alert('Done!');
-                                }
-                                else {
-                                    exp.slider.slick('slickGoTo', exp.tab);
-                                }
+                        if($step.description) {
+                            this.$scope.experienceDescription = $step.description;
+                        }
+
+                        if (tab === this.tab && step === this.step) {
+                            if ($step.timeout !== undefined) {
+                                this.$timeout(function (exp) {
+                                    if ($step.last === true) {
+                                        if ($tab.last === true) {
+                                            //alert('Done!');
+                                        }
+                                        else {
+                                            exp.slider.slick('slickGoTo', exp.tab);
+                                        }
+                                    }
+                                    else {
+                                        exp.step = exp.step + 1;
+                                        exp.runStep(exp.tab, exp.step);
+                                    }
+                                }.bind('exp', this).bind('$tab', $tab).bind('$step', $step), $step.timeout * 1000);
                             }
-                            else {
-                                exp.step = exp.step + 1;
-                                exp.runStep(exp.tab, exp.step);
-                            }
-                        }.bind('exp', this).bind('$tab', $tab).bind('$step', $step), $step.timeout * 1000);
+                        }
                     }
                 }
             },

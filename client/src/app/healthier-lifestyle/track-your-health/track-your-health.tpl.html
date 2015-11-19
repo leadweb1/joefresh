@@ -1,5 +1,9 @@
+<div class="ng-hide" ng-show="experience.tab == 3 && experience.step == 7">
+    <ng-include src="data.config.experienceEnd" />
+</div>
 <div class="pure-g slider-wrapper healthier-lifestyle track-your-health tab{{experience.tab}} step{{experience.step}} {{experience.data.tabs[experience.tab - 1].steps[experience.step - 1].bgClass}}">
     <div class="pure-u-1">
+        {{experience.tab}} / {{experience.step}}
         <div class="title main" ng-show="experience.step == 1">{{experienceTitle}}</div>
         <div class="title description sub" ng-show="experience.step == 1" ng-if="experienceDescription" ng-bind-html="experienceDescription | nl2br"></div>
         <div class="pure-g">
@@ -99,7 +103,7 @@
                                  ng-show="experience.step == null || experience.step == 1 || experience.step >= 3">
                                 <div class="drag">
                                     <div ng-show="experience.step == 4"><ng-include src="data.config.tapScreen" /></div>
-                                    <div class="bg ng-hide" ng-show="experience.step == 1 || experience.step == 6">
+                                    <div class="bg ng-hide" ng-show="experience.step == 1 || experience.step == 6 || experience.step == 7">
                                         <img ng-src="assets/3-healthier-lifestyle/hi_03-heartrate_screen-01.png" />
                                     </div>
                                     <div class="bg ng-hide" ng-show="experience.step == 3 || experience.step == 4">

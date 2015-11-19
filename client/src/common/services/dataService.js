@@ -7,6 +7,7 @@
                 rotatingBezelLeft: 'src/common/templates/rotating-bezel-left.tpl.html',
                 rotatingBezelRight: 'src/common/templates/rotating-bezel-right.tpl.html',
                 tapScreen: 'src/common/templates/tap-screen.tpl.html',
+                experienceEnd: 'src/common/templates/experience-end.tpl.html',
             },
             content: {
                 sections: {
@@ -171,6 +172,9 @@
                                                 },
                                                 {
                                                     timeout: 0.5,
+                                                },
+                                                {
+                                                    timeout: 1,
                                                 },
                                                 {
                                                     timeout: 2,
@@ -351,6 +355,9 @@
                                                     bgClass: 'bg bg1 blured',
                                                 },
                                                 {
+                                                    timeout: 1,
+                                                },
+                                                {
                                                     timeout: 2,
                                                     bgClass: 'bg bg1 blured',
                                                     last: true,
@@ -383,6 +390,9 @@
                                                 },
                                                 {
                                                     userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 1,
                                                 },
                                                 {
                                                     timeout: 1,
@@ -597,6 +607,9 @@
                                                 },
                                                 {
                                                     userActionRequired: true,
+                                                },
+                                                {
+                                                    timeout: 1,
                                                 },
                                                 {
                                                     userActionRequired: true,

@@ -63,6 +63,7 @@
   function HealthierTrackController(data, DataService, ExperienceService, $scope, $timeout) {
     $scope.data = angular.extend({}, data, {
         template: 'src/app/healthier-lifestyle/track-your-health/track-your-health.tpl.html',
+        section: DataService.getSectionByName('track-your-health'),
         top: DataService.getSectionByName('healthier-lifestyle'),
     });
     
@@ -81,6 +82,14 @@
         $scope.experience.startExperience(false, $scope.experience);
     };
     
+    $scope.tryAgain = function() {        
+        jQuery('.slick-slider').each(function(){
+            jQuery(this).slick('slickGoTo', 0);
+        });
+        
+        $scope.experience.initExperience();
+    }
+    
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.healthierLifestyle.sections.trackYourHealth.experience, $scope, $timeout);    
     $scope.experience.initExperience();
@@ -93,8 +102,17 @@
   function HealthierActivityController(data, DataService, ExperienceService, $scope, $timeout) {
     $scope.data = angular.extend({}, data, {
         template: 'src/app/healthier-lifestyle/24h-activity-log/24h-activity-log.tpl.html',
+        section: DataService.getSectionByName('activity-log'),
         top: DataService.getSectionByName('healthier-lifestyle'),
     });
+    
+    $scope.tryAgain = function() {        
+        jQuery('.slick-slider').each(function(){
+            jQuery(this).slick('slickGoTo', 0);
+        });
+        
+        $scope.experience.initExperience();
+    }
     
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.healthierLifestyle.sections.activityLog.experience, $scope, $timeout);    
@@ -108,6 +126,7 @@
   function HealthierHealthClockController(data, DataService, ExperienceService, $scope, $timeout) {
     $scope.data = angular.extend({}, data, {
         template: 'src/app/healthier-lifestyle/health-clock/health-clock.tpl.html',
+        section: DataService.getSectionByName('health-clock'),
         top: DataService.getSectionByName('healthier-lifestyle'),
     });
     

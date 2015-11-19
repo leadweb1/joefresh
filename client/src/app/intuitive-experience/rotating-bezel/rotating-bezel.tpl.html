@@ -1,3 +1,6 @@
+<div class="ng-hide" ng-show="experience.tab == 4 && experience.step == 5">
+    <ng-include src="data.config.experienceEnd" />
+</div>
 <div class="pure-g slider-wrapper intuitive-experience rotating-bezel">
     <div class="pure-u-1">
         <div class="title">{{experienceTitle}}</div>
@@ -75,7 +78,7 @@
                             <div class="bg ng-hide" ng-show="experience.step == 3">
                                 <img ng-src="assets/2-intuitive-experience/ie_04-value_screen-03.png" />
                             </div>
-                            <div class="bg ng-hide" ng-show="experience.step == 4">
+                            <div class="bg ng-hide" ng-show="experience.step == 4 || experience.step == 5">
                                 <img ng-src="assets/2-intuitive-experience/ie_04-value_screen-04.png" />
                             </div>
                         </div>

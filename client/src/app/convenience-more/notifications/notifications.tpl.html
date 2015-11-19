@@ -1,3 +1,6 @@
+<div class="ng-hide" ng-show="experience.tab == 2 && experience.step == 43">
+    <ng-include src="data.config.experienceEnd" />
+</div>
 <div class="pure-g slider-wrapper convenience-more notifications">
     <div class="pure-u-1">
         <div class="title">{{experienceTitle}}</div>
@@ -95,7 +98,7 @@
                                     <div class="bg ng-hide" ng-class="{darker: experience.step == 41}" ng-show="experience.step == 40 || experience.step == 41">
                                         <img ng-src="assets/4-convenience-more/cm_01-notif_02-5-keypad_screen-12.png" />
                                     </div>
-                                    <div class="bg ng-hide" ng-show="experience.step == 42">
+                                    <div class="bg ng-hide" ng-show="experience.step == 42 || experience.step == 43">
                                         <img ng-src="assets/4-convenience-more/cm_01-notif_02-5-keypad_screen-14.png" />
                                     </div>
                                 </div>

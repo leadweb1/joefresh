@@ -91,6 +91,14 @@
         $scope.experience.startExperience(false, $scope.experience);
     };
     
+    $scope.tryAgain = function() {        
+        jQuery('.slick-slider').each(function(){
+            jQuery(this).slick('slickGoTo', 0);
+        });
+        
+        $scope.experience.initExperience();
+    }
+    
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.convenienceMore.sections.notifications.experience, $scope, $timeout);    
     $scope.experience.initExperience();
