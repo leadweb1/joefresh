@@ -4,6 +4,8 @@
   angular.element(document).ready(function() {
     angular.bootstrap(document, ['app']);
   });
+  
+  var timeout = 30; // In seconds
 
   function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider, hammerDefaultOptsProvider, IdleProvider) {
     $urlRouterProvider.otherwise('/begin');
@@ -37,16 +39,17 @@
         ],
     });
     
-    IdleProvider.idle(30); // In seconds, default is 20min
-    IdleProvider.timeout(5); // In seconds, default is 30sec
+    IdleProvider.idle(1); // In seconds, default is 20min
+    IdleProvider.timeout(timeout); // In seconds, default is 30sec
   }
 
-  function MainCtrl($log, $scope, $state) {
+  function MainCtrl($log, $scope, $state, Idle) {
     $log.debug('MainCtrl laoded!');
     
     $scope.$on('IdleTimeout', function() {
-        console.log('Timeout');
         $state.go('root.splash');
+        $state.countdown = timeout;
+        Idle.watch();
     });
     
     $scope.isActiveState = function(state) {
@@ -68,8 +71,8 @@
       } else {
           this.$apply(fn);
       }
-  };
-}
+    };
+  }
 
   angular.module('app', [
       'ui',
