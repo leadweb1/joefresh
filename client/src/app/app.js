@@ -5,7 +5,7 @@
     angular.bootstrap(document, ['app']);
   });
 
-  function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider, hammerDefaultOptsProvider) {
+  function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider, hammerDefaultOptsProvider, IdleProvider) {
     $urlRouterProvider.otherwise('/begin');
     $logProvider.debugEnabled(true);
     $httpProvider.interceptors.push('httpInterceptor');
@@ -27,7 +27,7 @@
           }
         }
       });
-    
+
     hammerDefaultOptsProvider.set({
         recognizers: [
             [Hammer.Tap, {}],
@@ -36,18 +36,29 @@
             [Hammer.Pan, {}], // For drag events
         ],
     });
+    
+    //IdleProvider.idle(5 * 60); // In seconds, default is 20min
+    //IdleProvider.timeout(5); // In seconds, default is 30sec
   }
 
   function MainCtrl($log, $scope, $state) {
     $log.debug('MainCtrl laoded!');
+    
+    $scope.$on('IdleTimeout', function() {
+        console.log('Timeout');
+        $state.go('root.splash')
+    });
     
     $scope.isActiveState = function(state) {
         return ($state.current.name === state);
     };
   }
 
-  function run($rootScope, $log) {
+  function run($rootScope, $log, Idle) {
     $log.debug('App is running!');
+    
+    Idle.watch();
+    
     $rootScope.safeApply = function(fn) {
       var phase = this.$root.$$phase;
       if(phase === '$apply' || phase === '$digest') {
@@ -64,6 +75,7 @@
       'ui',
       'ui.router',
       'ngAnimate',
+      'ngIdle',
       'angular-gestures',
       'app.splash',
       'app.home',
