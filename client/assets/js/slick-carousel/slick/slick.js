@@ -2415,8 +2415,8 @@
             touches;
 
         if (_.touchObject.fingerCount !== 1 || _.slideCount <= _.options.slidesToShow) {
-            _.touchObject = {};
-            return false;
+            //_.touchObject = {};
+            //return false;
         }
 
         if (event.originalEvent !== undefined && event.originalEvent.touches !== undefined) {

@@ -309,6 +309,8 @@ and open the template in the editor.
                         .slick-list {
                             .slick-track {
                                 .slick-slide {
+                                    transform: none;
+                                    
                                     img.steps {
                                         margin: 40px auto 0;
                                     }

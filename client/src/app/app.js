@@ -31,8 +31,8 @@
     hammerDefaultOptsProvider.set({
         recognizers: [
             [Hammer.Tap, {}],
-            //[Hammer.Press, {}],
-            //[Hammer.Swipe, {}],
+            [Hammer.Press, {}],
+            [Hammer.Swipe, {}],
             [Hammer.Pan, {}], // For drag events
         ],
     });
