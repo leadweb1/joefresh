@@ -160,7 +160,7 @@
         $scope.activeBand = '01';
     };
     
-    $scope.changeBand = function(watch) {
+    $scope.changeBand = function() {
         $scope.selectBand = true;
     };
     

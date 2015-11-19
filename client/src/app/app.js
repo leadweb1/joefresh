@@ -6,7 +6,7 @@
   });
 
   function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider, hammerDefaultOptsProvider) {
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/begin');
     $logProvider.debugEnabled(true);
     $httpProvider.interceptors.push('httpInterceptor');
     $stateProvider
@@ -65,6 +65,7 @@
       'ui.router',
       'ngAnimate',
       'angular-gestures',
+      'app.splash',
       'app.home',
       'app.aestheticElegantDesign',
       'app.intuitiveExperience',
