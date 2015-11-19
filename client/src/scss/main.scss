@@ -186,7 +186,7 @@ html, body, div, button, input, select, textarea, .pure-g [class*="pure-u"] {
             &.sub {
                 font-size: 28px;
             }
-            
+
             &.description {
                 width: 90%;
                 margin: 0 auto;
@@ -213,6 +213,34 @@ html, body, div, button, input, select, textarea, .pure-g [class*="pure-u"] {
         position: absolute;
         width: 100%;
         z-index: 1;
+
+        li {
+            display: inline-block;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #D9D9D9;
+            top: 0px;
+            left: 0px;
+            margin: 0 20px;
+
+            button {
+                color: #D9D9D9;
+            }
+
+            &.slick-active {
+                background-color: #919191;
+                color: #919191;
+                button {
+                    color: #919191;
+                }
+            }
+
+            button {
+                background: none;
+                border: none;
+            }
+        }
 
         .slick-arrow {
             position: absolute;
