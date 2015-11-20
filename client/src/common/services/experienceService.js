@@ -100,7 +100,7 @@
                             })
                             .on('afterChange', function (event, slick, currentSlide) {
                                 var newTab = currentSlide + 1;
-                                var length = exp.$scope.activeSliderMaxSlides || exp.data.tabs.length
+                                var length = exp.$scope.activeSliderMaxSlides || exp.data.tabs.length;
                                 if (exp.tab !== newTab && newTab <= length) {
                                     // Change tab
                                     exp.$scope.safeApply(function () {
