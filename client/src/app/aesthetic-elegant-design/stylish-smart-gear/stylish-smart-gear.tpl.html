@@ -22,7 +22,7 @@
                         <div class="pure-u-10-24"></div>
                         <div ng-repeat="c in m.colors" class="pure-u-2-24">
                             <div class="circle outer" ng-class="{active: color == c.name}">
-                                <div class="circle inner" ng-click="changeColor(modelIndex, c.name)" style="background-color: {{c.color}};"></div>
+                                <div class="circle inner" ng-click="changeColor(modelIndex, c.name); submissionAction('click', 'action', 'aesthetic-elegant-design_stylish-smart-gear_change-color_'+c.name); $event.stopPropagation();" style="background-color: {{c.color}};"></div>
                             </div>
                         </div>
                         <div class="pure-u-10-24"></div>
@@ -34,7 +34,7 @@
             <div class="nav-container pure-g">
                 <div class="pure-u-4-24"></div>
                 <div ng-repeat="m in experience.data.tabs" class="pure-u-8-24">
-                    <div class="item" ng-class="{active: model == m.name}" ng-click="changeModel($index);">{{m.title}}</div>
+                    <div class="item" ng-class="{active: model == m.name}" ng-click="changeModel($index); submissionAction('click', 'action', 'aesthetic-elegant-design_stylish-smart-gear_change-model_'+m.name); $event.stopPropagation();">{{m.title}}</div>
                 </div>
                 <div class="pure-u-4-24"></div>
             </div>

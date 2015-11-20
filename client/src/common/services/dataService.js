@@ -486,6 +486,7 @@
                                             last: true,
                                             steps: [
                                                 {
+                                                    name: 'send-messages',
                                                     title: 'Send Messages', // 1
                                                     description: 'Gear S2 gives you four different ways\nto respond to messages from your wrist.',
                                                     timeout: 1,
@@ -494,6 +495,7 @@
                                                     userActionRequired: true,
                                                 },
                                                 {
+                                                    name: 'presets',
                                                     title: 'Presets', // 3
                                                     description: 'Turn the bezel to select preset texts.\nYou can also add more presets from your phone.',
                                                     timeout: 1,
@@ -508,6 +510,7 @@
                                                     timeout: 1,
                                                 },
                                                 {
+                                                    name: 'voice-input',
                                                     title: 'Voice Input', // 7
                                                     description: 'Select the S Voice icon to write messages\nwith your voice.',
                                                     timeout: 1,
@@ -534,6 +537,7 @@
                                                     timeout: 2,
                                                 },
                                                 {
+                                                    name: 'emoticons',
                                                     title: 'Emoticon', // 15
                                                     description: 'Choose from a variety of emoticons\nto send quick messages.',
                                                     timeout: 1,
@@ -566,6 +570,7 @@
                                                     timeout: 1.5,
                                                 },
                                                 { // Change screen
+                                                    name: 'keypads',
                                                     title: 'Keypads', // 25
                                                     description: 'Gear S2 also has a keypad to let you type\nmessages without taking out your phone.',
                                                     timeout: 1,

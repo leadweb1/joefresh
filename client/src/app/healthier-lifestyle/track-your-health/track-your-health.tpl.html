@@ -6,8 +6,7 @@
         <div class="title main" ng-class="{'text-white': experience.currentSlide > 1}" ng-show="experience.step == 1">{{experienceTitle}}</div>
         <div class="title description sub" ng-class="{'text-white': experience.currentSlide > 1}" ng-show="experience.step == 1" ng-if="experienceDescription" ng-bind-html="experienceDescription | nl2br"></div>
         <div class="pure-g">
-            <div class="arrow pure-u-2-24"><img class="left" ng-show="experience.currentSlide > 1" ng-src="assets/0-UI/icon_arrow_slider_left.svg" ng-click="prevSlide();
-                $event.stopPropagation();" /></div>
+            <div class="arrow pure-u-2-24"><img class="left" ng-show="experience.currentSlide > 1" ng-src="assets/0-UI/icon_arrow_slider_left.svg" ng-click="prevSlide(); submissionAction('click', 'action', 'healthier-lifestyle_track-your-health_prev-slide'); $event.stopPropagation();" /></div>
             <div class="content pure-u-20-24">
                 <div class="slider-container" app-content-carousel>
                     <div class="slide">
@@ -24,8 +23,7 @@
                                     </div>
                                 </div>
                                 <div class="hint" ng-show="experience.tab == 1 && experience.step == 5">Tap on the screen</div>
-                                <div class="start" ng-show="experience.step == 1" ng-click="startExperience();
-                                    $event.stopPropagation();">Start</div>
+                                <div class="start" ng-show="experience.step == 1" ng-click="startExperience(); submissionAction('click', 'action', 'healthier-lifestyle_track-your-health_start-experience_'+experience.tab.name+'_'+experience.step.name); $event.stopPropagation();">Start</div>
                             </div>
                         </div>
                     </div>
@@ -91,8 +89,7 @@
                                     </div>
                                 </div>
                                 <div class="hint" ng-show="experience.tab == 3 && experience.step == 4">Tap on the screen</div>
-                                <div class="start" ng-show="experience.step == 1" ng-click="startExperience();
-                                    $event.stopPropagation();">Start</div>
+                                <div class="start" ng-show="experience.step == 1" ng-click="startExperience(); submissionAction('click', 'action', 'healthier-lifestyle_track-your-health_start-experience_'+experience.tab.name+'_'+experience.step.name); $event.stopPropagation();">Start</div>
                             </div>
                         </div>
                     </div>
@@ -113,15 +110,13 @@
                                     </div>
                                 </div>
                                 <div class="hint" ng-show="experience.tab == 3 && experience.step == 4">Tap on the screen</div>
-                                <div class="start" ng-show="experience.step == 1" ng-click="startExperience();
-                                    $event.stopPropagation();">Start</div>
+                                <div class="start" ng-show="experience.step == 1" ng-click="startExperience(); submissionAction('click', 'action', 'healthier-lifestyle_track-your-health_start-experience_'+experience.tab.name+'_'+experience.step.name); $event.stopPropagation();">Start</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="arrow pure-u-2-24"><img class="right" ng-show="experience.currentSlide < 3" ng-src="assets/0-UI/icon_arrow_slider_right.svg" ng-click="nextSlide();
-                $event.stopPropagation();" /></div>
+            <div class="arrow pure-u-2-24"><img class="right" ng-show="experience.currentSlide < 3" ng-src="assets/0-UI/icon_arrow_slider_right.svg" ng-click="nextSlide(); submissionAction('click', 'action', 'healthier-lifestyle_track-your-health_next-slide'); $event.stopPropagation();" /></div>
         </div>
     </div>
 </div>

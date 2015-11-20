@@ -6,8 +6,7 @@
         <div class="title">{{experienceTitle}}</div>
         <div class="title description sub" ng-if="experienceDescription" ng-bind-html="experienceDescription | nl2br"></div>
         <div class="pure-g">
-            <div class="arrow pure-u-2-24"><img class="left" ng-show="experience.currentSlide > 1" ng-src="assets/0-UI/icon_arrow_slider_left.svg" ng-click="prevSlide();
-                $event.stopPropagation();" /></div>
+            <div class="arrow pure-u-2-24"><img class="left" ng-show="experience.currentSlide > 1" ng-src="assets/0-UI/icon_arrow_slider_left.svg" ng-click="prevSlide(); submissionAction('click', 'action', 'convenience-more_notifications_prev-slide'); $event.stopPropagation();" /></div>
             <div class="content pure-u-20-24">
                 <div class="slider-container" app-content-carousel>
                     <div class="slide">
@@ -114,27 +113,27 @@
                                 <div class="nav-container pure-g">
                                     <div class="item pure-u-1-5">
                                         <div class="circle outer" ng-class="{active: experience.step < 3}">
-                                            <div class="start circle inner" ng-click="changeFeature(1)"></div>
+                                            <div class="start circle inner" ng-click="changeFeature(1); submissionAction('click', 'action', 'convenience-more_notifications_change-feature_'+experience.tabs[experience.tab].steps[1].name); $event.stopPropagation();"></div>
                                         </div>
                                     </div>
                                     <div class="item pure-u-1-5">
                                         <div class="circle outer" ng-class="{active: experience.step >= 3 && experience.step < 7}">
-                                            <div class="feature1 circle inner" ng-click="changeFeature(3)"></div>
+                                            <div class="feature1 circle inner" ng-click="changeFeature(3); submissionAction('click', 'action', 'convenience-more_notifications_change-feature_'+experience.tabs[experience.tab].steps[3].name); $event.stopPropagation();"></div>
                                         </div>
                                     </div>
                                     <div class="item pure-u-1-5">
                                         <div class="circle outer" ng-class="{active: experience.step >= 7 && experience.step < 15}">
-                                            <div class="feature2 circle inner" ng-click="changeFeature(7)"></div>
+                                            <div class="feature2 circle inner" ng-click="changeFeature(7); submissionAction('click', 'action', 'convenience-more_notifications_change-feature_'+experience.tabs[experience.tab].steps[7].name); $event.stopPropagation();"></div>
                                         </div>
                                     </div>
                                     <div class="item pure-u-1-5">
                                         <div class="circle outer" ng-class="{active: experience.step >= 15 && experience.step < 25}">
-                                            <div class="feature3 circle inner" ng-click="changeFeature(15)"></div>
+                                            <div class="feature3 circle inner" ng-click="changeFeature(15); submissionAction('click', 'action', 'convenience-more_notifications_change-feature_'+experience.tabs[experience.tab].steps[15].name); $event.stopPropagation();"></div>
                                         </div>
                                     </div>
                                     <div class="item pure-u-1-5">
                                         <div class="circle outer" ng-class="{active: experience.step >= 25}">
-                                            <div class="feature4 circle inner" ng-click="changeFeature(25)"></div>
+                                            <div class="feature4 circle inner" ng-click="changeFeature(25); submissionAction('click', 'action', 'convenience-more_notifications_change-feature_'+experience.tabs[experience.tab].steps[25].name); $event.stopPropagation();"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -143,8 +142,7 @@
                     </div>
                 </div>
             </div>
-            <div class="arrow pure-u-2-24"><img class="right" ng-show="experience.currentSlide < 2" ng-src="assets/0-UI/icon_arrow_slider_right.svg" ng-click="nextSlide();
-                $event.stopPropagation();" /></div>
+            <div class="arrow pure-u-2-24"><img class="right" ng-show="experience.currentSlide < 2" ng-src="assets/0-UI/icon_arrow_slider_right.svg" ng-click="nextSlide(); submissionAction('click', 'action', 'convenience-more_notifications_next-slide'); $event.stopPropagation();" /></div>
         </div>
     </div>
 </div>
