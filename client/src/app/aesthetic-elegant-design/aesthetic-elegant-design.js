@@ -51,7 +51,7 @@
     
     $scope.model = 'gears2';
     $scope.color = 'black';
-    $scope.colorTitle = 'Dark Gray';
+    $scope.colorTitle = 'Dark Grey';
     
     $scope.changeModel = function(model) {
         var $model = $scope.experience.data.tabs[model];

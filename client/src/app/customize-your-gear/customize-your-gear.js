@@ -29,7 +29,7 @@
     });
     
     $scope.activeSlider = 'watch';
-    $scope.modelTitle = 'Gear 2 / Dark Gray';
+    $scope.modelTitle = 'Gear 2 / Dark Grey';
     $scope.faceTitle = 'Modern Utility';
     
     $scope.changeSlider = function(slider) {

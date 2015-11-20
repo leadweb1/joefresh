@@ -30,7 +30,7 @@
                                             colors: {
                                                 'black': {
                                                     name: 'black',
-                                                    title: 'Dark Gray',
+                                                    title: 'Dark Grey',
                                                     color: '#343434',
                                                     imagePrefix: 'gear2_sports_black',
                                                     imageCount: 66,
@@ -78,7 +78,7 @@
                     'intuitiveExperience': {
                         name: 'intuitive-experience',
                         title: 'Intuitive Experience',
-                        description: 'Gear S2 provides an analog-inspired, circular interface for easier navigation.\nWith the rotating bezel, you can navigate quickly, precisely, and clearly without blocking the screen with fingers.',
+                        description: 'Gear S2 provides an analogue-inspired, circular interface for easier navigation.\nWith the rotating bezel, you can navigate quickly, precisely, and clearly without blocking the screen with fingers.',
                         route: 'root.intuitive-experience',
                         sections: {
                             'rotatingBezel': {
@@ -370,13 +370,13 @@
                             'activityLog': {
                                 name: '24h-activity-log',
                                 title: '24H Activity Log',
-                                description: 'Track your activity throughout the day and easily identify the types of activity by different colors.',
+                                description: 'Track your activity throughout the day and easily identify the types of activity by different colours.',
                                 route: 'root.healthier-lifestyle_24h-activity-log',
                                 experience: {
                                     tabs: [
                                         {
                                             title: '24H Activity Log',
-                                            description: 'Review summaries of your daily movements to stay healthy.\nThe 24H Activity Log measures all your movements during the day.',
+                                            description: 'Review summaries of your daily movements to stay fit.\nThe 24H Activity Log measures all your movements during the day.',
                                             last: true,
                                             steps: [
                                                 {
@@ -408,7 +408,7 @@
                             },
                             'healthClock': {
                                 name: 'health-clock',
-                                title: 'Health Clock',
+                                title: 'Fitness Clock',
                                 description: 'Gear S2 encourages an active lifestyle with the fitness related watch faces. Check the screen on the Gear S2 to see if you are getting enough exercise.',
                                 route: 'root.healthier-lifestyle_health-clock',
                                 experience: {
@@ -426,7 +426,7 @@
                                         },
                                         {
                                             title: 'Pixel Heart',
-                                            description: 'Heart shape changes color\ndepending on your HR status',
+                                            description: 'Heart shape changes colour\ndepending on your HR status',
                                             imageId: '09',
                                         },
                                         {
@@ -706,7 +706,7 @@
                             'accessories': {
                                 name: 'accessories',
                                 title: 'Accessories',
-                                description: 'Gear S2 provides a range of watch faces and watchbands that completes your personal style.\nA special collection from Italian designer Alessandro Mendini brings his taste, humor, and sense of color to the Gear S2.',
+                                description: 'Gear S2 provides a range of watch faces and watchbands that completes your personal style.\nA special collection from Italian designer Alessandro Mendini brings his taste, humor, and sense of colour to the Gear S2.',
                                 route: 'root.convenience-more_accessories',
                                 experience: {
                                     tabs: [
