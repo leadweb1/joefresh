@@ -9,7 +9,7 @@
 
   function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider, hammerDefaultOptsProvider, IdleProvider) {
     $urlRouterProvider.otherwise('/begin');
-    $logProvider.debugEnabled(true);
+    $logProvider.debugEnabled(false);
     $httpProvider.interceptors.push('httpInterceptor');
     $stateProvider
       .state('root', {
