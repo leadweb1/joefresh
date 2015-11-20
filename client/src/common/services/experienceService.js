@@ -134,16 +134,18 @@
                     if($tab.steps) {
                         var $step = $tab.steps[exp.step - 1];
                         if($step !== undefined) {
-                            exp.$scope.experienceTitle = $tab.title;
-                            exp.$scope.experienceDescription = $tab.description;
+                            exp.$scope.safeApply(function () {
+                                exp.$scope.experienceTitle = $tab.title;
+                                exp.$scope.experienceDescription = $tab.description;
 
-                            if($step.title) {
-                                exp.$scope.experienceTitle = $step.title;
-                            }
+                                if($step.title) {
+                                    exp.$scope.experienceTitle = $step.title;
+                                }
 
-                            if($step.title) {
-                                exp.$scope.experienceDescription = $step.description;
-                            }
+                                if($step.title) {
+                                    exp.$scope.experienceDescription = $step.description;
+                                }
+                            });
                         }
                     }
                 }
