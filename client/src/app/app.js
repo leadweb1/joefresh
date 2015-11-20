@@ -5,7 +5,7 @@
     angular.bootstrap(document, ['app']);
   });
   
-  var timeout = 0; // In seconds
+  var timeout = 30; // In seconds
 
   function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider, hammerDefaultOptsProvider, IdleProvider) {
     $urlRouterProvider.otherwise('/begin');
