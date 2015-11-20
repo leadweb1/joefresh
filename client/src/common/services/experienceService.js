@@ -107,12 +107,17 @@
                                         exp.tab = newTab;
                                         exp.currentSlide = newTab;
                                         
+                                        // Customize Your Gear S2
                                         if(exp.$scope.setModelTitle) {
                                             exp.$scope.setModelTitle();
                                         }
-                                        
                                         if(exp.$scope.setFaceTitle) {
                                             exp.$scope.setFaceTitle();
+                                        }
+
+                                        // Fit Lifestyle - Fitness Clock
+                                        if(exp.$scope.setWatchFaceInfo) {
+                                            exp.$scope.setWatchFaceInfo();
                                         }
                                     });
 
