@@ -96,8 +96,7 @@
             value: Math.round(Date.now() / 1000)
           }
         });
-    }
-    
+    };
     $rootScope.submissionStart = function() {
       $rootScope.submission.astral_post.sessions = [{
         'field_email': 'none',
@@ -109,8 +108,7 @@
         },
         'field_action': []
       }];
-    }
-    
+    };
     $rootScope.submissionEnd = function() {
       if ($rootScope.submission.astral_post.sessions.length < 1 || $rootScope.submission.astral_post.sessions[0].field_action.length < 1) {
         $rootScope.submission.sessions = [];        
@@ -121,18 +119,20 @@
       
       $rootScope.submission.astral_post.sessions[0].field_time.value2 = Math.round(Date.now() / 1000);
       
-      if(true) $http({
-        url: appConfig.postUrl,
-        method: 'POST',
-        data: $rootScope.submission,
-        headers: {
-          'Content-Type': 'x-www-form-urlencoded'
-        }
-      }).then(function() {
-        $location.path("/begin");
-        $rootScope.submission.sessions = [];
-      });
-    }
+      if(true) {
+        $http({
+          url: appConfig.postUrl,
+          method: 'POST',
+          data: $rootScope.submission,
+          headers: {
+            'Content-Type': 'x-www-form-urlencoded'
+          }
+        }).then(function() {
+          $location.path('/begin');
+          $rootScope.submission.sessions = [];
+        });
+      }
+    };
   }
 
   angular.module('app', [

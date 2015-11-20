@@ -3,12 +3,13 @@
     "angular": false,
     "$": false,
     "jQuery": false,
-    "Hammer": false
+    "Hammer": false,
+    "appConfig": false
   },
   "node": true,
   "browser": true,
   "bitwise": true,
-  "camelcase": true,
+  "camelcase": false,
   "curly": true,
   "immed": true,
   "latedef": true,
