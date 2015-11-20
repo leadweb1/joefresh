@@ -58,7 +58,7 @@
         });
         
         $scope.experience.initExperience();
-    }
+    };
     
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.intuitiveExperience.sections.rotatingBezel.experience, $scope, $timeout);

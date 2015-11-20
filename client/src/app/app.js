@@ -75,7 +75,7 @@
     
     $rootScope.changeState = function(state) {
         $state.go(state);
-    }
+    };
   }
 
   angular.module('app', [

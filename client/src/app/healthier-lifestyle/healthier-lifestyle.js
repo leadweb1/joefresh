@@ -88,7 +88,7 @@
         });
         
         $scope.experience.initExperience();
-    }
+    };
     
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.healthierLifestyle.sections.trackYourHealth.experience, $scope, $timeout);    
@@ -112,7 +112,7 @@
         });
         
         $scope.experience.initExperience();
-    }
+    };
     
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.healthierLifestyle.sections.activityLog.experience, $scope, $timeout);    

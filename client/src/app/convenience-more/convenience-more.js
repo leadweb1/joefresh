@@ -97,7 +97,7 @@
         });
         
         $scope.experience.initExperience();
-    }
+    };
     
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.convenienceMore.sections.notifications.experience, $scope, $timeout);    
