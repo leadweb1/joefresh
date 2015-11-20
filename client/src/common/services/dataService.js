@@ -201,7 +201,7 @@
                                     tabs: [
                                         {
                                             title: 'Auto Tracking',
-                                            description: 'Gear S2 automatically detects your movement, exercise, and heart rate. It recognizes your activity level and also motivates you to move more to stay fit.',
+                                            description: 'Gear S2 automatically detects your movement, exercise, \nand heart rate. It recognizes your activity level and also \nmotivates you to move more to stay fit.',
                                             steps: [
                                                 { // start
                                                     userActionRequired: true,
@@ -236,7 +236,7 @@
                                         },
                                         {
                                             title: 'Exercise',
-                                            description: 'Before working out, set your goals. Gear S2 will notify you when you reach your goal and record your fitness data.',
+                                            description: 'Before working out, set your goals. Gear S2 will notify you \nwhen you reach your goal and record your fitness data.',
                                             steps: [
                                                 { // start, 1
                                                     userActionRequired: true,
@@ -331,7 +331,7 @@
                                         },
                                         {
                                             title: 'Heart Rate',
-                                            description: 'With Gear S2, you can check the heart rate and see the record on a chart.',
+                                            description: 'With Gear S2, you can check the heart rate \nand see the record on a chart.',
                                             last: true,
                                             steps: [
                                                 { // start
