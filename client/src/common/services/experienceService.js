@@ -40,7 +40,7 @@
             },
             runStep: function (tab, step) {
                 var $tab = this.data.tabs[tab - 1];
-                if($tab) {
+                if($tab && $tab.steps) {
                     var $step = $tab.steps[step - 1];
                     if($step) {
                         if($step.title) {
@@ -89,6 +89,7 @@
                     exp.slider = jQuery('.slick-slider')
                             .on('beforeChange', function (event, slick, currentSlide, nextSlide) {
                                 var newTab = nextSlide + 1;
+                                
                                 if (exp.tab !== newTab) {
                                     // Reset step
                                     exp.$scope.safeApply(function () {
@@ -115,16 +116,22 @@
             },
             updateTitles: function(exp) {
                 var $tab = exp.data.tabs[exp.tab - 1];
-                var $step = $tab.steps[exp.step - 1];
-                exp.$scope.experienceTitle = $tab.title;
-                exp.$scope.experienceDescription = $tab.description;
-                
-                if($step.title) {
-                    exp.$scope.experienceTitle = $step.title;
-                }
-                
-                if($step.title) {
-                    exp.$scope.experienceDescription = $step.description;
+                if($tab !== undefined) {
+                    if($tab.steps) {
+                        var $step = $tab.steps[exp.step - 1];
+                        if($step !== undefined) {
+                            exp.$scope.experienceTitle = $tab.title;
+                            exp.$scope.experienceDescription = $tab.description;
+
+                            if($step.title) {
+                                exp.$scope.experienceTitle = $step.title;
+                            }
+
+                            if($step.title) {
+                                exp.$scope.experienceDescription = $step.description;
+                            }
+                        }
+                    }
                 }
             }
         };

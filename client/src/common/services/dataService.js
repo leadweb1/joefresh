@@ -414,15 +414,25 @@
                                 experience: {
                                     tabs: [
                                         {
-                                            title: 'Fitness Clock',
-                                            description: 'Bla bla',
-                                            last: true,
-                                            steps: [
-                                                {
-                                                    userActionRequired: true,
-                                                    last: true,
-                                                },
-                                            ],
+                                            title: 'Activity Bubbles',
+                                            description: 'As you move more,\nthe coloful circle grows bigger',
+                                            imageId: '07',
+                                        },
+                                        {
+                                            title: 'Activity Sparkles',
+                                            description: 'More particles appear\nwhen you move',
+                                            imageId: '11',
+                                            default: true,
+                                        },
+                                        {
+                                            title: 'Pixel Heart',
+                                            description: 'Heart shape changes color\ndepending on your HR status',
+                                            imageId: '09',
+                                        },
+                                        {
+                                            title: 'Heart Wave',
+                                            description: 'Measured heart rate records appears\n(Average/Minimum/Maximum)',
+                                            imageId: '08',
                                         },
                                     ],
                                 },
