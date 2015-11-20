@@ -274,6 +274,9 @@ and open the template in the editor.
                             }
                         }
                         &.tab2 {
+                            .title {
+                                color: #FFF;
+                            }
                             &.bg1 {
                                 &.clear {
                                     background: url('../3-healthier-lifestyle/hi_02-exercise_bg01.jpg') no-repeat top right;
@@ -292,6 +295,9 @@ and open the template in the editor.
                             }
                         }
                         &.tab3 {
+                            .title {
+                                color: #FFF;
+                            }
                             &.bg1 {
                                 &.clear {
                                     background: url('../3-healthier-lifestyle/hi_03-heartrate_bg01.jpg') no-repeat top right;
