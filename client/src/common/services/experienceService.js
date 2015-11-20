@@ -100,11 +100,20 @@
                             })
                             .on('afterChange', function (event, slick, currentSlide) {
                                 var newTab = currentSlide + 1;
-                                
-                                if (exp.tab !== newTab && newTab <= exp.data.tabs.length) {
+                                var length = exp.$scope.activeSliderMaxSlides || exp.data.tabs.length
+                                if (exp.tab !== newTab && newTab <= length) {
                                     // Change tab
                                     exp.$scope.safeApply(function () {
                                         exp.tab = newTab;
+                                        exp.currentSlide = newTab;
+                                        
+                                        if(exp.$scope.setModelTitle) {
+                                            exp.$scope.setModelTitle();
+                                        }
+                                        
+                                        if(exp.$scope.setFaceTitle) {
+                                            exp.$scope.setFaceTitle();
+                                        }
                                     });
 
                                     exp.startExperience(false, exp);

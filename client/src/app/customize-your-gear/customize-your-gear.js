@@ -22,13 +22,14 @@
    * @name  CustomizeController
    * @description Controller
    */
-  function CustomizeController(data, DataService, $scope, $timeout) {
+  function CustomizeController(data, DataService, ExperienceService, $scope, $timeout) {
     $scope.data = angular.extend({}, data, {
         template: 'src/app/customize-your-gear/customize-your-gear.tpl.html',
         top: DataService.getSectionByName('customize-your-gear'),
     });
     
     $scope.activeSlider = 'watch';
+    $scope.activeSliderMaxSlides = 3;
     $scope.modelTitle = 'Gear 2 / Dark Grey';
     $scope.faceTitle = 'Modern Utility';
     
@@ -38,6 +39,7 @@
         $timeout(function(){
           var $slider = jQuery('.slider-container:not(.ng-hide)');
           var $slides = $slider.find('.slick-slide');
+          $scope.activeSliderMaxSlides = $slides.length;
           
           if($slider.attr('id') === 'watchFace') {
               var $watchSlider = jQuery('.slider-container.ng-hide');
@@ -86,6 +88,10 @@
         var title = jQuery('#watchFace .slick-current').data('title');
         $scope.faceTitle = title;
     };
+    
+    // Start experience
+    $scope.experience = ExperienceService.get($scope.data.content.sections.customizeYourGear.experience, $scope, $timeout);    
+    $scope.experience.initExperience();
     
   }
 
