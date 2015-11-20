@@ -189,12 +189,12 @@
                     },
                     'healthierLifestyle': {
                         name: 'healthier-lifestyle',
-                        title: 'Healthier Lifestyle',
+                        title: 'Fit Lifestyle',
                         route: 'root.healthier-lifestyle',
                         sections: {
                             'trackYourHealth': {
                                 name: 'track-your-health',
-                                title: 'Track Your Health',
+                                title: 'Track Your Fitness',
                                 description: 'Gear S2 comes full circle with a durable stainless steel body that sits slim and sleek on your wrist.',
                                 route: 'root.healthier-lifestyle_track-your-health',
                                 experience: {
@@ -409,12 +409,12 @@
                             'healthClock': {
                                 name: 'health-clock',
                                 title: 'Health Clock',
-                                description: 'Gear S2 encourages a healthier lifestyle with Health Clock watch faces. Check the screen on the Gear S2 to see if you are getting enough exercise.',
+                                description: 'Gear S2 encourages an active lifestyle with the fitness related watch faces. Check the screen on the Gear S2 to see if you are getting enough exercise.',
                                 route: 'root.healthier-lifestyle_health-clock',
                                 experience: {
                                     tabs: [
                                         {
-                                            title: 'Health Clock',
+                                            title: 'Fitness Clock',
                                             description: 'Bla bla',
                                             last: true,
                                             steps: [
@@ -681,6 +681,7 @@
                                         {
                                             title: '3G Connectivity',
                                             description: 'Bla bla',
+                                            disabled: true,
                                             last: true,
                                             steps: [
                                                 {
@@ -701,7 +702,7 @@
                                     tabs: [
                                         {
                                             title: 'Accessories',
-                                            description: 'For every occasion, you can find the perfect\nwatch band to match your style.',
+                                            description: 'For every occasion, you can find the ideal\nwatch band to match your style.',
                                             last: true,
                                             steps: [
                                                 {
