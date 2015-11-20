@@ -3,7 +3,6 @@
 </div>
 <div class="pure-g slider-wrapper healthier-lifestyle track-your-health tab{{experience.tab}} step{{experience.step}} {{experience.data.tabs[experience.tab - 1].steps[experience.step - 1].bgClass}}">
     <div class="pure-u-1">
-        {{experience.tab}} / {{experience.step}}
         <div class="title main" ng-show="experience.step == 1">{{experienceTitle}}</div>
         <div class="title description sub" ng-show="experience.step == 1" ng-if="experienceDescription" ng-bind-html="experienceDescription | nl2br"></div>
         <div class="pure-g">
