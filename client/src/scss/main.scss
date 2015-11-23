@@ -6,6 +6,9 @@ https://github.com/davidrapson/scss-toolkit
 */
 @import 'settings', 'mixins', 'base', 'helpers', 'modules/island','modules/horizontal-list', 'modules/buttons', 'layouts/page', 'states';
 
+$fa-font-path: "/src/vendor/font-awesome/fonts";
+@import "../vendor/font-awesome/scss/font-awesome";
+
 @font-face {
     font-family: 'SamsungSharpSansRegular';
     src: url('../_FONT/SamsungSharpSans-Regular.ttf');
