@@ -26,6 +26,36 @@
             return DataService.get();
           }
         }
+      })
+      .state('collection', {
+        url: '/collection',
+        templateUrl: 'src/app/collection/collection.html',
+        controller: 'CollectionController'
+      })
+      .state('terms', {
+        url: '/terms',
+        templateUrl: 'src/app/terms/terms.html',
+        controller: 'TermsController'
+      })
+      .state('video', {
+        url: '/video',
+        templateUrl: 'src/app/video/video.html',
+        controller: 'VideoController'
+      })
+      .state('videos', {
+        url: '/videos',
+        templateUrl: 'src/app/videos/videos.html',
+        controller: 'VideosController'
+      })
+      .state('thanks', {
+        url: '/thanks',
+        templateUrl: 'src/app/thanks/thanks.html',
+        controller: 'ThanksController'
+      })
+      .state('email', {
+        url: '/email',
+        templateUrl: 'src/app/email/email.html',
+        controller: 'EmailController'
       });
 
     hammerDefaultOptsProvider.set({
@@ -143,6 +173,12 @@
       'angular-gestures',
       'app.splash',
       'app.home',
+      'app.email',
+      'app.terms',
+      'app.privacy',
+      'app.videos',
+      'app.video',
+      'app.collection',
       'app.aestheticElegantDesign',
       'app.intuitiveExperience',
       'app.healthierLifestyle',

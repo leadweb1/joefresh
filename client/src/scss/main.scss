@@ -10,20 +10,20 @@ $fa-font-path: "/src/vendor/font-awesome/fonts";
 @import "../vendor/font-awesome/scss/font-awesome";
 
 @font-face {
-    font-family: 'SamsungSharpSansRegular';
-    src: url('../_FONT/SamsungSharpSans-Regular.ttf');
+    font-family: 'JFCalibreRegular';
+    src: url('../assets/_FONT/JFCalibre-Regular.ttf');
 }
 @font-face {
-    font-family: 'SamsungSharpSansMedium';
-    src: url('../_FONT/samsungsharpsans_medium.ttf');
+    font-family: 'JFCalibreMedium';
+    src: url('../assets/_FONT/JFCalibre-Medium.ttf');
 }
 @font-face {
-    font-family: 'SamsungSharpSansBold';
-    src: url('../_FONT/SamsungSharpSans-Bold.ttf');
+    font-family: 'JFCalibreBold';
+    src: url('../assets/_FONT/JFCalibre-Bold.ttf');
 }
 
 html, body, div, button, input, select, textarea, .pure-g [class*="pure-u"] {
-    font-family: 'SamsungSharpSansMedium';
+    font-family: 'JFCalibreMedium';
 }
 
 body{
@@ -339,4 +339,10 @@ body{
 'sections/intuitive-experience/styles',
 'sections/healthier-lifestyle/styles',
 'sections/convenience-more/styles',
-'sections/customize-your-gear/styles';
+'sections/customize-your-gear/styles',
+'joefresh/email',
+'joefresh/thanks',
+'joefresh/videos',
+'joefresh/terms',
+'joefresh/collection',
+'joefresh/home';

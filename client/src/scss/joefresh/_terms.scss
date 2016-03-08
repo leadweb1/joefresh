@@ -1,0 +1,20 @@
+.terms
+{
+	background-color:white;
+	margin-top:-200px;
+	color:$email-title-color;
+	overflow:scroll;
+	overflow-x: hidden;
+}
+
+.back-button
+{
+	left:250px !important;
+}
+
+.box-shadow
+{
+	-moz-box-shadow: 0 0 3px #ccc;
+	-webkit-box-shadow: 0 0 3px #ccc;
+	box-shadow: 0 0 3px #ccc;
+}

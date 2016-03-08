@@ -1,0 +1,5 @@
+.video
+	button.menu-home.menu-button.fixed.box-shadow.z(ui-sref="root.home") MENU
+	button.menu-home.menu-button.back-button.fixed.box-shadow.z(ng-click="goToVideos()") BACK
+	button.menu-home.menu-button.mute-button.fixed.box-shadow.z#mute(ng-click="toggleAudio()") MUTE
+	video.video-background.fixed#video(src="http://techslides.com/demos/sample-videos/small.mp4", width="1920px", height="1080px", autoplay, loop, mute)

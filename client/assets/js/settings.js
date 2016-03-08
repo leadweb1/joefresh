@@ -9,7 +9,8 @@ var appConfig = {
   timeout :  30,
   project : 'samsung-gear-s2',
   gaUa    : 'UA-64984920-2',
-  postUrl : 'http://astral-analytics.picard.lead-web.com/post-session',
+  // postUrl : 'http://astral-analytics.picard.lead-web.com/post-session',
+  postUrl : 'http://localhost:2222/post',
   postKey : '_ujWA-rIA8IQfUD1',
   //driveUrl: 'https://spreadsheets.google.com/feeds/list/1I3ymWKzSZHpV4wicdLLpbmBjLaOhUp7aXncA3W9j_Ok/'
 };

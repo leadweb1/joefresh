@@ -4,6 +4,7 @@
 # TEAM
 
     <name> -- <role> -- <twitter>
+    David Hernon —- Developer —- @daveisrising
 
 # THANKS
 

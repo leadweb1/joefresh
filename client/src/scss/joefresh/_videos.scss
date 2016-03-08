@@ -1,0 +1,35 @@
+.videos
+{
+    background-image: url("/assets/images/backgrounds/JF_Spring-2016_Background.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width:1920px;
+    height:1080px;
+}
+
+.video
+{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width:1920px;
+    height:1080px;
+}
+
+.mute-button
+{
+    left:1704px !important;
+}
+
+.video-background
+{
+    z-index: -999;
+}
+
+.muted
+{
+    background-color:#E6E6E6 !important;
+}
