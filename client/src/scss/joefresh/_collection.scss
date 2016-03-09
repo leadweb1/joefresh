@@ -1,6 +1,6 @@
 .collection
 {
-	background-image: url("/assets/images/collection/collection.png"); 
+	// background-image: url("/assets/images/collection/collection.png"); 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -11,16 +11,54 @@
 
 .slick-slide
 {
+	margin-left: -50px !important;
+	margin-right: -50px !important;
+	width:360px !important;
 	opacity:0.5;
+}
+
+.slide
+{
+	position:relative
 }
 
 .slick-center
 {
-	// opacity:0;
-	z-index:100;
+
 }
 
 .slick-current
 {
 	opacity:1;
+	z-index:100 !important;
+}
+
+.content
+{
+	height:490px;
+	// overflow:hidden !important;
+}
+
+.slick-track
+{
+	margin-left:135px;
+	margin-right:800px !important;
+	// width:1000px !important;
+}
+
+.slick-list
+{
+	overflow:hidden !important;
+	width:975px;
+}
+
+.white-cover
+{
+	position:fixed;
+	background-color: white;
+	height:360px;
+	width:138px;
+	top:365px;
+	left:114px;
+	z-index:999;
 }

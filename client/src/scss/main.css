@@ -3480,7 +3480,6 @@ and open the template in the editor.
   box-shadow: 0 0 3px #ccc; }
 
 .collection {
-  background-image: url("/assets/images/collection/collection.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -3489,13 +3488,37 @@ and open the template in the editor.
   height: 1080px; }
 
 .slick-slide {
+  margin-left: -50px !important;
+  margin-right: -50px !important;
+  width: 360px !important;
   opacity: 0.5; }
 
-.slick-center {
-  z-index: 100; }
+.slide {
+  position: relative; }
 
 .slick-current {
-  opacity: 1; }
+  opacity: 1;
+  z-index: 100 !important; }
+
+.content {
+  height: 490px; }
+
+.slick-track {
+  margin-left: 135px;
+  margin-right: 800px !important; }
+
+.slick-list {
+  overflow: hidden !important;
+  width: 975px; }
+
+.white-cover {
+  position: fixed;
+  background-color: white;
+  height: 360px;
+  width: 138px;
+  top: 365px;
+  left: 114px;
+  z-index: 999; }
 
 .call-to-action {
   width: 834px;

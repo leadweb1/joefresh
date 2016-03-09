@@ -15,6 +15,8 @@
   "devDependencies": {
     "browser-sync": "~2.7.1",
     "del": "~1.1.1",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
     "gulp": "~3.8.11",
     "gulp-changed": "~1.2.1",
     "gulp-concat": "~2.5.2",
@@ -53,5 +55,14 @@
   },
   "scripts": {
     "test": "gulp travis"
+  },
+  "dependencies": {
+    "grunt-angular-templates": "^1.0.3",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compress": "^1.1.1",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.0"
   }
 }

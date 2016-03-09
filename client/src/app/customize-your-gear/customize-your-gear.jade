@@ -2,15 +2,20 @@
 	.pure-u-1.pure-u-1-1
 		.customize
 			.experience
-				.title Select a product and colour
+				.title Flip Through To See Our Latest Collection
 				.title.sub.model {{modelTitle}}
-				.title.sub.face {{faceTitle}} Watch Face
 				.watch
 					.watch-container.pure-g
 						.arrow.pure-u-2-24
 							img.left(ng-show='experience.currentSlide > 1', ng-src='assets/0-UI/icon_arrow_slider_left.svg', ng-click="prevSlide(); submissionAction('click', 'action', 'customize-your-gear_customize-your-gear_prev-slide'); $event.stopPropagation();")
 						.content.pure-u-20-24
-							#watch.slider-container.ng-hide(ng-show="activeSlider == 'watch' || activeSlider == null", app-watch-carousel='', data-slick='{"startSlide": 2, "overlay": "", "swipe": true}')
+							#watch.slider-container.ng-hide(ng-show="activeSlider == 'watch' || activeSlider == null", app-watch-carousel='', data-slick='{"startSlide": 3, "overlay": "", "swipe": true, "slidesToShow":3, "centerMode": true}')
+								.slide(data-title='Some Dress Name')
+									img(ng-src='assets/images/collection/model.png')
+								.slide(data-title='Collection 2')
+									img(ng-src='assets/images/collection/model.png')
+								.slide(data-title='nice clothes!')
+									img(ng-src='assets/images/collection/model.png')
 								.slide(data-title='Some Dress Name')
 									img(ng-src='assets/images/collection/model.png')
 								.slide(data-title='Collection 2')
@@ -19,3 +24,4 @@
 									img(ng-src='assets/images/collection/model.png')
 						.arrow.pure-u-2-24
 							img.right(ng-show='experience.currentSlide < activeSliderMaxSlides', ng-src='assets/0-UI/icon_arrow_slider_right.svg', ng-click="nextSlide(); submissionAction('click', 'action', 'customize-your-gear_customize-your-gear_next-slide'); $event.stopPropagation();")
+.white-cover
