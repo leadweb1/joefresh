@@ -24,7 +24,7 @@
    */
   function CustomizeController(data, DataService, ExperienceService, $scope, $timeout) {
     $scope.data = angular.extend({}, data, {
-        template: 'src/app/customize-your-gear/customize-your-gear.tpl.html',
+        template: 'src/app/customize-your-gear/customize-your-gear.html',
         top: DataService.getSectionByName('customize-your-gear'),
     });
     

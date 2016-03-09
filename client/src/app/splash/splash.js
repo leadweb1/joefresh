@@ -11,7 +11,7 @@
         url: '/begin',
         views: {
           '@': {
-            templateUrl: 'src/app/splash/splash.tpl.html',
+            templateUrl: 'src/app/splash/splash.html',
             controller: 'SplashController as splash',
           }
         }
