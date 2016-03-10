@@ -22,12 +22,12 @@
    * @name  HomeController
    * @description Controller
    */
-  function VideosController($scope, $state) {
+  function VideosController($scope, $state, $location) {
     console.log('here')
 
-    $scope.goToVideo = function()
+    $scope.goToVideo = function(video)
     {
-      $state.go('video');
+      $location.path('/video/' + video)
     }
    
   }

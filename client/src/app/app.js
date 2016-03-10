@@ -37,8 +37,8 @@
         templateUrl: 'src/app/terms/terms.html',
         controller: 'TermsController'
       })
-      .state('video', {
-        url: '/video',
+      .state('video/:video', {
+        url: '/video/:video',
         templateUrl: 'src/app/video/video.html',
         controller: 'VideoController'
       })

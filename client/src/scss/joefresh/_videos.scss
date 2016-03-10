@@ -31,5 +31,34 @@
 
 .muted
 {
-    background-color:#E6E6E6 !important;
+    // background-color:#E6E6E6 !important;
+}
+
+.video-thumb
+{
+    position:relative;
+}
+.vid
+{
+    background-color:transparent;
+}
+
+.cover-text
+{
+    position:absolute;
+    top:40%;
+    width:500px;
+}
+
+.behind
+{
+    top:35%;
+    line-height:50px;
+}
+
+.outline
+{
+    border-style:solid;
+    width:1920px;
+    height:1080px;
 }

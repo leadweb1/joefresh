@@ -1,9 +1,12 @@
 .videos
 	button.menu-home.menu-button.fixed.box-shadow(ui-sref="root.home") MENU
 	.button-row.fixed
-		button.home-button-row(ng-click="goToVideo()")
-			.button-text.bold-left ADULTS
-		button.home-button-row(ng-click="goToVideo()")
-			.button-text.bold-left KIDS
-		button.home-button-row.right(ng-click="goToVideo()")
-			.button-text.bold-left BEHIND THE SCENES
+		button.home-button-row.vid(ng-click="goToVideo('one')")
+			video.video-thumb(src="assets/videos/buttons/JoeFresh_BTS.webmhd.webm", autoplay, loop, muted)
+			.button-text.bold-left.cover-text ADULTS
+		button.home-button-row.vid(ng-click="goToVideo('two')")
+			video.video-thumb(src="assets/videos/buttons/JoeFresh_FamilyKids.webmhd.webm", autoplay, loop, muted)
+			.button-text.bold-left.cover-text  KIDS
+		button.home-button-row.right.vid(ng-click="goToVideo('three')")
+			video.video-thumb(src="assets/videos/buttons/JoeFresh_TopsDressesPolos.webmhd.webm", autoplay, loop, muted)
+			.button-text.bold-left.cover-text.behind  BEHIND THE SCENES
