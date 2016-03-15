@@ -8,7 +8,7 @@
   function config($stateProvider) {
     $stateProvider
       .state('root.customize-your-gear', {
-        url: '/customize-your-gear',
+        url: '/collection',
         views: {
           '@': {
             templateUrl: 'src/common/templates/section.tpl.html',
@@ -60,7 +60,7 @@
     ];
     
     $scope.activeSlider = 'watch';
-    $scope.activeSliderMaxSlides = 6;
+    $scope.activeSliderMaxSlides = 9;
     $scope.modelTitle = 'Gear 2 / Dark Grey';
     $scope.faceTitle = 'Modern Utility';
 
@@ -124,30 +124,6 @@
     };
 
     $scope.hideBackgroundSlides = function() {
-      // var el = $element[0].querySelector('.slick-current');
-      // var center_index = el.getAttribute('data-slick-index');
-      // var controls = $element[0].querySelectorAll('.slide');
-
-      // [].forEach.call(controls, function (ctl) {
-
-      //   var one_up = parseInt(center_index) + 1;
-
-      //     if(ctl.getAttribute('data-slick-index') == center_index){
-      //       ctl.style.opacity = 1;
-      //     }else if(ctl.getAttribute('data-slick-index') == '' +(center_index + 1)){
-      //       console.log('here2')
-      //      ctl.style.opacity = 0.5;
-      //     }else if(ctl.getAttribute('data-slick-index') == center_index - 1 || parseInt(ctl.getAttribute('data-slick-index')) == one_up){
-      //       console.log('here')
-      //      ctl.style.opacity = 0.5;
-      //     }else{
-      //       console.log(    parseInt((ctl.getAttribute('data-slick-index').toString())) + 1)
-      //       ctl.style.opacity = 0;
-      //     }
-
-
-
-      // });
     }
     
     // Start experience

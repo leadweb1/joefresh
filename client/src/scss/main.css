@@ -3476,11 +3476,6 @@ and open the template in the editor.
   top: 35%;
   line-height: 50px; }
 
-.outline {
-  border-style: solid;
-  width: 1920px;
-  height: 1080px; }
-
 .terms {
   background-color: white;
   margin-top: -200px;
@@ -3504,38 +3499,69 @@ and open the template in the editor.
   width: 1920px;
   height: 1080px; }
 
-.slick-slide {
-  margin-left: -50px !important;
-  margin-right: -50px !important;
-  width: 360px !important;
-  opacity: 0.5; }
+.content {
+  width: 1730 !important; }
+
+.slider-container {
+  width: 1730px !important; }
+
+.draggable {
+  width: 1700px !important; }
+
+.slide > img {
+  position: relative;
+  z-index: 0; }
+
+.slick-center > img {
+  z-index: 1; }
 
 .slide {
-  position: relative; }
+  margin-left: -59px !important;
+  margin-right: -59px !important; }
 
-.slick-current {
-  opacity: 1;
-  z-index: 100 !important; }
+.slick-slide {
+  width: 600px !important; }
 
-.content {
-  height: 490px; }
-
-.slick-track {
-  margin-left: 135px;
-  margin-right: 800px !important; }
+.slick-center {
+  width: 700px !important;
+  margin-left: 1px !important;
+  margin-right: 1px !important; }
 
 .slick-list {
-  overflow: hidden !important;
-  width: 975px; }
+  padding: 0px 0px !important;
+  margin-left: 50px !important; }
+
+.draggable {
+  margin-left: 0px;
+  margin-right: 0px; }
+
+.outline {
+  border-style: solid;
+  width: 1920px;
+  height: 1080px; }
+
+.experience {
+  padding-top: 0px !important;
+  margin-top: -75px; }
+
+.arrow {
+  margin-top: 140px; }
+
+.left {
+  margin-left: -60px; }
+
+.right {
+  right: -120px !important; }
 
 .white-cover {
   position: fixed;
+  left: 100px;
+  top: 0px;
+  height: 800px;
+  width: 50px;
   background-color: white;
-  height: 360px;
-  width: 138px;
-  top: 365px;
-  left: 114px;
-  z-index: 999; }
+  z-index: 9999999 !important;
+  opacity: 1; }
 
 .call-to-action {
   width: 834px;
