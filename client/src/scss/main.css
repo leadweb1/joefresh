@@ -3278,10 +3278,16 @@ and open the template in the editor.
   height: 100%;
   margin-left: 520px;
   margin-right: 520px;
-  padding-left: 100px;
-  padding-right: 100px;
   padding-top: 172px;
   background-color: white; }
+
+.padding {
+  padding-left: 100px;
+  padding-right: 100px; }
+
+.email-center {
+  margin-left: 450px !important;
+  margin-right: 450px !important; }
 
 .heading-text {
   font-size: 87px;
@@ -3294,8 +3300,9 @@ and open the template in the editor.
   margin-top: -8px;
   font-size: 36px;
   margin-left: 4px;
-  letter-spacing: -1.25px;
-  color: #75797D; }
+  letter-spacing: -0px;
+  color: #75797D;
+  font-family: "JFCalibreRegular"; }
 
 .input-prompt {
   font-size: 32px;
@@ -3308,7 +3315,7 @@ and open the template in the editor.
   border-color: #BEC0C0;
   border-style: solid;
   height: 92px;
-  width: 640px; }
+  width: 100%; }
 
 .select-prompt {
   font-size: 32px;
@@ -3331,10 +3338,10 @@ and open the template in the editor.
   margin-top: 40px; }
 
 .email-text-input {
-  width: 640px;
+  width: 100%;
   height: 94px;
   border-style: solid;
-  border-width: 5px;
+  border-width: 3px;
   padding-left: 20px;
   font-size: 32px;
   padding-top: 10px;
@@ -3473,8 +3480,19 @@ and open the template in the editor.
   width: 500px; }
 
 .behind {
-  top: 35%;
+  top: 40%;
   line-height: 50px; }
+
+.video-button {
+  background-color: transparent;
+  border-style: none;
+  color: white; }
+
+.kids {
+  top: 50%; }
+
+.scenes {
+  margin: 0; }
 
 .terms {
   background-color: white;
@@ -3503,33 +3521,29 @@ and open the template in the editor.
   width: 1730 !important; }
 
 .slider-container {
-  width: 1730px !important; }
+  width: 1720px; }
 
-.draggable {
-  width: 1700px !important; }
+.slick-slider {
+  width: 1720px !important; }
+
+.slick-slider {
+  overflow: hidden; }
 
 .slide > img {
   position: relative;
-  z-index: 0; }
+  z-index: 0;
+  opacity: 0.5; }
 
 .slick-center > img {
-  z-index: 1; }
-
-.slide {
-  margin-left: -59px !important;
-  margin-right: -59px !important; }
+  z-index: 1;
+  opacity: 1; }
 
 .slick-slide {
-  width: 600px !important; }
-
-.slick-center {
-  width: 700px !important;
-  margin-left: 1px !important;
-  margin-right: 1px !important; }
+  margin: 0 -40px !important; }
 
 .slick-list {
   padding: 0px 0px !important;
-  margin-left: 50px !important; }
+  width: 1720px; }
 
 .draggable {
   margin-left: 0px;
@@ -3564,18 +3578,16 @@ and open the template in the editor.
   opacity: 1; }
 
 .call-to-action {
-  width: 834px;
-  height: 196px;
-  background-color: transparent;
-  top: 581px;
-  left: 546px;
+  width: 1920px;
+  height: 1080px;
+  background-color: #FD4600;
   color: white;
-  font-size: 96px;
-  line-height: 76px;
+  padding-top: 100px;
+  font-size: 280px;
+  line-height: 0px;
   font-family: 'JFCalibreBold';
   letter-spacing: -0.1px;
-  padding-left: 69px;
-  padding-top: 73px; }
+  text-align: center; }
 
 .hover {
   cursor: pointer; }
@@ -3594,8 +3606,14 @@ button {
   font-family: JFCalibreRegular;
   font-size: 40px; }
 
+.top {
+  z-index: 9999999 !important; }
+
 .fixed {
   position: fixed; }
+
+.sub {
+  display: inline-block; }
 
 .home {
   background-image: url("/assets/images/backgrounds/JF_Spring-2016_Background.jpg");
@@ -3611,8 +3629,8 @@ button {
   width: 158px;
   top: 60px;
   left: 60px;
-  background-color: white;
-  color: #FF5E00; }
+  background-color: #FE4600;
+  color: white; }
 
 .menu-button {
   padding-top: 15px; }

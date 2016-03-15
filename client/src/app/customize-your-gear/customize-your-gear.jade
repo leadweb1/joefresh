@@ -1,4 +1,5 @@
 .pure-g.slider-wrapper.customize-your-gear.outline
+	button.menu-home.menu-button.fixed.box-shadow.top(ui-sref="root.home") MENU
 	.pure-u-1.pure-u-1-1
 		.customize
 			.experience
@@ -9,7 +10,7 @@
 						.arrow.pure-u-2-24.left
 							img.left(ng-show='experience.currentSlide > 1', ng-src='assets/0-UI/icon_arrow_slider_left.svg', ng-click="prevSlide(); submissionAction('click', 'action', 'customize-your-gear_customize-your-gear_prev-slide'); $event.stopPropagation();")
 						.content.pure-u-20-24
-							#watch.slider-container.ng-hide(ng-show="activeSlider == 'watch' || activeSlider == null", app-watch-carousel='', data-slick='{"startSlide": 3, "overlay": "", "swipe": true, "slidesToShow":3, "centerMode": true, "adaptiveHeight": true}')
+							#watch.slider-container.ng-hide(ng-show="activeSlider == 'watch' || activeSlider == null", app-watch-carousel='', data-slick='{"startSlide": 3, "overlay": "", "swipe": true, "slidesToShow":3, "slidesToScroll":1, "centerMode": true, "adaptiveHeight": true}')
 								.slide(data-title='Some Dress Name')
 									img(ng-src='assets/images/collection/women/Women_01.jpg')
 								.slide(data-title='Collection 2')
@@ -30,4 +31,4 @@
 									img(ng-src='assets/images/collection/women/Women_06.jpg')
 						.arrow.pure-u-2-24.right
 							img.right(ng-show='experience.currentSlide < activeSliderMaxSlides', ng-src='assets/0-UI/icon_arrow_slider_right.svg', ng-click="nextSlide(); submissionAction('click', 'action', 'customize-your-gear_customize-your-gear_next-slide'); $event.stopPropagation();")
-.white-cover
+//- .white-cover

@@ -17,9 +17,19 @@ button {
     font-size:40px;
 }
 
+.top
+{
+    z-index:9999999 !important;
+}
+
 .fixed
 {
     position:fixed;
+}
+
+.sub
+{
+    display:inline-block;
 }
 
 .home
@@ -40,8 +50,8 @@ button {
     top:60px;
     left:60px;
     
-    background-color:white;
-    color:$orange-text;
+    background-color:$orange-background;
+    color:white;
 }
 
 .menu-button

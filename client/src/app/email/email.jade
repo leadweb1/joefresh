@@ -1,9 +1,12 @@
 .email
 	button.menu-home.menu-button.fixed.box-shadow(ui-sref="root.home") MENU
-	.center
-		.header.heading-text SIGN UP + GET 20% OFF ONLINE
-		.subheader-text AND GET ALL THE NEWS THAT'S FIT TO WEAR
-		.select-favorite
+	.center.email-center
+		.header.heading-text
+			.padding SIGN UP 
+			p.scenes.padding + GET 10% OFF
+			p.scenes.padding AT JOEFRESH.COM
+		.subheader-text.padding AND GET ALL THE NEWS THAT'S FIT TO WEAR
+		.select-favorite.padding
 			.input-prompt SELECT YOUR FAVORITE ITEM
 			.dropdown-container
 				ul.nav.navbar-nav.wide
@@ -36,14 +39,14 @@
 								a(href='#')
 									| Sign Out 
 									span.glyphicon.glyphicon-log-out.pull-right
-		.email-input
+		.email-input.padding
 			.input-prompt EMAIL
 			input.email-text-input#email(ng-model="email.email")
-		.checkbox-container
+		.checkbox-container.padding
 			input.checkbox(type="checkbox", ng-model="accept")
 			.checkbox-text I accept the 
 				.link(ui-sref="root.terms") Terms and Conditions 
 				| &
 				.link.privacy(ui-sref="root.privacy") Privacy Policy
-		.send
+		.send.padding
 			button.send-button(ui-sref="root.convenience-more", ng-click="send()") SEND
