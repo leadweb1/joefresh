@@ -1,21 +1,19 @@
 $orange-text: #FF5E00;
+$orange-background: #FD4600;
 
 .call-to-action
 {
-	width:834px;
-	height:196px;
-	background-color:transparent;
-	top:581px;
-	left:546px;
+	width:1920px;
+	height:1080px;
+	background-color:$orange-background;
 	color:white;
 
-	font-size:96px;
-	line-height:76px;
+	padding-top:100px;
+	font-size:280px;
+	line-height:0px;
 	font-family: 'JFCalibreBold';
 	letter-spacing:-0.1px;
-
-	padding-left:69px;
-	padding-top:73px;
+	text-align:center;
 }
 
 .hover

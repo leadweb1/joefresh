@@ -11,15 +11,15 @@ $fa-font-path: "/src/vendor/font-awesome/fonts";
 
 @font-face {
     font-family: 'JFCalibreRegular';
-    src: url('../assets/_FONT/JFCalibre-Regular.ttf');
+    src: url('../fonts/JFCalibre-Regular.ttf');
 }
 @font-face {
     font-family: 'JFCalibreMedium';
-    src: url('../assets/_FONT/JFCalibre-Medium.ttf');
+    src: url('../fonts/JFCalibre-Medium.ttf');
 }
 @font-face {
     font-family: 'JFCalibreBold';
-    src: url('../assets/_FONT/JFCalibre-Bold.ttf');
+    src: url('../fonts/JFCalibre-Bold.ttf');
 }
 
 html, body, div, button, input, select, textarea, .pure-g [class*="pure-u"] {

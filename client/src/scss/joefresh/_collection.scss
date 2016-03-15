@@ -14,54 +14,65 @@ $width: 1730 !important;
 .content
 {
 	width:$width;
-	// left:0px !important;
-	// margin-left:-5px;
 }
 
 .slider-container
 {
-	width:1730px !important;
+	width:1720px;
+}
+
+.slick-slider
+{
+	width:1720px !important;
 }
 
 .draggable
 {
-	width:1700px !important;
+
+}
+
+.slick-slider
+{
+	overflow:hidden
 }
 
 .slide > img
 {
 	position:relative;
 	z-index:0;
+	opacity:0.5;
 }
 
 .slick-center > img
 {
 	z-index: 1;
+	opacity:1;
 }
 
 .slide
 {
-
-	margin-left:-59px !important;
-	margin-right:-59px !important;
+	// margin-left:-59px !important;
+	// margin-right:-59px !important;
 }
 
 .slick-slide
 {
-	width:600px !important;
+	// width:600px !important;
+	margin:0 -40px !important;
 }
 
 .slick-center
 {
-	width:700px !important;
-	margin-left:1px !important;
-	margin-right:1px !important;
+	// width:700px !important;
+	// margin-left:1px !important;
+	// margin-right:1px !important;
 }
 
 .slick-list
 {
 	padding:0px 0px !important;
-	margin-left:50px !important;
+	width:1720px;
+	// margin:0 40px !important;
 }
 
 .draggable

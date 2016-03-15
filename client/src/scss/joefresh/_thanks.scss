@@ -1,5 +1,5 @@
-$menu-button-color:#63666A;
-$thanks-header-text-color: #FF5E00;
+
+$thanks-header-text-color:	#FD4600 !important;
 
 .thanks
 {
@@ -12,16 +12,7 @@ $thanks-header-text-color: #FF5E00;
     height:1080px;
 }
 
-.thanks-header-text
-{
-	margin-top:188px;
-	margin-left:8px;
-	font-size:120px;
-	font-family: 'JFCalibreBold';
-	letter-spacing:0.035em;
-	color:$thanks-header-text-color;
 
-}
 
 .other-header-text
 {
@@ -37,10 +28,20 @@ $thanks-header-text-color: #FF5E00;
 	text-align:center;
 	font-size:50px;
 	margin-top:-22px;
-	margin-left:70px;
-	margin-right:70px;
 	letter-spacing:-0.45px;
 	line-height:56px;
+	margin:0 50px !important;
+}
+
+.thanks-header-text
+{
+	margin-top:300px !importantddsdd;
+	margin-left:8px;
+	font-size:120px;
+	font-family: 'JFCalibreBold';
+	letter-spacing:0.035em;
+	color:$thanks-header-text-color;
+
 }
 
 .back-to-menu
@@ -48,12 +49,12 @@ $thanks-header-text-color: #FF5E00;
 	font-size:58px !important;
 	letter-spacing: -0.5px;
 	color:white;
-	background-color: $menu-button-color;
 	text-align:center;
 	padding-top:26px;
 	padding-left:4px;
 	width:467px;
-	margin-left:106px;
-	margin-top:38px;
+	margin:0 180px !important;
+	margin-top:100px !important;
 	height:131px;
+	opacity:1;
 }
