@@ -3578,6 +3578,9 @@ and open the template in the editor.
   z-index: 9999999 !important;
   opacity: 1; }
 
+.collection-button-row {
+  text-align: center; }
+
 .call-to-action {
   width: 1920px;
   height: 1080px;

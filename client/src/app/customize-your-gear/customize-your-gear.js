@@ -29,34 +29,12 @@
     });
 
     $scope.images = [
-          {
-        title: 'This Collection Title',
-        url:'assets/images/collection/model.png'
-      },
-          {
-        title: 'This Collection Title',
-        url:'assets/images/collection/model.png'
-      },
-          {
-        title: 'This Collection Title',
-        url:'assets/images/collection/model.png'
-      },
-          {
-        title: 'This Collection Title',
-        url:'assets/images/collection/model.png'
-      },
-          {
-        title: 'This Collection Title',
-        url:'assets/images/collection/model.png'
-      },
-          {
-        title: 'This Collection Title',
-        url:'assets/images/collection/model.png'
-      },
-          {
-        title: 'This Collection Title',
-        url:'assets/images/collection/model.png'
-      }
+      'assets/images/collection/women/Women_01.jpg',
+      'assets/images/collection/women/Women_02.jpg',
+      'assets/images/collection/women/Women_03.jpg',
+      'assets/images/collection/women/Women_04.jpg',
+      'assets/images/collection/women/Women_05.jpg',
+      'assets/images/collection/women/Women_06.jpg',
     ];
     
     $scope.activeSlider = 'watch';
