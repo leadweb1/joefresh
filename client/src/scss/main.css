@@ -3414,7 +3414,8 @@ and open the template in the editor.
   font-size: 120px;
   font-family: 'JFCalibreBold';
   letter-spacing: 0.035em;
-  color: #FF5E00; }
+  color: #FD4600;
+  text-align: center; }
 
 .other-header-text {
   margin-top: 188px;
@@ -3436,13 +3437,13 @@ and open the template in the editor.
   font-size: 58px !important;
   letter-spacing: -0.5px;
   color: white;
-  background-color: #63666A;
+  background-color: #FD4600;
   text-align: center;
   padding-top: 26px;
   padding-left: 4px;
   width: 467px;
-  margin-left: 106px;
-  margin-top: 38px;
+  margin: 0 277px;
+  margin-top: 25px;
   height: 131px; }
 
 .videos {

@@ -1,5 +1,5 @@
 $menu-button-color:#63666A;
-$thanks-header-text-color: #FF5E00;
+$thanks-header-text-color: #FD4600;
 
 .thanks
 {
@@ -20,6 +20,7 @@ $thanks-header-text-color: #FF5E00;
 	font-family: 'JFCalibreBold';
 	letter-spacing:0.035em;
 	color:$thanks-header-text-color;
+	text-align:center;
 
 }
 
@@ -48,12 +49,12 @@ $thanks-header-text-color: #FF5E00;
 	font-size:58px !important;
 	letter-spacing: -0.5px;
 	color:white;
-	background-color: $menu-button-color;
+	background-color: $thanks-header-text-color;
 	text-align:center;
 	padding-top:26px;
 	padding-left:4px;
 	width:467px;
-	margin-left:106px;
-	margin-top:38px;
+	margin:0 277px;
+	margin-top:25px;
 	height:131px;
 }
