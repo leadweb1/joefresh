@@ -94,7 +94,9 @@ $send-hover-color:#FE4600;
 {
 	font-size:90px;
 	font-weight:300;
-	margin-top:-62px;
+	margin-top:-20px;
+	height:20px !important;
+	margin-right:15px;
 }
 
 .inner-dropdown
@@ -192,3 +194,4 @@ $send-hover-color:#FE4600;
 {
 	background-color: $send-hover-color;
 }
+

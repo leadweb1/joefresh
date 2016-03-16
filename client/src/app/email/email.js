@@ -30,6 +30,8 @@
 
    $scope.prompt = '';
 
+   $scope.favorite;
+
    // $('.checkbox').checkbox();
 
    $scope.send = function()
@@ -37,6 +39,10 @@
       console.log('here')
       console.log( $scope.email.email);
       // $state.go('thanks')
+   }
+
+   $scope.setFavorite = function(favorite){
+    $scope.favorite = favorite;
    }
    
   }

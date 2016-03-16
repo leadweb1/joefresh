@@ -3329,7 +3329,9 @@ and open the template in the editor.
 .dropdown-icon {
   font-size: 90px;
   font-weight: 300;
-  margin-top: -62px; }
+  margin-top: -20px;
+  height: 20px !important;
+  margin-right: 15px; }
 
 .inner-dropdown {
   height: 86px; }
@@ -3620,6 +3622,26 @@ and open the template in the editor.
 
 .hover {
   cursor: pointer; }
+
+.dropdown-menu {
+  width: 820px !important;
+  margin: 2px 0px !important;
+  margin-left: -3px !important;
+  padding: 0 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #75797D; }
+
+.dropdown-menu > li {
+  height: 40px; }
+
+.dropdown-menu > li.divider {
+  margin: 0 0; }
+
+.dropdown-menu > li > a {
+  height: 100%;
+  font-size: 30px;
+  color: #75797D; }
 
 /*
 To change this license header, choose License Headers in Project Properties.

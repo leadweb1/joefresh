@@ -12,33 +12,34 @@
 				ul.nav.navbar-nav.wide
 					li.dropdown.wide
 						a.dropdown-toggle.inner-dropdown(href='#', data-toggle='dropdown')
-							.select-prompt.input-prompt-color SELECT
-							span.fa.fa-angle-down.fa-3x.dropdown-icon.pull-right
+							.select-prompt.input-prompt-color {{favorite? favorite : "SELECT" }}
+							//- span.fa.fa-angle-down.fa-3x.dropdown-icon.pull-right
+							img.dropdown-icon.pull-right(ng-src="assets/images/email/dropdown.svg")
 						ul.dropdown-menu
 							li
-								a(href='#')
-									| Account Settings 
-									span.glyphicon.glyphicon-cog.pull-right
+								a(href='#', ng-click="setFavorite('Love')")
+									| DRESSES
+									//- span.glyphicon.glyphicon-cog.pull-right
 							li.divider
 							li
-								a(href='#')
-									| User stats 
-									span.glyphicon.glyphicon-stats.pull-right
+								a(href='#', ng-click="setFavorite('Love')")
+									| SHIRTS
+									//- span.glyphicon.glyphicon-stats.pull-right
 							li.divider
 							li
-								a(href='#')
-									| Messages 
-									span.badge.pull-right  42 
+								a(href='#', ng-click="setFavorite('Love')")
+									| PANTS
+									//- span.badge.pull-right  42 
 							li.divider
 							li
-								a(href='#')
-									| Favourites Snippets 
-									span.glyphicon.glyphicon-heart.pull-right
+								a(href='#', ng-click="setFavorite('Love')")
+									| HATS
+									//- span.glyphicon.glyphicon-heart.pull-right
 							li.divider
 							li
-								a(href='#')
-									| Sign Out 
-									span.glyphicon.glyphicon-log-out.pull-right
+								a(href='#', ng-click="setFavorite('Love')")
+									| LOVE
+									//- span.glyphicon.glyphicon-log-out.pull-right
 		.email-input.padding
 			.input-prompt EMAIL
 			input.email-text-input#email(ng-model="email.email")
