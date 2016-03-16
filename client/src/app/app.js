@@ -68,7 +68,8 @@
     });
     
     IdleProvider.interrupt('mousemove keydown DOMMouseScroll mousewheel mousedown onplaying touchstart touchmove scroll');
-    IdleProvider.idle(appConfig.timeout); // In seconds, default is 20min
+    // IdleProvider.idle(appConfig.timeout); // In seconds, default is 20min
+    IdleProvider.idle(500000);
     //IdleProvider.timeout(appConfig.timeout); // In seconds, default is 30sec
   }
 

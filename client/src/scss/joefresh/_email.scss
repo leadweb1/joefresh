@@ -83,6 +83,7 @@ $send-hover-color:#FE4600;
 	padding-top:22px;
 	letter-spacing:0.04em;
 	padding-left: 10px;
+	color:$email-title-color !important;
 }
 
 .wide
@@ -118,7 +119,8 @@ $send-hover-color:#FE4600;
 	padding-left:20px;
 	font-size:32px;
 	padding-top:10px;
-	color:$input-prompt-color;
+	color:$email-title-color;
+	border-color:$input-prompt-color;
 
 }
 
@@ -147,7 +149,7 @@ $send-hover-color:#FE4600;
 {
 	float:right;
 	align:right;
-	width:590px
+	width:590px;
 	margin-right:150px;
 	// margin-top:-20px;
 	font-size:28px;
