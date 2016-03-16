@@ -1,14 +1,28 @@
+//- .videos
+//- 	button.menu-home.menu-button.fixed.box-shadow(ui-sref="root.home") MENU
+//- 	.button-row.fixed
+//- 		button.video-button.video-size(ng-click="goToVideo('one')")
+//- 			img.video-thumb.video-size(src="assets/videos/buttons/gifs/JoeFresh_TopsDressesPolos.gif", autoplay, loop, muted)
+//- 			.button-text.bold-left.cover-text.behind SPRING COLLECTION
+//- 		button.video-button.video-size(ng-click="goToVideo('two')")
+//- 			img.video-thumb.video-size(src="assets/videos/buttons/gifs/JoeFresh_FamilyKids.gif", autoplay, loop, muted)
+//- 			.button-text.bold-left.cover-text.kids  KIDS
+//- 		button.video-button.video-size(ng-click="goToVideo('three')")
+//- 			img.video-thumb.video-size(src="assets/videos/buttons/gifs/JoeFresh_BTS_TransitShelter.gif", autoplay, loop, muted)
+//- 			.button-text.bold-left.cover-text.behind 
+//- 				| BEHIND 
+//- 				p.scenes THE SCENES
 .videos
 	button.menu-home.menu-button.fixed.box-shadow(ui-sref="root.home") MENU
 	.button-row.fixed
-		button.video-button(ng-click="goToVideo('one')")
-			img.video-thumb(src="assets/videos/buttons/gifs/JoeFresh_TopsDressesPolos.gif", autoplay, loop, muted)
-			.button-text.bold-left.cover-text.behind SPRING COLLECTION
-		button.video-button(ng-click="goToVideo('two')")
-			img.video-thumb(src="assets/videos/buttons/gifs/JoeFresh_FamilyKids.gif", autoplay, loop, muted)
-			.button-text.bold-left.cover-text.kids  KIDS
-		button.video-button(ng-click="goToVideo('three')")
-			img.video-thumb(src="assets/videos/buttons/gifs/JoeFresh_BTS_TransitShelter.gif", autoplay, loop, muted)
-			.button-text.bold-left.cover-text.behind 
+		button.home-button-row(ng-click="goToVideo('one')")
+			img.video-thumb.video-size(src="assets/videos/buttons/gifs/JoeFresh_TopsDressesPolos.gif", autoplay, loop, muted)
+			.button-text.bold-left.cover-text.behind.video-text SPRING COLLECTION
+		button.home-button-row(ng-click="goToVideo('two')")
+			img.video-thumb.video-size.video-middle(src="assets/videos/buttons/gifs/JoeFresh_FamilyKids.gif", autoplay, loop, muted)
+			.button-text.bold-left.cover-text.kids.video-text  KIDS
+		button.home-button-row(ng-click="goToVideo('three')")
+			img.video-thumb.video-size(src="assets/videos/buttons/gifs/JoeFresh_BTS_TransitShelter.gif", autoplay, loop, muted)
+			.button-text.bold-left.cover-text.behind.video-text 
 				| BEHIND 
 				p.scenes THE SCENES

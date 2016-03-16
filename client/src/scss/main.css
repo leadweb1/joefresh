@@ -3489,18 +3489,39 @@ and open the template in the editor.
   border-style: none;
   color: white; }
 
+.video-size {
+  position: fixed;
+  width: 503px;
+  height: 257px;
+  margin-left: -252px;
+  margin-top: -128px; }
+
+.video-middle {
+  margin-left: -251px; }
+
+.video-text {
+  margin-top: -10px; }
+
 .kids {
   top: 50%; }
 
 .scenes {
   margin: 0; }
 
+.svg-audio {
+  height: 90%;
+  width: 100%;
+  margin-top: -8px; }
+
+.audio-button {
+  width: 95px !important; }
+
 .terms {
   background-color: white;
-  margin-top: -200px;
   color: #75797D;
   overflow: scroll;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  padding: 0px 10px; }
 
 .back-button {
   left: 250px !important; }
@@ -3509,6 +3530,10 @@ and open the template in the editor.
   -moz-box-shadow: 0 0 3px #ccc;
   -webkit-box-shadow: 0 0 3px #ccc;
   box-shadow: 0 0 3px #ccc; }
+
+.terms-header-text {
+  margin-top: 120px;
+  line-height: 100px; }
 
 .collection {
   -webkit-background-size: cover;

@@ -61,6 +61,26 @@
     background-color:transparent;
     border-style:none;
     color:white;
+
+}
+
+.video-size
+{
+    position:fixed;
+    width:503px;
+    height:257px;
+    margin-left:-252px;
+    margin-top:-128px;
+}
+
+.video-middle
+{
+    margin-left:-251px;
+}
+
+.video-text
+{
+    margin-top:-10px;
 }
 
 .kids
@@ -71,4 +91,16 @@
 .scenes
 {
     margin:0;
+}
+
+.svg-audio
+{
+    height:90%;
+    width:100%;
+    margin-top:-    8px;
+}
+
+.audio-button
+{
+    width:95px !important;
 }
