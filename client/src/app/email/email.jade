@@ -13,7 +13,6 @@
 					li.dropdown.wide
 						a.dropdown-toggle.inner-dropdown(href='#', data-toggle='dropdown')
 							.select-prompt.input-prompt-color {{favorite? favorite : "SELECT" }}
-							//- span.fa.fa-angle-down.fa-3x.dropdown-icon.pull-right
 							img.dropdown-icon.pull-right(ng-src="assets/images/email/dropdown.svg")
 						ul.dropdown-menu
 							li
@@ -40,14 +39,17 @@
 								a(href='#', ng-click="setFavorite('Love')")
 									| LOVE
 									//- span.glyphicon.glyphicon-log-out.pull-right
+
 		.email-input.padding
 			.input-prompt EMAIL
 			input.email-text-input#email(ng-model="email.email")
 		.checkbox-container.padding
-			input.checkbox(type="checkbox", ng-model="accept")
+			//- input.checkbox(type="checkbox", ng-model="accept")
+			.checkbox(ng-click="toggleChecked()")
+				img.checkmark(ng-src="assets/images/email/check.svg", ng-style="{'opacity':opa}")
 			.checkbox-text I accept the 
 				.link(ui-sref="root.terms") Terms and Conditions 
 				| &
 				.link.privacy(ui-sref="root.privacy") Privacy Policy
 		.send.padding
-			button.send-button(ui-sref="root.convenience-more", ng-click="send()") SEND
+			button.send-button(ng-click="send()", ng-style="validateForm()") SEND

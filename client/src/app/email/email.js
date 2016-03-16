@@ -25,10 +25,14 @@
   function EmailController($scope, $state) {
     
    $scope.email = {
-     email: ''
-   }
+    email : ''
+   };
+
+   $scope.checked = false;
+   $scope.opa = 0;
 
    $scope.prompt = '';
+   $scope.valid = false;
 
    $scope.favorite;
 
@@ -36,14 +40,51 @@
 
    $scope.send = function()
    {
-      console.log('here')
-      console.log( $scope.email.email);
-      // $state.go('thanks')
+    console.log($scope.valid)
+    if($scope.valid){ 
+      $state.go('thanks')
+    }
+      
    }
 
    $scope.setFavorite = function(favorite){
     $scope.favorite = favorite;
    }
+
+   $scope.toggleChecked = function()
+   {
+   
+      $scope.checked = !$scope.checked;
+      if($scope.checked){
+        $scope.opa = 1;
+      }
+      else
+        $scope.opa = 0;
+   }
+
+   $scope.validateEmail = function (e) {
+    console.log(e);
+    var filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
+    return String(e).search (filter) != -1;
+  }
+
+
+    $scope.validateForm = function()
+    {
+      var result = $scope.validateEmail($scope.email.email);
+      if($scope.checked && result)
+      {
+        $scope.valid = true;
+        return {
+          "background-color" : "#FD4600"
+        }
+      }else{
+        $scope.valid = false;
+        return {
+          "background-color" : "#FFA287"
+        }
+      }
+    }
    
   }
 
