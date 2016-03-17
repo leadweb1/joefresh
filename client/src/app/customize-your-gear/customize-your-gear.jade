@@ -9,8 +9,8 @@
 					.watch-container.pure-g
 						.arrow.pure-u-2-24.left
 							img.left(ng-show='experience.currentSlide > 1', ng-src='assets/0-UI/icon_arrow_slider_left.svg', ng-click="prevSlide(); submissionAction('click', 'action', 'customize-your-gear_customize-your-gear_prev-slide'); $event.stopPropagation();")
-						.content.pure-u-20-24
-							#watch.slider-container.ng-hide(ng-show="activeSlider == 'watch' || activeSlider == null", app-watch-carousel='', data-slick='{"startSlide": 3, "overlay": "", "swipe": true, "slidesToShow":3, "slidesToScroll":1, "centerMode": true, "adaptiveHeight": true}')
+						.content.pure-u-20-24.fadeIn
+							#watch.slider-container.ng-hide.fader(ng-show="activeSlider == 'women' || activeSlider == null", app-watch-carousel='', data-slick='{"startSlide": 2, "overlay": "", "swipe": true, "slidesToShow":3, "slidesToScroll":1, "centerMode": true, "variableWidth" : true, "adaptiveHeight": true}')
 								.slide(data-title='Some Dress Name')
 									img(ng-src='assets/images/collection/women/Women_01.jpg')
 								.slide(data-title='Collection 2')
@@ -23,15 +23,31 @@
 									img(ng-src='assets/images/collection/women/Women_05.jpg')
 								.slide(data-title='nice clothes!')
 									img(ng-src='assets/images/collection/women/Women_06.jpg')
+							#watchFace.slider-container.ng-hide.fader(ng-show="activeSlider == 'men' || activeSlider == null", app-watch-carousel='', data-slick='{"startSlide": 2, "overlay": "", "swipe": true, "slidesToShow":3, "slidesToScroll":1, "centerMode": true, "variableWidth" : true, "adaptiveHeight": true}')
 								.slide(data-title='Some Dress Name')
-									img(ng-src='assets/images/collection/women/Women_04.jpg')
-								.slide(data-title='Collection 2')
-									img(ng-src='assets/images/collection/women/Women_05.jpg')
-								.slide(data-title='nice clothes!')
-									img(ng-src='assets/images/collection/women/Women_06.jpg')
+									img(ng-src='assets/images/collection/men/Men_01.jpg')
+								.slide(data-title='Some Dress Name')
+									img(ng-src='assets/images/collection/men/Men_02.jpg')
+								.slide(data-title='Some Dress Name')
+									img(ng-src='assets/images/collection/men/Men_03.jpg')
+								.slide(data-title='Some Dress Name')
+									img(ng-src='assets/images/collection/men/Men_04.jpg')
+							#watchFacer.slider-container.ng-hide.fader(ng-show="activeSlider == 'children' || activeSlider == null", app-watch-carousel='', data-slick='{"startSlide": 2, "overlay": "", "swipe": true, "slidesToShow":3, "slidesToScroll":1, "centerMode": true, "variableWidth" : true, "adaptiveHeight": true}')
+								.slide(data-title='Some Dress Name')
+									img(ng-src='assets/images/collection/kids/Kids_01.jpg')
+								.slide(data-title='Some Dress Name')
+									img(ng-src='assets/images/collection/kids/Kids_02.jpg')
+								.slide(data-title='Some Dress Name')
+									img(ng-src='assets/images/collection/kids/Kids_03.jpg')
+								.slide(data-title='Some Dress Name')
+									img(ng-src='assets/images/collection/kids/Kids_04.jpg')
+								.slide(data-title='Some Dress Name')
+									img(ng-src='assets/images/collection/kids/Kids_05.jpg')
+								.slide(data-title='Some Dress Name')
+									img(ng-src='assets/images/collection/kids/Kids_06.jpg')
 						.arrow.pure-u-2-24.right
 							img.right(ng-show='experience.currentSlide < activeSliderMaxSlides', ng-src='assets/0-UI/icon_arrow_slider_right.svg', ng-click="nextSlide(); submissionAction('click', 'action', 'customize-your-gear_customize-your-gear_next-slide'); $event.stopPropagation();")
 			.collection-button-row
-				button.collection-type WOMENS
-				button.collection-type MENS
-				button.collection-type CHILDREN
+				button.collection-type(ng-click="changeSlider('women');") WOMENS
+				button.collection-type(ng-click="changeSlider('men')")  MENS
+				button.collection-type(ng-click="changeSlider('children')") CHILDREN

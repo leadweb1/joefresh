@@ -37,13 +37,19 @@
       'assets/images/collection/women/Women_06.jpg',
     ];
     
-    $scope.activeSlider = 'watch';
+    $scope.activeSlider = 'women';
     $scope.activeSliderMaxSlides = 9;
     $scope.modelTitle = 'Gear 2 / Dark Grey';
     $scope.faceTitle = 'Modern Utility';
 
     
     $scope.changeSlider = function(slider) {
+
+      $('.content').removeClass('fadeIn').animate({'nothing':null}, 1, function () {
+      $('.content').addClass('fadeIn');
+      });
+
+
       console.log('change slider')
         $scope.activeSlider = slider;
                 
@@ -52,18 +58,8 @@
           var $slides = $slider.find('.slick-slide');
           $scope.activeSliderMaxSlides = $slides.length;
           
-          if($slider.attr('id') === 'watchFace') {
-              var $watchSlider = jQuery('.slider-container.ng-hide');
-              var $overlay = $slider.find('.slider-overlay');
-              var overlayImage = $watchSlider.find('.slick-current img').attr('src');
-              $overlay.find('img').attr('src', overlayImage);
-          }
-          else {
-              var $watchFaceSlider = jQuery('.slider-container.ng-hide');
-              var backgroundImage = $watchFaceSlider.find('.slick-current img').attr('src');
-              $slider.css('background-image','url(\''+backgroundImage+'\')');
-          }
-          
+          var $watchFaceSlider = jQuery('.slider-container.ng-hide');
+
           $slides.each(function(index){
             var $slide = jQuery(this);
             
@@ -72,34 +68,30 @@
             }
           });
         },100);
+
+        // jQuery('.content').css('opacity', '1');
     };
     
     $scope.prevSlide = function() {
         var $slider = jQuery('.slider-container:not(.ng-hide)');
         $slider.slick('slickPrev');
-        
-        $scope.setModelTitle();
-        $scope.setFaceTitle();
     };
     
     $scope.nextSlide = function() {
         var $slider = jQuery('.slider-container:not(.ng-hide)');
         $slider.slick('slickNext');
-        
-        $scope.setModelTitle();
-        $scope.setFaceTitle();
     };
     
-    $scope.setModelTitle = function() {
-      $scope.hideBackgroundSlides()
-        var title = jQuery('#watch .slick-current').data('title');
-        $scope.modelTitle = title;
-    };
+    // $scope.setModelTitle = function() {
+    //   $scope.hideBackgroundSlides()
+    //     var title = jQuery('#watch .slick-current').data('title');
+    //     $scope.modelTitle = title;
+    // };
     
-    $scope.setFaceTitle = function() {
-        var title = jQuery('#watchFace .slick-current').data('title');
-        $scope.faceTitle = title;
-    };
+    // $scope.setFaceTitle = function() {
+    //     var title = jQuery('#watchFace .slick-current').data('title');
+    //     $scope.faceTitle = title;
+    // };
 
     $scope.hideBackgroundSlides = function() {
     }
@@ -107,6 +99,21 @@
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.customizeYourGear.experience, $scope, $timeout);    
     $scope.experience.initExperience();
+
+    // $scope.changeSlider('women');
+    // setTimeout(function() {
+    //    $scope.changeSlider('men');
+    //    setTimeout(function() {
+    //        $scope.changeSlider('children');
+    //         setTimeout(function() {
+    //            $scope.changeSlider('women');
+    //         }, 1000);
+    //     }, 1000);
+    // }, 00);
+   
+    
+    
+    
     
   }
 
