@@ -181,7 +181,15 @@ $width: 1730 !important;
 
 .collection-type
 {
+ margin: 0 10px;
+ color: #62666A;
+ background-color:transparent;
+}
 
+.active
+{
+	color: #FD4600 !important;
+	font-family:'JFCalibreBold'
 }
 
 .watch

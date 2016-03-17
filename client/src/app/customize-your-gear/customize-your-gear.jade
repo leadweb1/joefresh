@@ -48,6 +48,6 @@
 						.arrow.pure-u-2-24.right
 							img.right(ng-show='experience.currentSlide < activeSliderMaxSlides', ng-src='assets/0-UI/icon_arrow_slider_right.svg', ng-click="nextSlide(); submissionAction('click', 'action', 'customize-your-gear_customize-your-gear_next-slide'); $event.stopPropagation();")
 			.collection-button-row
-				button.collection-type(ng-click="changeSlider('women');") WOMENS
-				button.collection-type(ng-click="changeSlider('men')")  MENS
-				button.collection-type(ng-click="changeSlider('children')") CHILDREN
+				button.collection-type(ng-class="{active: activeSlider == 'women'}", ng-click="changeSlider('women');") WOMENS
+				button.collection-type(ng-class="{active: activeSlider == 'men'}", ng-click="changeSlider('men')")  MENS
+				button.collection-type(ng-class="{active: activeSlider == 'children'}", ng-click="changeSlider('children')") CHILDREN

@@ -3639,6 +3639,15 @@ and open the template in the editor.
 .collection-button-row {
   text-align: center; }
 
+.collection-type {
+  margin: 0 10px;
+  color: #62666A;
+  background-color: transparent; }
+
+.active {
+  color: #FD4600 !important;
+  font-family: "JFCalibreBold"; }
+
 .watch {
   margin-top: 150px !important; }
 
