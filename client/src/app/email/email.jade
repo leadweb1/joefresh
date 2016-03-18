@@ -7,49 +7,54 @@
 			p.scenes.padding AT JOEFRESH.COM
 		.subheader-text.padding AND GET ALL THE NEWS THAT'S FIT TO WEAR
 		.select-favorite.padding
-			.input-prompt SELECT YOUR FAVORITE ITEM
-			.dropdown-container
-				ul.nav.navbar-nav.wide
-					li.dropdown.wide
-						a.dropdown-toggle.inner-dropdown(href='#', data-toggle='dropdown')
-							.select-prompt {{favorite? favorite : "SELECT" }}
-							img.dropdown-icon.pull-right(ng-src="assets/images/email/dropdown.svg")
-						ul.dropdown-menu
-							li
-								a(href='#', ng-click="setFavorite('Love')")
-									| DRESSES
-									//- span.glyphicon.glyphicon-cog.pull-right
-							li.divider
-							li
-								a(href='#', ng-click="setFavorite('Love')")
-									| SHIRTS
-									//- span.glyphicon.glyphicon-stats.pull-right
-							li.divider
-							li
-								a(href='#', ng-click="setFavorite('Love')")
-									| PANTS
-									//- span.badge.pull-right  42 
-							li.divider
-							li
-								a(href='#', ng-click="setFavorite('Love')")
-									| HATS
-									//- span.glyphicon.glyphicon-heart.pull-right
-							li.divider
-							li
-								a(href='#', ng-click="setFavorite('Love')")
-									| LOVE
-									//- span.glyphicon.glyphicon-log-out.pull-right
-
-		.email-input.padding
-			.input-prompt EMAIL
-			input.email-text-input#email(ng-model="email.email")
-		.checkbox-container.padding
-			//- input.checkbox(type="checkbox", ng-model="accept")
-			.checkbox(ng-click="toggleChecked()")
-				img.checkmark(ng-src="assets/images/email/check.svg", ng-style="{'opacity':opa}")
-			.checkbox-text I accept the 
-				.link(ui-sref="root.terms") Terms and Conditions 
-				| &
-				.link.privacy(ui-sref="root.privacy") Privacy Policy
-		.send.padding
-			button.send-button(ng-click="send()", ng-style="validateForm()") SEND
+			//- .input-prompt SELECT YOUR FAVORITE ITEM
+			//- .dropdown-container
+			//- 	ul.nav.navbar-nav.wide
+			//- 		li.dropdown.wide
+			//- 			a.dropdown-toggle.inner-dropdown(href='#', data-toggle='dropdown')
+			//- 				.select-prompt {{favorite? favorite : "SELECT" }}
+			//- 				img.dropdown-icon.pull-right(ng-src="assets/images/email/dropdown.svg")
+			//- 			ul.dropdown-menu
+			//- 				li
+			//- 					a(href='#', ng-click="setFavorite('Love')")
+			//- 						| DRESSES
+			//- 						//- span.glyphicon.glyphicon-cog.pull-right
+			//- 				li.divider
+			//- 				li
+			//- 					a(href='#', ng-click="setFavorite('Love')")
+			//- 						| SHIRTS
+			//- 						//- span.glyphicon.glyphicon-stats.pull-right
+			//- 				li.divider
+			//- 				li
+			//- 					a(href='#', ng-click="setFavorite('Love')")
+			//- 						| PANTS
+			//- 						//- span.badge.pull-right  42 
+			//- 				li.divider
+			//- 				li
+			//- 					a(href='#', ng-click="setFavorite('Love')")
+			//- 						| HATS
+			//- 						//- span.glyphicon.glyphicon-heart.pull-right
+			//- 				li.divider
+			//- 				li
+			//- 					a(href='#', ng-click="setFavorite('Love')")
+			//- 						| LOVE
+			//- 						//- span.glyphicon.glyphicon-log-out.pull-right
+		form#subscribeForm(action='http://cl.exct.net/subscribe.aspx?lid=921', name='subscribeForm', method='post')
+			input(type='hidden', name='thx', value='https://www.joefresh.com')
+			input(type='hidden', name='err', value='https://pages.email.joefresh.com/profile/oops/')
+			input(type='hidden', name='MID', value='6172201s')
+			// required
+			input(type='hidden', name='SubAction', value='sub_add_update')
+			.email-input.padding
+				.input-prompt EMAIL
+				input.email-text-input#email(ng-model="email.email")
+			.checkbox-container.padding
+				//- input.checkbox(type="checkbox", ng-model="accept")
+				.checkbox(ng-click="toggleChecked()")
+					img.checkmark(ng-src="assets/images/email/check.svg", ng-style="{'opacity':opa}")
+				.checkbox-text I accept the 
+					.link(ui-sref="root.terms") Terms and Conditions 
+					| &
+					.link.privacy(ui-sref="root.privacy") Privacy Policy
+			.send.padding
+				button.send-button(ng-click="send()", ng-style="validateForm()") SEND
