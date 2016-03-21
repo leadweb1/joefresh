@@ -51,5 +51,8 @@
 				button.collection-type(ng-class="{active: activeSlider == 'women'}", ng-click="changeSlider('women'); submissionAction('click', 'action', 'view-collection-women'); $event.stopPropagation();") WOMENS
 				button.collection-type(ng-class="{active: activeSlider == 'men'}", ng-click="changeSlider('men'); submissionAction('click', 'action', 'view-collection-men'); $event.stopPropagation();")  MENS
 				button.collection-type(ng-class="{active: activeSlider == 'children'}", ng-click="changeSlider('children'); submissionAction('click', 'action', 'view-collection-children'); $event.stopPropagation();") CHILDREN
-		.gif.fixed.gifFade#gif
-			img(ng-src="assets/images/collection/loading_spinner.gif")
+		//- .gif.fixed.gifFade#gif
+		//- 	img(ng-src="assets/images/collection/loading_spinner.gif")
+		.loader
+			svg.circular#gif(viewBox="25 25 50 50")
+				circle.path(cx="50", cy="50", r="20", fill="none", stroke-width="2", stroke-miterlimit="10")
