@@ -3610,7 +3610,10 @@ and open the template in the editor.
 
 .outline {
   width: 1920px;
-  height: 1080px; }
+  height: 1080px;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden; }
 
 .experience {
   padding-top: 0px !important;
@@ -3650,12 +3653,21 @@ and open the template in the editor.
 .watch {
   margin-top: 150px !important; }
 
+.gif {
+  z-index: -10;
+  left: 860px;
+  top: 340px; }
+
+.gifFade {
+  transition-duration: 0.6s;
+  opacity: 0; }
+
 .call-to-action {
   width: 1920px;
   height: 1080px;
   background-color: #FD4600;
   color: white;
-  padding-top: 100px;
+  padding-top: 165px;
   font-size: 280px;
   line-height: 0px;
   font-family: 'JFCalibreBold';

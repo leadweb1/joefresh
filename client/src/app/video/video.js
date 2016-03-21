@@ -30,12 +30,12 @@
 
     console.log($stateParams.video == 'one')
     if($stateParams.video == 'one'){
-      $scope.vid = 'assets/videos/JoeFresh_BTS_TransitShelter-1920x1080.webmhd.webm';
+      $scope.vid = 'assets/videos/JoeFresh_TopsDressesPolos-TransitShelter-1920x1080.webmhd.webm';
     }else if($stateParams.video == 'two')
     {
       $scope.vid = 'assets/videos/JoeFresh_FamilyKids_TransitShelter-1920x1080.webmhd.webm';
     }else{
-      $scope.vid = 'assets/videos/JoeFresh_TopsDressesPolos-TransitShelter-1920x1080.webmhd.webm';
+      $scope.vid = 'assets/videos/JoeFresh_BTS_TransitShelter-1920x1080.webmhd.webm';
     }
 
     $scope.video = $stateParams.video;

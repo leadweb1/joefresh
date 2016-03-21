@@ -87,6 +87,15 @@
         }
       }
     }
+
+    $scope.disable = function()
+    {
+      if($scope.checked && $scope.validateEmail($scope.email.email)){
+        return false;
+      }else{
+        return true;
+      }
+    }
    
   }
 

@@ -47,7 +47,13 @@
 
       $('.content').removeClass('fadeIn').animate({'nothing':null}, 1, function () {
       $('.content').addClass('fadeIn');
+        setTimeout(function() {
+          console.log('fade gif')
+          jQuery('#gif').addClass('gifFade');
+        }, 1000)
       });
+
+      jQuery('#gif').removeClass('gifFade');
 
 
       console.log('change slider')
@@ -81,35 +87,19 @@
         var $slider = jQuery('.slider-container:not(.ng-hide)');
         $slider.slick('slickNext');
     };
-    
-    // $scope.setModelTitle = function() {
-    //   $scope.hideBackgroundSlides()
-    //     var title = jQuery('#watch .slick-current').data('title');
-    //     $scope.modelTitle = title;
-    // };
-    
-    // $scope.setFaceTitle = function() {
-    //     var title = jQuery('#watchFace .slick-current').data('title');
-    //     $scope.faceTitle = title;
-    // };
 
     $scope.hideBackgroundSlides = function() {
+    }
+
+    $scope.goToSlide = function(index)
+    {
+      var $slider = jQuery('.slider-container:not(.ng-hide)');
+      $slider.slick('slickGoTo', index);
     }
     
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.customizeYourGear.experience, $scope, $timeout);    
     $scope.experience.initExperience();
-
-    // $scope.changeSlider('women');
-    // setTimeout(function() {
-    //    $scope.changeSlider('men');
-    //    setTimeout(function() {
-    //        $scope.changeSlider('children');
-    //         setTimeout(function() {
-    //            $scope.changeSlider('women');
-    //         }, 1000);
-    //     }, 1000);
-    // }, 00);
    
     
     
