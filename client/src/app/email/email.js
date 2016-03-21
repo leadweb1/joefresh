@@ -44,7 +44,7 @@
     if($scope.valid){ 
       console.log(jQuery('#subscribeForm'))
       jQuery('#subscribeForm').submit();
-      $state.go('thanks')
+      $state.go('thanks');
     }
       
    }

@@ -42,7 +42,7 @@
      **/
     function get( selector ) {
         return document.querySelector( selector );
-    };
+    }
 
     /**
      * Renders the CoverFlow based on the current _index
@@ -50,29 +50,29 @@
     function render() {
 
         // loop through albums & transform positions
-        for( var i = 0; i < _albums.length; i++ ) {
+        for( var i = 0; i < _albums.length; i = i + 1 ) {
  
             // before 
             if( i < _index ) {
-                _albums[i].style[_transformName] = "translateX( -"+ ( OFFSET * ( _index - i  ) ) +"% ) rotateY( "+ ROTATION +"deg )";
+                _albums[i].style[_transformName] = 'translateX( -'+ ( OFFSET * ( _index - i  ) ) +'% ) rotateY( '+ ROTATION +'deg )';
                 _albums[i].style.zIndex = BASE_ZINDEX + i;  
             } 
 
             // current
              if( i === _index ) {
-                _albums[i].style[_transformName] = "rotateY( 0deg ) translateZ( 140px )";
+                _albums[i].style[_transformName] = 'rotateY( 0deg ) translateZ( 140px )';
                 _albums[i].style.zIndex = MAX_ZINDEX;  
             } 
 
              // after
             if( i > _index ) {
-                _albums[i].style[_transformName] = "translateX( "+ ( OFFSET * ( i - _index  ) ) +"% ) rotateY( -"+ ROTATION +"deg )";
+                _albums[i].style[_transformName] = 'translateX( '+ ( OFFSET * ( i - _index  ) ) +'% ) rotateY( -'+ ROTATION +'deg )';
                 _albums[i].style.zIndex = BASE_ZINDEX + ( _albums.length - i  ); 
             }         
         
         }
 
-    };
+    }
 
     /**
      * Flow to the right
@@ -82,11 +82,11 @@
        // check if has albums 
        // on the right side
        if( _index ) {
-            _index--;
+            _index = _index - 1;
             render();
        }
       
-    };
+    }
 
     /**
      * Flow to the left
@@ -96,11 +96,11 @@
         // check if has albums 
        // on the left side
        if( _albums.length > ( _index + 1)  ) {
-            _index++;
+            _index = _index + 1;
             render();
        }
       
-    };
+    }
 
     /**
      * Enable left & right keyboard events
@@ -139,8 +139,8 @@
 
         // display covers
         for( var i = 0; i < _albums.length; i++ ) {
-            var url = _albums[i].getAttribute("data-cover");
-            _albums[i].style.backgroundImage = "url("+ url  +")";
+            var url = _albums[i].getAttribute('data-cover');
+            _albums[i].style.backgroundImage = 'url('+ url  +')';
         }
 
         // do important stuff
