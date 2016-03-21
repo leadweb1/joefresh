@@ -22,7 +22,7 @@
    * @name  HomeController
    * @description Controller
    */
-  function PrivacyController($scope) {
+  function PrivacyController() {
    
   }
 

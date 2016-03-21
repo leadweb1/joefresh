@@ -25,13 +25,12 @@
   function VideoController($scope, $state, $stateParams) {
 
     var sound = 'assets/images/video/sound.svg';
-    var mute = 'assets/images/video/mute.svg'
+    var mute = 'assets/images/video/mute.svg';
     $scope.icon = sound;
 
-    console.log($stateParams.video == 'one')
-    if($stateParams.video == 'one'){
+    if($stateParams.video === 'one'){
       $scope.vid = 'assets/videos/JoeFresh_TopsDressesPolos-TransitShelter-1920x1080.webmhd.webm';
-    }else if($stateParams.video == 'two')
+    }else if($stateParams.video === 'two')
     {
       $scope.vid = 'assets/videos/JoeFresh_FamilyKids_TransitShelter-1920x1080.webmhd.webm';
     }else{
@@ -42,22 +41,22 @@
 
     $scope.goToVideos = function()
     {
-      $state.go('videos')
-    }
+      $state.go('videos');
+    };
 
 
       $scope.toggleAudio = function()
       {
-        if( $("#video").prop('muted') ){
-          $("#video").prop('muted', false);
-          $("#mute").toggleClass('muted')
+        if( $('#video').prop('muted') ){
+          $('#video').prop('muted', false);
+          $('#mute').toggleClass('muted');
           $scope.icon = sound;
         }else{
-          $("#video").prop('muted', true);
-          $("#mute").toggleClass('muted');
+          $('#video').prop('muted', true);
+          $('#mute').toggleClass('muted');
           $scope.icon = mute;
         }
-      }
+      };
    
   }
 

@@ -22,7 +22,7 @@
    * @name  CustomizeController
    * @description Controller
    */
-  function CustomizeController(data, DataService, ExperienceService, $scope, $timeout, $element) {
+  function CustomizeController(data, DataService, ExperienceService, $scope, $timeout) {
     $scope.data = angular.extend({}, data, {
         template: 'src/app/customize-your-gear/customize-your-gear.html',
         top: DataService.getSectionByName('customize-your-gear'),
@@ -48,15 +48,13 @@
       $('.content').removeClass('fadeIn').animate({'nothing':null}, 1, function () {
       $('.content').addClass('fadeIn');
         setTimeout(function() {
-          console.log('fade gif')
+          console.log('fade gif');
           jQuery('#gif').addClass('gifFade');
-        }, 1000)
+        }, 1000);
       });
 
       jQuery('#gif').removeClass('gifFade');
 
-
-      console.log('change slider')
         $scope.activeSlider = slider;
                 
         $timeout(function(){
@@ -64,7 +62,7 @@
           var $slides = $slider.find('.slick-slide');
           $scope.activeSliderMaxSlides = $slides.length;
           
-          var $watchFaceSlider = jQuery('.slider-container.ng-hide');
+          // var $watchFaceSlider = jQuery('.slider-container.ng-hide');
 
           $slides.each(function(index){
             var $slide = jQuery(this);
@@ -89,13 +87,13 @@
     };
 
     $scope.hideBackgroundSlides = function() {
-    }
+    };
 
     $scope.goToSlide = function(index)
     {
       var $slider = jQuery('.slider-container:not(.ng-hide)');
       $slider.slick('slickGoTo', index);
-    }
+    };
     
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.customizeYourGear.experience, $scope, $timeout);    

@@ -34,24 +34,17 @@
    $scope.prompt = '';
    $scope.valid = false;
 
-   $scope.favorite;
-
    // $('.checkbox').checkbox();
 
    $scope.send = function()
    {
-    console.log($scope.valid)
     if($scope.valid){ 
-      console.log(jQuery('#subscribeForm'))
+      console.log(jQuery('#subscribeForm'));
       jQuery('#subscribeForm').submit();
       $state.go('thanks');
     }
       
-   }
-
-   $scope.setFavorite = function(favorite){
-    $scope.favorite = favorite;
-   }
+   };
 
    $scope.toggleChecked = function()
    {
@@ -59,16 +52,21 @@
       $scope.checked = !$scope.checked;
       if($scope.checked){
         $scope.opa = 1;
-      }
-      else
+      }else{
         $scope.opa = 0;
-   }
+      }
+   };
 
    $scope.validateEmail = function (e) {
     console.log(e);
     var filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
-    return String(e).search (filter) != -1;
-  }
+    if(String(e).search (filter) === -1){
+      return false;
+    }else{
+      return true;
+    }
+    // return String(e).search (filter) != -1;
+  };
 
 
     $scope.validateForm = function()
@@ -78,15 +76,15 @@
       {
         $scope.valid = true;
         return {
-          "background-color" : "#FD4600"
-        }
+          'background-color' : '#FD4600'
+        };
       }else{
         $scope.valid = false;
         return {
-          "background-color" : "#FFA287"
-        }
+          'background-color' : '#FFA287'
+        };
       }
-    }
+    };
 
     $scope.disable = function()
     {
@@ -95,7 +93,7 @@
       }else{
         return true;
       }
-    }
+    };
    
   }
 

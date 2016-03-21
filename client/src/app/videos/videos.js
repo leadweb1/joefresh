@@ -23,12 +23,12 @@
    * @description Controller
    */
   function VideosController($scope, $state, $location) {
-    console.log('here')
+    console.log('here');
 
     $scope.goToVideo = function(video)
     {
-      $location.path('/video/' + video)
-    }
+      $location.path('/video/' + video);
+    };
    
   }
 

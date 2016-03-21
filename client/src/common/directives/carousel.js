@@ -12,6 +12,40 @@
   
   //var activeSlider = null;
 
+  var setStartSlide = function ($elem) {
+    var slickData = $elem.data('slick');
+    
+    if(slickData && slickData.startSlide !== undefined) {
+        $elem.slick('slickGoTo', slickData.startSlide - 1);
+    }
+  };
+
+  var resizeOverlay = function ($carousel) {
+    $carousel = $carousel || jQuery('.slick-list');
+    $carousel.each(function(){
+        $carousel = jQuery(this);
+        var $overlay = $carousel.find('.slider-overlay');
+        var width = $carousel.find('.slick-slide.slick-current').width();
+
+        $overlay.css('width', width)
+            .css('margin-left', (width / 2) * -1)
+        ;
+    });
+  };
+
+  var createOverlay = function ($elem) {
+    $elem.on('init', function(event, slick) {
+      if(slick.options.overlay) {
+        var $overlay = jQuery(slick.options.overlay);
+        var $carousel = $elem.find('.slick-list');
+
+        $overlay.appendTo($carousel);
+        resizeOverlay($carousel);
+      }
+    });
+    
+  };
+
   function watchCarouselDirective() {
     return {
       restrict: 'A',
@@ -49,40 +83,6 @@
         setStartSlide($elem);
       }
     };
-  }
-  
-  function setStartSlide($elem) {
-    var slickData = $elem.data('slick');
-    
-    if(slickData && slickData.startSlide !== undefined) {
-        $elem.slick('slickGoTo', slickData.startSlide - 1);
-    }
-  }
-
-  function createOverlay($elem) {
-    $elem.on('init', function(event, slick) {
-      if(slick.options.overlay) {
-        var $overlay = jQuery(slick.options.overlay);
-        var $carousel = $elem.find('.slick-list');
-
-        $overlay.appendTo($carousel);
-        resizeOverlay($carousel);
-      }
-    });
-    
-  }
-  
-  function resizeOverlay($carousel) {
-    $carousel = $carousel || jQuery('.slick-list');
-    $carousel.each(function(){
-        $carousel = jQuery(this);
-        var $overlay = $carousel.find('.slider-overlay');
-        var width = $carousel.find('.slick-slide.slick-current').width();
-
-        $overlay.css('width', width)
-            .css('margin-left', (width / 2) * -1)
-        ;
-    });
   }
 
   angular.module('common.directives.carousel', [])

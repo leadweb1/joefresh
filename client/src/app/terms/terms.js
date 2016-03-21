@@ -22,7 +22,7 @@
    * @name  HomeController
    * @description Controller
    */
-  function TermsController($scope) {
+  function TermsController() {
    
   }
 

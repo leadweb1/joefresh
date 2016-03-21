@@ -50,7 +50,7 @@
       .state('thanks', {
         url: '/thanks',
         templateUrl: 'src/app/thanks/thanks.html',
-        controller: 'ThanksController'
+        controller: function () {}
       })
       .state('email', {
         url: '/email',
@@ -178,11 +178,6 @@
       'app.privacy',
       'app.videos',
       'app.video',
-      'app.collection',
-      'app.aestheticElegantDesign',
-      'app.intuitiveExperience',
-      'app.healthierLifestyle',
-      'app.convenienceAndMore',
       'app.customizeYourGear',
       'common.header',
       'common.footer',
