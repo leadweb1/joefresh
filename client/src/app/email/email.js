@@ -22,7 +22,7 @@
    * @name  HomeController
    * @description Controller
    */
-  function EmailController($scope, $state) {
+  function EmailController($scope, $state, $rootScope) {
     
    $scope.email = {
     email : ''
@@ -66,6 +66,12 @@
       return true;
     }
     // return String(e).search (filter) != -1;
+  };
+
+  $scope.submitAnalytics = function(event) {
+    var em = 'submit-email_'+$scope.email.email;
+    $rootScope.submissionAction('click', 'action', em); 
+    event.stopPropagation();
   };
 
 

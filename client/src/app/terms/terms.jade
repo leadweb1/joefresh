@@ -1,6 +1,6 @@
 .thanks
-	button.menu-home.menu-button.fixed.box-shadow(ui-sref="root.home") MENU
-	button.menu-home.menu-button.back-button.fixed.box-shadow(ui-sref="root.email") BACK
+	button.menu-home.menu-button.fixed.box-shadow(ui-sref="root.home", ng-click="submissionAction('click', 'action', 'terms_select-menu'); $event.stopPropagation();") MENU
+	button.menu-home.menu-button.back-button.fixed.box-shadow(ui-sref="root.email", ng-click="submissionAction('click', 'action', 'terms_select-back'); $event.stopPropagation();") BACK
 	.center.terms
 		.other-header-text.terms-header-text TERMS AND CONDITIONS
 		.content

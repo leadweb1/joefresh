@@ -26,6 +26,6 @@
 					| &
 					.link.privacy(ui-sref="root.privacy") Privacy Policy
 			.send.padding
-				button.send-button(ng-disabled="disable()", type="submit", ng-style="validateForm()", value="UPDATE") SEND
+				button.send-button(ng-disabled="disable()", type="submit", ng-style="validateForm()", value="UPDATE", ng-click="submitAnalytics($event)") SEND
 
 				//- <input type="email" name="Email Address" id="Email Address" tabindex="10" accesskey="1" />
