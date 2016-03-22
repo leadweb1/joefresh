@@ -36,7 +36,7 @@ $width: 1730 !important;
 }
 
 @keyframes fade {
-  0% { opacity: 0 }
+  0% { opacity: 1 }
   75% {opacity: 0 }
   100% { opacity: 1 }
 }
@@ -155,6 +155,14 @@ $width: 1730 !important;
 {
 	padding-top:0px !important;
 	margin-top:-110px;
+	opacity: 0;
+
+}
+
+.opaque
+{
+	transition-duration: 1s;
+	opacity: 1;
 }
 
 .arrow
@@ -308,4 +316,10 @@ body {
   80%, 90%{
     stroke: $yellow;
   }
+}
+
+
+.hidden
+{
+	display: none;
 }

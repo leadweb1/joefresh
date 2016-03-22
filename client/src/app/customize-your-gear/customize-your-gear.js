@@ -47,19 +47,31 @@
     $scope.modelTitle = 'Gear 2 / Dark Grey';
     $scope.faceTitle = 'Modern Utility';
 
+    var men = false;
+    var children = false;
+
     
     $scope.changeSlider = function(slider) {
 
+      if(slider == 'men' && !men){
+        $('.experience').removeClass('opaque');
+        men = true;
+      }
 
-      $('.content').removeClass('fadeIn').animate({'nothing':null}, 1, function () {
-      $('.content').addClass('fadeIn');
-        setTimeout(function() {
-          console.log('fade gif');
-          jQuery('#gif').addClass('gifFade');
-        }, 1000);
-      });
+      if(slider == 'children' && !children){
+        $('.experience').removeClass('opaque');
+        children = true;
+      }
 
-      jQuery('#gif').removeClass('gifFade');
+      // Control the nice fade in (working)
+      // $('.content').removeClass('fadeIn').animate({'nothing':null}, 1, function () {
+      // $('.content').addClass('fadeIn');
+      //   setTimeout(function() {
+      //     console.log('fade gif');
+      //     jQuery('#gif').addClass('gifFade');
+      //   }, 1000);
+      // });
+      // jQuery('#gif').removeClass('gifFade');
 
         $scope.activeSlider = slider;
                 
@@ -80,6 +92,9 @@
         },100);
 
         // jQuery('.content').css('opacity', '1');
+        setTimeout(function() {
+          $('.experience').addClass('opaque')
+      }, 600)
 
     };
     
@@ -105,12 +120,13 @@
     // Start experience
     $scope.experience = ExperienceService.get($scope.data.content.sections.customizeYourGear.experience, $scope, $timeout);    
     $scope.experience.initExperience();
-   
     
-            console.log($('#content'))
-        $("#content").removeClass('fadeOutFast');
-    
-    
+
+    jQuery(document).ready(function () {
+      setTimeout(function() {
+        $('.experience').addClass('opaque')
+      }, 600)
+    });
   }
 
   angular.module('app.customizeYourGear', [])
