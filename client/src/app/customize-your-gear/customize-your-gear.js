@@ -23,6 +23,11 @@
    * @description Controller
    */
   function CustomizeController(data, DataService, ExperienceService, $scope, $timeout) {
+    window.onload = function(){
+      console.log(document.getElementById('watch'));
+    }
+    
+
     $scope.data = angular.extend({}, data, {
         template: 'src/app/customize-your-gear/customize-your-gear.html',
         top: DataService.getSectionByName('customize-your-gear'),
@@ -44,6 +49,7 @@
 
     
     $scope.changeSlider = function(slider) {
+
 
       $('.content').removeClass('fadeIn').animate({'nothing':null}, 1, function () {
       $('.content').addClass('fadeIn');
@@ -74,6 +80,7 @@
         },100);
 
         // jQuery('.content').css('opacity', '1');
+
     };
     
     $scope.prevSlide = function() {
@@ -100,7 +107,8 @@
     $scope.experience.initExperience();
    
     
-    
+            console.log($('#content'))
+        $("#content").removeClass('fadeOutFast');
     
     
   }

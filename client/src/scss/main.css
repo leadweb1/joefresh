@@ -3241,10 +3241,8 @@ and open the template in the editor.
           .l-page.island .customize-your-gear .customize .experience .watch .watch-container .content #watchFace .slick-list {
             padding: 0 !important;
             margin: 0 50px; }
-            .l-page.island .customize-your-gear .customize .experience .watch .watch-container .content #watchFace .slick-list .slider-overlay {
-              margin-left: -103px !important; }
-              .l-page.island .customize-your-gear .customize .experience .watch .watch-container .content #watchFace .slick-list .slider-overlay img {
-                height: 346px; }
+            .l-page.island .customize-your-gear .customize .experience .watch .watch-container .content #watchFace .slick-list .slider-overlay img {
+              height: 346px; }
   .l-page.island .customize-your-gear .nav {
     position: absolute;
     bottom: 100px;
@@ -3554,6 +3552,13 @@ and open the template in the editor.
   -webkit-animation: fade 0.6s linear;
   animation: fade 0.6s linear; }
 
+.fadeOutFast {
+  opacity: 0;
+  transition-duration: 0.3s; }
+
+.fadeInSlow {
+  opacity: 1; }
+
 @keyframes fade {
   0% {
     opacity: 0; }
@@ -3561,9 +3566,6 @@ and open the template in the editor.
     opacity: 0; }
   100% {
     opacity: 1; } }
-.content {
-  opacity: 1; }
-
 .collection {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -3779,7 +3781,7 @@ button {
   display: inline-block; }
 
 .home {
-  background-image: url("./assets/images/backgrounds/JF_Spring-2016_Background.jpg");
+  background-image: url("../assets/images/backgrounds/JF_Spring-2016_Background.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
