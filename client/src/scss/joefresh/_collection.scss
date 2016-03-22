@@ -68,10 +68,10 @@ $width: 1730 !important;
 	width:1720px !important;
 }
 
-.draggable
-{
+// .draggable
+// {
 
-}
+// }
 
 .slide
 {
@@ -137,7 +137,7 @@ $width: 1730 !important;
 
 .draggable
 {
-	margin-left:0px;
+	margin-left:0px !important;
 	margin-right:0px;
 }
 
@@ -155,6 +155,14 @@ $width: 1730 !important;
 {
 	padding-top:0px !important;
 	margin-top:-110px;
+	opacity: 0;
+
+}
+
+.opaque
+{
+	transition-duration: 1s;
+	opacity: 1;
 }
 
 .arrow
@@ -211,8 +219,8 @@ $width: 1730 !important;
 .gif
 {
 	z-index:-10;
-	left:860px;
-	top:350px;
+	left:900px;
+	top:400px;
 }
 
 .gifFade
@@ -222,9 +230,12 @@ $width: 1730 !important;
 	opacity: 0;
 }
 
+.invisible
+{
+	transition-duration:0.5s;
+	opacity:0;
 
-
-
+}
 
 // GIF animation
 $green: #FE4600;

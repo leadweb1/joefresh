@@ -47,19 +47,34 @@
     $scope.modelTitle = 'Gear 2 / Dark Grey';
     $scope.faceTitle = 'Modern Utility';
 
+    var men = false;
+    var children = false;
+
     
     $scope.changeSlider = function(slider) {
 
+      $('#gif').removeClass('invisible')
 
-      $('.content').removeClass('fadeIn').animate({'nothing':null}, 1, function () {
-      $('.content').addClass('fadeIn');
-        setTimeout(function() {
-          console.log('fade gif');
-          jQuery('#gif').addClass('gifFade');
-        }, 1000);
-      });
+      if(slider == 'men' && !men){
+        $('.experience').removeClass('opaque');
+        men = true;
+      }
 
-      jQuery('#gif').removeClass('gifFade');
+      if(slider == 'children' && !children){
+        $('.experience').removeClass('opaque');
+        children = true;
+      }
+
+
+      // $('.content').removeClass('fadeIn').animate({'nothing':null}, 1, function () {
+      // $('.content').addClass('fadeIn');
+      //   setTimeout(function() {
+      //     console.log('fade gif');
+      //     jQuery('#gif').addClass('gifFade');
+      //   }, 1000);
+      // });
+
+      // jQuery('#gif').removeClass('gifFade');
 
         $scope.activeSlider = slider;
                 
@@ -80,6 +95,10 @@
         },100);
 
         // jQuery('.content').css('opacity', '1');
+        setTimeout(function() {
+          $('.experience').addClass('opaque')
+          $('#gif').addClass('invisible')
+      }, 600)
 
     };
     
@@ -106,9 +125,12 @@
     $scope.experience = ExperienceService.get($scope.data.content.sections.customizeYourGear.experience, $scope, $timeout);    
     $scope.experience.initExperience();
    
-    
-            console.log($('#content'))
-        $("#content").removeClass('fadeOutFast');
+    jQuery(document).ready(function () {
+      setTimeout(function() {
+        $('.experience').addClass('opaque')
+        $('#gif').addClass('invisible')
+      }, 600)
+    });
     
     
   }
