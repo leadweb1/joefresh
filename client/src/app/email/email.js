@@ -36,15 +36,15 @@
 
    // $('.checkbox').checkbox();
 
-   $scope.send = function()
-   {
-    if($scope.valid){ 
-      console.log(jQuery('#subscribeForm'));
-      jQuery('#subscribeForm').submit();
-      $state.go('thanks');
-    }
+   // $scope.send = function()
+   // {
+   //  if($scope.valid){ 
+   //    console.log(jQuery('#subscribeForm'));
+   //    jQuery('#subscribeForm').submit();
+   //    $state.go('thanks');
+   //  }
       
-   };
+   // };
 
    $scope.toggleChecked = function()
    {
@@ -65,8 +65,34 @@
     }else{
       return true;
     }
-    // return String(e).search (filter) != -1;
   };
+
+  $('#subscribeForm').submit(function(event) {
+
+        event.preventDefault();
+
+        var postDict = {
+          'thx': 'google.com',
+          'err': 'yahoo.com',
+          'MID': '6172201',
+          'SubAction': 'sub_add_update',
+          'Email Address': $scope.email.email
+        };
+
+        $.ajax({
+          type: 'POST',
+          url: 'http://cl.exct.net/subscribe.aspx?lid=921',
+          data: postDict,
+          success: function(data){
+            console.log('here we are in the return');
+            console.log(data);
+          }
+        });
+
+        $state.go('thanks');
+        event = event;
+
+    });
 
   $scope.submitAnalytics = function(event) {
     var em = 'submit-email_'+$scope.email.email;

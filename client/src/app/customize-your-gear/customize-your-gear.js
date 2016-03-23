@@ -23,9 +23,6 @@
    * @description Controller
    */
   function CustomizeController(data, DataService, ExperienceService, $scope, $timeout) {
-    window.onload = function(){
-      console.log(document.getElementById('watch'));
-    }
     
 
     $scope.data = angular.extend({}, data, {
@@ -43,7 +40,7 @@
     ];
     
     $scope.activeSlider = 'women';
-    $scope.activeSliderMaxSlides = 9;
+    $scope.activeSliderMaxSlides = 6;
     $scope.modelTitle = 'Gear 2 / Dark Grey';
     $scope.faceTitle = 'Modern Utility';
 
@@ -53,14 +50,14 @@
     
     $scope.changeSlider = function(slider) {
 
-      $('#gif').removeClass('invisible')
+      $('#gif').removeClass('invisible');
 
-      if(slider == 'men' && !men){
+      if(slider === 'men' && !men){
         $('.experience').removeClass('opaque');
         men = true;
       }
 
-      if(slider == 'children' && !children){
+      if(slider === 'children' && !children){
         $('.experience').removeClass('opaque');
         children = true;
       }
@@ -96,9 +93,9 @@
 
         // jQuery('.content').css('opacity', '1');
         setTimeout(function() {
-          $('.experience').addClass('opaque')
-          $('#gif').addClass('invisible')
-      }, 600)
+          $('.experience').addClass('opaque');
+          $('#gif').addClass('invisible');
+      }, 600);
 
     };
     
@@ -127,9 +124,9 @@
    
     jQuery(document).ready(function () {
       setTimeout(function() {
-        $('.experience').addClass('opaque')
-        $('#gif').addClass('invisible')
-      }, 600)
+        $('.experience').addClass('opaque');
+        $('#gif').addClass('invisible');
+      }, 600);
     });
     
     

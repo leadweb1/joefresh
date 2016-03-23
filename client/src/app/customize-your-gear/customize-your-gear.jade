@@ -10,7 +10,7 @@
 						.arrow.pure-u-2-24.left
 							img.left(ng-show='experience.currentSlide > 1', ng-src='assets/0-UI/icon_arrow_slider_left.svg', ng-click="prevSlide(); submissionAction('click', 'action', 'view-collection_prev-slide-button'); $event.stopPropagation();")
 						.content.pure-u-20-24#content
-							#watch.slider-container.ng-hide.fader(ng-show="activeSlider == 'women' || activeSlider == null", app-watch-carousel='', data-slick='{"startSlide": 2, "overlay": "", "swipe": true, "slidesToShow":3, "slidesToScroll":0.5, "centerMode": true, "variableWidth" : true, "adaptiveHeight": true}', ng-click="submissionAction('click', 'action', 'view-collection_touch-slide'); $event.stopPropagation();")
+							#watch.slider-container.ng-hide.fader(ng-show="activeSlider == 'women' || activeSlider == null", app-watch-carousel='', data-slick='{"startSlide": 2, "overlay": "", "swipe": true, "slidesToShow":3, "slidesToScroll":1, "centerMode": true, "variableWidth" : true, "adaptiveHeight": true}', ng-click="submissionAction('click', 'action', 'view-collection_touch-slide'); $event.stopPropagation();")
 								.slide(data-title='Some Dress Name')
 									img(ng-src='assets/images/collection/women/Women_01.jpg', ng-click="goToSlide(0)")
 								.slide(data-title='Collection 2')
